@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_custom_check_signs",
+  "info": {
+    "name": "CheckSign",
+    "icon": "check"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

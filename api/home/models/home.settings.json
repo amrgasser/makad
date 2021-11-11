@@ -1,0 +1,49 @@
+{
+  "kind": "singleType",
+  "collectionName": "homes",
+  "info": {
+    "name": "home",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "zones": {
+      "collection": "zones"
+    },
+    "amenities": {
+      "collection": "amenity"
+    },
+    "center": {
+      "model": "center"
+    },
+    "banner": {
+      "type": "dynamiczone",
+      "components": [
+        "custom.basic-slider"
+      ]
+    },
+    "lifeInOnePlace": {
+      "type": "dynamiczone",
+      "components": [
+        "custom.basic-slider"
+      ]
+    },
+    "getaway": {
+      "type": "dynamiczone",
+      "components": [
+        "custom.basic-slider"
+      ]
+    }
+  }
+}

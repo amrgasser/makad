@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/amenities",
+      "handler": "amenity.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/amenities/count",
+      "handler": "amenity.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/amenities/:id",
+      "handler": "amenity.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/amenities",
+      "handler": "amenity.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/amenities/:id",
+      "handler": "amenity.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/amenities/:id",
+      "handler": "amenity.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

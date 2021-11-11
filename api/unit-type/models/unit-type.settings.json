@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "unit_types",
+  "info": {
+    "name": "Unit Type"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "zone": {
+      "via": "unit_types",
+      "model": "zones"
+    },
+    "units": {
+      "via": "unit_type",
+      "collection": "unit"
+    }
+  }
+}

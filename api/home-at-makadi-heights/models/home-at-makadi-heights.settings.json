@@ -1,0 +1,42 @@
+{
+  "kind": "singleType",
+  "collectionName": "home_at_makadi_heights",
+  "info": {
+    "name": "Home At Makadi Heights"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "banner": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "aboutDescription": {
+      "type": "text"
+    },
+    "zones": {
+      "collection": "zones"
+    },
+    "gettingAround": {
+      "type": "dynamiczone",
+      "components": [
+        "custom.basic-slider"
+      ]
+    }
+  }
+}

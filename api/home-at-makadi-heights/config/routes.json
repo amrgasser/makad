@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/home-at-makadi-heights",
+      "handler": "home-at-makadi-heights.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/home-at-makadi-heights",
+      "handler": "home-at-makadi-heights.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/home-at-makadi-heights",
+      "handler": "home-at-makadi-heights.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

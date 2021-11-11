@@ -1,0 +1,81 @@
+{
+  "kind": "collectionType",
+  "collectionName": "zones",
+  "info": {
+    "name": "Zones",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "zoneName": {
+      "type": "string"
+    },
+    "homeImg": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "homeVideo": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "brochure": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "unit_types": {
+      "via": "zone",
+      "collection": "unit-type"
+    },
+    "zoneBanner": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "moodboard": {
+      "type": "component",
+      "repeatable": true,
+      "component": "pages.image"
+    },
+    "zoneUnitMap": {
+      "type": "component",
+      "repeatable": false,
+      "component": "pages.image"
+    }
+  }
+}
