@@ -29,7 +29,7 @@
         "custom.always-in-season-slider"
       ]
     },
-    "zonesTitle1": {
+    "zonesHeader": {
       "type": "string"
     },
     "zonesTitle2": {
