@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_custom_home_section1s",
+  "info": {
+    "name": "homeSection1",
+    "icon": "th-list"
+  },
+  "options": {},
+  "attributes": {
+    "bannerVideos": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "usp": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    }
+  }
+}

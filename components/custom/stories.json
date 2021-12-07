@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_custom_stories",
+  "info": {
+    "name": "stories",
+    "icon": "align-right"
+  },
+  "options": {},
+  "attributes": {
+    "leftStory": {
+      "type": "component",
+      "repeatable": true,
+      "component": "custom.basic-slider"
+    },
+    "topStory": {
+      "type": "component",
+      "repeatable": false,
+      "component": "custom.basic-slider"
+    },
+    "bottomStory": {
+      "type": "component",
+      "repeatable": false,
+      "component": "custom.basic-slider"
+    }
+  }
+}

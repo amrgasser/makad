@@ -7,11 +7,8 @@
   },
   "options": {},
   "attributes": {
-    "description": {
-      "type": "text"
-    },
     "images": {
-      "collection": "file",
+      "model": "file",
       "via": "related",
       "allowedTypes": [
         "images",
@@ -22,8 +19,14 @@
       "required": false,
       "pluginOptions": {}
     },
+    "name": {
+      "type": "string"
+    },
     "title": {
       "type": "string"
+    },
+    "text": {
+      "type": "text"
     }
   }
 }

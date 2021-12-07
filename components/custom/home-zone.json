@@ -1,0 +1,55 @@
+{
+  "collectionName": "components_custom_home_zones",
+  "info": {
+    "name": "homeZone",
+    "icon": "align-left"
+  },
+  "options": {},
+  "attributes": {
+    "villas": {
+      "type": "integer"
+    },
+    "Name": {
+      "type": "string"
+    },
+    "exploreLink": {
+      "type": "string"
+    },
+    "bottomDescription": {
+      "type": "string"
+    },
+    "appartments": {
+      "type": "integer"
+    },
+    "bannerImg": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "bedrooms": {
+      "type": "string"
+    },
+    "zoneLogo": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "description": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_custom_life_in_one_places",
+  "info": {
+    "name": "lifeInOnePlace",
+    "icon": "align-justify"
+  },
+  "options": {},
+  "attributes": {
+    "card1": {
+      "type": "component",
+      "repeatable": true,
+      "component": "custom.img-container"
+    },
+    "card2": {
+      "type": "component",
+      "repeatable": true,
+      "component": "custom.img-container"
+    },
+    "card3": {
+      "type": "component",
+      "repeatable": true,
+      "component": "custom.img-container"
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_custom_img_containers",
+  "info": {
+    "name": "imgContainer",
+    "icon": "align-center"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "btnLink": {
+      "type": "string"
+    }
+  }
+}

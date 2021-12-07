@@ -12,38 +12,66 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "title": {
+    "homeSection1": {
+      "type": "component",
+      "repeatable": false,
+      "component": "custom.home-section1"
+    },
+    "alwaysInSeasonTitle": {
       "type": "string"
     },
-    "description": {
-      "type": "text"
+    "alwaysInSeasonDescription": {
+      "type": "string"
     },
-    "zones": {
-      "collection": "zones"
-    },
-    "amenities": {
-      "collection": "amenity"
-    },
-    "center": {
-      "model": "center"
-    },
-    "banner": {
+    "alwaysInSeasonSlider": {
       "type": "dynamiczone",
       "components": [
-        "custom.basic-slider"
+        "custom.always-in-season-slider"
       ]
+    },
+    "zonesTitle1": {
+      "type": "string"
+    },
+    "zonesTitle2": {
+      "type": "string"
+    },
+    "zones": {
+      "type": "dynamiczone",
+      "components": [
+        "custom.home-zone"
+      ]
+    },
+    "lifeInOnePlaceTitle1": {
+      "type": "string"
+    },
+    "lifeInOnePlaceTitle2": {
+      "type": "string"
+    },
+    "lifeInOnePlaceDescription": {
+      "type": "string"
+    },
+    "lifeExploreLink": {
+      "type": "string"
     },
     "lifeInOnePlace": {
       "type": "dynamiczone",
       "components": [
-        "custom.basic-slider"
+        "custom.life-in-one-place"
       ]
     },
-    "getaway": {
+    "panoramicSection": {
       "type": "dynamiczone",
       "components": [
-        "custom.basic-slider"
+        "custom.panoramic"
       ]
+    },
+    "stories": {
+      "type": "component",
+      "repeatable": true,
+      "component": "custom.stories"
+    },
+    "mediaCenters": {
+      "collection": "center"
     }
   }
 }

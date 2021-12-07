@@ -1,0 +1,41 @@
+{
+  "collectionName": "components_custom_panoramics",
+  "info": {
+    "name": "panoramic",
+    "icon": "book-open"
+  },
+  "options": {},
+  "attributes": {
+    "logoImg": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "logoText": {
+      "type": "string"
+    },
+    "header": {
+      "type": "string"
+    },
+    "subheader": {
+      "type": "string"
+    },
+    "backgroundImg": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    }
+  }
+}
