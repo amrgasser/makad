@@ -2,13 +2,14 @@
   "collectionName": "components_custom_stories",
   "info": {
     "name": "stories",
-    "icon": "align-right"
+    "icon": "align-right",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "leftStory": {
       "type": "component",
-      "repeatable": true,
+      "repeatable": false,
       "component": "custom.basic-slider"
     },
     "topStory": {
