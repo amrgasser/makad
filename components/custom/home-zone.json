@@ -2,7 +2,8 @@
   "collectionName": "components_custom_home_zones",
   "info": {
     "name": "homeZone",
-    "icon": "align-left"
+    "icon": "align-left",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -24,11 +25,7 @@
     "bannerImg": {
       "model": "file",
       "via": "related",
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos"
-      ],
+      "allowedTypes": ["images", "files", "videos"],
       "plugin": "upload",
       "required": false,
       "pluginOptions": {}
@@ -39,16 +36,21 @@
     "zoneLogo": {
       "model": "file",
       "via": "related",
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos"
-      ],
+      "allowedTypes": ["images", "files", "videos"],
       "plugin": "upload",
       "required": false,
       "pluginOptions": {}
     },
     "description": {
+      "type": "string"
+    },
+    "completionDate": {
+      "type": "date"
+    },
+    "propertyTypes": {
+      "type": "string"
+    },
+    "startingPrice": {
       "type": "string"
     }
   }

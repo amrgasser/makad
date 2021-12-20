@@ -1,0 +1,43 @@
+{
+  "collectionName": "components_custom_chairmen",
+  "info": {
+    "name": "Chairman",
+    "icon": "smile"
+  },
+  "options": {},
+  "attributes": {
+    "Title1": {
+      "type": "string"
+    },
+    "Title2": {
+      "type": "string"
+    },
+    "quote": {
+      "type": "richtext"
+    },
+    "img": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "video": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    }
+  }
+}

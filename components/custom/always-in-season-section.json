@@ -2,21 +2,21 @@
   "collectionName": "components_custom_always_in_season_sections",
   "info": {
     "name": "alwaysInSeasonSection",
-    "icon": "adjust"
+    "icon": "adjust",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "leftImg": {
-      "model": "file",
-      "via": "related",
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos"
-      ],
-      "plugin": "upload",
-      "required": false,
-      "pluginOptions": {}
+    "alwaysInSeasonTitle": {
+      "type": "string"
+    },
+    "alwaysInSeasonDescription": {
+      "type": "richtext"
+    },
+    "slider": {
+      "type": "component",
+      "repeatable": true,
+      "component": "custom.always-in-season-slider"
     }
   }
 }

@@ -1,0 +1,43 @@
+{
+  "collectionName": "components_custom_section2s",
+  "info": {
+    "name": "Section2",
+    "icon": "bars"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "firstParagraph": {
+      "type": "richtext"
+    },
+    "secondParagraph": {
+      "type": "richtext"
+    },
+    "smallImg": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "largeImg": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    }
+  }
+}

@@ -2,7 +2,8 @@
   "kind": "singleType",
   "collectionName": "home_at_makadi_heights",
   "info": {
-    "name": "Home At Makadi Heights"
+    "name": "Home At Makadi Heights",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -11,9 +12,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "title": {
-      "type": "string"
-    },
     "banner": {
       "model": "file",
       "via": "related",
@@ -26,17 +24,25 @@
       "required": false,
       "pluginOptions": {}
     },
-    "aboutDescription": {
-      "type": "text"
+    "Section2": {
+      "type": "component",
+      "repeatable": false,
+      "component": "custom.section2"
+    },
+    "MasterPlan": {
+      "type": "component",
+      "repeatable": false,
+      "component": "pages.master-plan"
     },
     "zones": {
-      "collection": "zones"
+      "type": "component",
+      "repeatable": true,
+      "component": "custom.home-zone"
     },
-    "gettingAround": {
-      "type": "dynamiczone",
-      "components": [
-        "custom.basic-slider"
-      ]
+    "GettingAround": {
+      "type": "component",
+      "repeatable": true,
+      "component": "pages.getting-around"
     }
   }
 }

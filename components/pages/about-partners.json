@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_pages_about_partners",
+  "info": {
+    "name": "aboutPartners",
+    "icon": "arrows-alt",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "body": {
+      "type": "richtext"
+    },
+    "img": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "tabName": {
+      "type": "string"
+    }
+  }
+}

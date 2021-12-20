@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_pages_partners",
+  "info": {
+    "name": "Partners",
+    "icon": "dollar-sign"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Subtitle": {
+      "type": "string"
+    },
+    "aboutPartners": {
+      "type": "component",
+      "repeatable": true,
+      "component": "pages.about-partners"
+    }
+  }
+}

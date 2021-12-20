@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_pages_master_plans",
+  "info": {
+    "name": "MasterPlan",
+    "icon": "atom"
+  },
+  "options": {},
+  "attributes": {
+    "amenities": {
+      "collection": "amenity"
+    },
+    "zones": {
+      "collection": "zones"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_pages_getting_arounds",
+  "info": {
+    "name": "GettingAround",
+    "icon": "angle-down",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "tabs": {
+      "type": "component",
+      "repeatable": true,
+      "component": "pages.about-partners"
+    }
+  }
+}

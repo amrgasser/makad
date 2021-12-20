@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_pages_life_in_one_places",
+  "info": {
+    "name": "LifeInOnePlace",
+    "icon": "archive"
+  },
+  "options": {},
+  "attributes": {
+    "lifeInOnePlaceTitle1": {
+      "type": "string"
+    },
+    "lifeInOnePlaceTitle2": {
+      "type": "string"
+    },
+    "lifeInOnePlaceDescription": {
+      "type": "text"
+    },
+    "btnLink": {
+      "type": "string"
+    },
+    "lifeInOnePlaceContainer": {
+      "type": "component",
+      "repeatable": true,
+      "component": "pages.life-in-one-place-container"
+    }
+  }
+}

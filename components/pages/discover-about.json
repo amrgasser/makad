@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_pages_discover_abouts",
+  "info": {
+    "name": "DiscoverAbout",
+    "icon": "tablet-alt"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Subtitle": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "string"
+    },
+    "slider": {
+      "type": "component",
+      "repeatable": true,
+      "component": "custom.basic-slider2"
+    }
+  }
+}
