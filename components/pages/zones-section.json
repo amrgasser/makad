@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_pages_zones_sections",
+  "info": {
+    "name": "zonesSection",
+    "icon": "arrow-circle-right"
+  },
+  "options": {},
+  "attributes": {
+    "zones": {
+      "type": "component",
+      "repeatable": true,
+      "component": "custom.home-zone"
+    },
+    "title1": {
+      "type": "string"
+    },
+    "title2": {
+      "type": "string"
+    }
+  }
+}

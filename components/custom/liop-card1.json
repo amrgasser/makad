@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_custom_liop_card1s",
+  "info": {
+    "name": "liop.card1",
+    "icon": "arrow-right",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string",
+      "maxLength": 180
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "btnLink": {
+      "type": "string"
+    }
+  }
+}

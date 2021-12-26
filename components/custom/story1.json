@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_custom_story1s",
+  "info": {
+    "name": "story1",
+    "icon": "arrow-circle-up"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "richtext"
+    },
+    "images": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": ["images", "videos"],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    }
+  }
+}

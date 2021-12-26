@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_pages_life_in_one_place_sectionns",
+  "info": {
+    "name": "LifeInOnePlaceSectionn",
+    "icon": "arrow-up",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "card1": {
+      "type": "component",
+      "repeatable": false,
+      "component": "custom.liop-card1"
+    },
+    "card2": {
+      "type": "component",
+      "repeatable": false,
+      "component": "custom.liop-card2"
+    },
+    "card3": {
+      "type": "component",
+      "repeatable": false,
+      "component": "custom.liop-card3"
+    }
+  }
+}
