@@ -8,5 +8,19 @@ module.exports = ({ env }) => ({
       api_secret: env('CLOUDINARY_SECRET', 'zXImiFpwDx2BwYAiwAZqB6ZVm2o'),
     },
   },
+  navigation: {
+    relatedContentTypes: [
+      'application::pages.pages',
+      'application::home.home',
+      'application::home-at-makadi-heights.home-at-makadi-heights',
+      'application::event.event',
+      'application::center.center',
+      'application::amenity.amenity',
+    ],
+    allowedLevels: 2,
+    // contentTypesNameFields: {
+    //   'event': ['id'],
+    // },
+  },
   // ...
 });

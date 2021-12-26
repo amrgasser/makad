@@ -2,32 +2,20 @@
   "collectionName": "components_custom_home_section1s",
   "info": {
     "name": "homeSection1",
-    "icon": "th-list"
+    "icon": "th-list",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "bannerVideos": {
-      "collection": "file",
-      "via": "related",
-      "allowedTypes": [
-        "images",
-        "videos"
-      ],
-      "plugin": "upload",
-      "required": false,
-      "pluginOptions": {}
+    "bannerVideo": {
+      "type": "component",
+      "repeatable": true,
+      "component": "custom.basic-slider2"
     },
     "usp": {
-      "collection": "file",
-      "via": "related",
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos"
-      ],
-      "plugin": "upload",
-      "required": false,
-      "pluginOptions": {}
+      "type": "component",
+      "repeatable": true,
+      "component": "custom.usps"
     }
   }
 }

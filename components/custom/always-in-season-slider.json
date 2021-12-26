@@ -2,7 +2,8 @@
   "collectionName": "components_custom_always_in_season_sliders",
   "info": {
     "name": "alwaysInSeasonSlider",
-    "icon": "air-freshener"
+    "icon": "air-freshener",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -47,7 +48,7 @@
       "pluginOptions": {}
     },
     "leftVideo": {
-      "collection": "file",
+      "model": "file",
       "via": "related",
       "allowedTypes": [
         "videos"
@@ -85,6 +86,34 @@
       "plugin": "upload",
       "required": false,
       "pluginOptions": {}
+    },
+    "leftHeadline": {
+      "type": "string",
+      "maxLength": 35
+    },
+    "topRightHeadline": {
+      "type": "string",
+      "maxLength": 35
+    },
+    "bottomRightHeadline": {
+      "type": "string",
+      "maxLength": 35
+    },
+    "centerHeadline": {
+      "type": "string",
+      "maxLength": 35
+    },
+    "titleLine1": {
+      "type": "string",
+      "maxLength": 15
+    },
+    "titleLine2": {
+      "type": "string",
+      "maxLength": 15
+    },
+    "alwaysInSeasonDescription": {
+      "type": "richtext",
+      "maxLength": 120
     }
   }
 }

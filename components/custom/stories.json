@@ -10,17 +10,17 @@
     "leftStory": {
       "type": "component",
       "repeatable": false,
-      "component": "custom.basic-slider"
+      "component": "custom.story1"
     },
     "topStory": {
       "type": "component",
       "repeatable": false,
-      "component": "custom.basic-slider"
+      "component": "custom.story2"
     },
     "bottomStory": {
       "type": "component",
       "repeatable": false,
-      "component": "custom.basic-slider"
+      "component": "custom.story3"
     }
   }
 }

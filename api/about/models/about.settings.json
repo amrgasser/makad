@@ -33,7 +33,8 @@
       "type": "string"
     },
     "bannerLowerDescription": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "bannerLowerImg": {
       "model": "file",

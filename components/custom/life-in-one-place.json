@@ -9,17 +9,17 @@
   "attributes": {
     "card1": {
       "type": "component",
-      "repeatable": false,
+      "repeatable": true,
       "component": "custom.img-container"
     },
     "card2": {
       "type": "component",
-      "repeatable": false,
+      "repeatable": true,
       "component": "custom.img-container"
     },
     "card3": {
       "type": "component",
-      "repeatable": false,
+      "repeatable": true,
       "component": "custom.img-container"
     }
   }

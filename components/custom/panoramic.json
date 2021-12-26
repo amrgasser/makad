@@ -2,7 +2,8 @@
   "collectionName": "components_custom_panoramics",
   "info": {
     "name": "panoramic",
-    "icon": "book-open"
+    "icon": "book-open",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -19,7 +20,8 @@
       "pluginOptions": {}
     },
     "logoText": {
-      "type": "string"
+      "type": "string",
+      "maxLength": 30
     },
     "header": {
       "type": "string"

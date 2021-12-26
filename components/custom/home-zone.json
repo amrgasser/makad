@@ -7,9 +7,6 @@
   },
   "options": {},
   "attributes": {
-    "villas": {
-      "type": "integer"
-    },
     "Name": {
       "type": "string"
     },
@@ -17,32 +14,36 @@
       "type": "string"
     },
     "bottomDescription": {
-      "type": "string"
-    },
-    "appartments": {
-      "type": "integer"
+      "type": "string",
+      "maxLength": 200
     },
     "bannerImg": {
       "model": "file",
       "via": "related",
-      "allowedTypes": ["images", "files", "videos"],
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
       "plugin": "upload",
       "required": false,
       "pluginOptions": {}
     },
-    "bedrooms": {
-      "type": "string"
-    },
     "zoneLogo": {
       "model": "file",
       "via": "related",
-      "allowedTypes": ["images", "files", "videos"],
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
       "plugin": "upload",
       "required": false,
       "pluginOptions": {}
     },
     "description": {
-      "type": "string"
+      "type": "string",
+      "maxLength": 100
     },
     "completionDate": {
       "type": "date"
@@ -51,6 +52,24 @@
       "type": "string"
     },
     "startingPrice": {
+      "type": "string"
+    },
+    "firstFeature": {
+      "type": "string"
+    },
+    "firstFeatureFigure": {
+      "type": "string"
+    },
+    "secondFeature": {
+      "type": "string"
+    },
+    "secondFeatureFigure": {
+      "type": "string"
+    },
+    "thirdFeature": {
+      "type": "string"
+    },
+    "thirdFeatureFigure": {
       "type": "string"
     }
   }

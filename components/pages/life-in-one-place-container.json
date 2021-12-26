@@ -2,8 +2,25 @@
   "collectionName": "components_pages_life_in_one_place_containers",
   "info": {
     "name": "lifeInOnePlaceContainer",
-    "icon": "chess-board"
+    "icon": "chess-board",
+    "description": ""
   },
   "options": {},
-  "attributes": {}
+  "attributes": {
+    "title": {
+      "type": "string",
+      "maxLength": 20
+    },
+    "subTitle": {
+      "type": "string",
+      "maxLength": 15
+    },
+    "description": {
+      "type": "string",
+      "maxLength": 120
+    },
+    "link": {
+      "type": "string"
+    }
+  }
 }

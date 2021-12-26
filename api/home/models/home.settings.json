@@ -17,54 +17,6 @@
       "repeatable": false,
       "component": "custom.home-section1"
     },
-    "alwaysInSeasonTitle": {
-      "type": "string"
-    },
-    "alwaysInSeasonDescription": {
-      "type": "string"
-    },
-    "alwaysInSeasonSlider": {
-      "type": "dynamiczone",
-      "components": [
-        "custom.always-in-season-slider"
-      ]
-    },
-    "zonesHeader": {
-      "type": "string"
-    },
-    "zonesTitle2": {
-      "type": "string"
-    },
-    "zones": {
-      "type": "dynamiczone",
-      "components": [
-        "custom.home-zone"
-      ]
-    },
-    "lifeInOnePlaceTitle1": {
-      "type": "string"
-    },
-    "lifeInOnePlaceTitle2": {
-      "type": "string"
-    },
-    "lifeInOnePlaceDescription": {
-      "type": "string"
-    },
-    "lifeExploreLink": {
-      "type": "string"
-    },
-    "lifeInOnePlace": {
-      "type": "dynamiczone",
-      "components": [
-        "custom.life-in-one-place"
-      ]
-    },
-    "panoramicSection": {
-      "type": "dynamiczone",
-      "components": [
-        "custom.panoramic"
-      ]
-    },
     "stories": {
       "type": "component",
       "repeatable": true,
@@ -72,6 +24,31 @@
     },
     "mediaCenters": {
       "collection": "center"
+    },
+    "panoramicSection": {
+      "type": "component",
+      "repeatable": true,
+      "component": "custom.panoramic"
+    },
+    "zonesSection": {
+      "type": "component",
+      "repeatable": false,
+      "component": "pages.zones-section"
+    },
+    "alwaysSection": {
+      "type": "component",
+      "repeatable": false,
+      "component": "custom.always-in-season-section"
+    },
+    "Container": {
+      "type": "component",
+      "repeatable": false,
+      "component": "pages.life-in-one-place-container"
+    },
+    "LifeInOnePlaceSection": {
+      "type": "component",
+      "repeatable": true,
+      "component": "pages.life-in-one-place-sectionn"
     }
   }
 }
