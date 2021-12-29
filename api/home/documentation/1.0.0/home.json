@@ -799,13 +799,7 @@
                 "date": {
                   "type": "string"
                 },
-                "description": {
-                  "type": "string"
-                },
                 "slug": {
-                  "type": "string"
-                },
-                "homeImage": {
                   "type": "string"
                 },
                 "video": {
@@ -815,10 +809,20 @@
                   "type": "string",
                   "enum": [
                     "pressRelease",
-                    "news"
+                    "news",
+                    "awards"
                   ]
                 },
                 "bannerImg": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "body": {
+                  "type": "string"
+                },
+                "gallery": {
                   "type": "array",
                   "items": {
                     "type": "string"

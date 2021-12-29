@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/life-in-one-place",
+      "handler": "life-in-one-place.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/life-in-one-place",
+      "handler": "life-in-one-place.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/life-in-one-place",
+      "handler": "life-in-one-place.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

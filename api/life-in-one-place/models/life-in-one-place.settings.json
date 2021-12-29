@@ -1,9 +1,8 @@
 {
-  "kind": "collectionType",
-  "collectionName": "events",
+  "kind": "singleType",
+  "collectionName": "life_in_one_places",
   "info": {
-    "name": "Event",
-    "description": ""
+    "name": "Life In One Place"
   },
   "options": {
     "increments": true,
@@ -12,26 +11,16 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "title": {
+    "slug": {
       "type": "string"
     },
-    "slug": {
-      "type": "string",
-      "unique": true
+    "bannerTitleLine1": {
+      "type": "string"
+    },
+    "bannerTitleLine2": {
+      "type": "string"
     },
     "banner": {
-      "model": "file",
-      "via": "related",
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos"
-      ],
-      "plugin": "upload",
-      "required": false,
-      "pluginOptions": {}
-    },
-    "gallery": {
       "collection": "file",
       "via": "related",
       "allowedTypes": [
@@ -43,11 +32,16 @@
       "required": false,
       "pluginOptions": {}
     },
+    "header": {
+      "type": "string"
+    },
     "body": {
       "type": "richtext"
     },
-    "date": {
-      "type": "datetime"
+    "amenity": {
+      "type": "component",
+      "repeatable": true,
+      "component": "custom.amenity"
     }
   }
 }

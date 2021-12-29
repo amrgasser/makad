@@ -15,51 +15,14 @@
     "name": {
       "type": "string"
     },
-    "homeDescription": {
-      "type": "text"
-    },
-    "homeImg": {
-      "collection": "file",
-      "via": "related",
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos"
-      ],
-      "plugin": "upload",
-      "required": false,
-      "pluginOptions": {}
-    },
-    "homeVideo": {
-      "model": "file",
-      "via": "related",
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos"
-      ],
-      "plugin": "upload",
-      "required": false,
-      "pluginOptions": {}
-    },
     "slug": {
       "type": "string",
       "unique": true
     },
-    "activities": {
-      "type": "dynamiczone",
-      "components": [
-        "custom.check-sign"
-      ]
-    },
     "gallery": {
       "collection": "file",
       "via": "related",
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos"
-      ],
+      "allowedTypes": ["images", "files", "videos"],
       "plugin": "upload",
       "required": false,
       "pluginOptions": {}
@@ -67,26 +30,32 @@
     "experience": {
       "collection": "file",
       "via": "related",
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos"
-      ],
+      "allowedTypes": ["images", "videos"],
       "plugin": "upload",
       "required": false,
       "pluginOptions": {}
     },
-    "location": {
-      "model": "file",
-      "via": "related",
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos"
-      ],
-      "plugin": "upload",
-      "required": false,
-      "pluginOptions": {}
+    "activities": {
+      "type": "component",
+      "repeatable": true,
+      "component": "custom.check-sign"
+    },
+    "masterplan": {
+      "type": "component",
+      "repeatable": false,
+      "component": "custom.master-plan-section"
+    },
+    "bannerTitle": {
+      "type": "string"
+    },
+    "bannerTitleLine2": {
+      "type": "string"
+    },
+    "bodyHeader": {
+      "type": "string"
+    },
+    "body": {
+      "type": "richtext"
     }
   }
 }

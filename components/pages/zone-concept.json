@@ -1,25 +1,18 @@
 {
-  "kind": "collectionType",
-  "collectionName": "events",
+  "collectionName": "components_pages_zone_concepts",
   "info": {
-    "name": "Event",
-    "description": ""
+    "name": "zoneConcept",
+    "icon": "barcode"
   },
-  "options": {
-    "increments": true,
-    "timestamps": true,
-    "draftAndPublish": true
-  },
-  "pluginOptions": {},
+  "options": {},
   "attributes": {
-    "title": {
+    "titleLine1": {
       "type": "string"
     },
-    "slug": {
-      "type": "string",
-      "unique": true
+    "titleLine2": {
+      "type": "string"
     },
-    "banner": {
+    "smallImg": {
       "model": "file",
       "via": "related",
       "allowedTypes": [
@@ -31,8 +24,8 @@
       "required": false,
       "pluginOptions": {}
     },
-    "gallery": {
-      "collection": "file",
+    "largeImg": {
+      "model": "file",
       "via": "related",
       "allowedTypes": [
         "images",
@@ -42,12 +35,6 @@
       "plugin": "upload",
       "required": false,
       "pluginOptions": {}
-    },
-    "body": {
-      "type": "richtext"
-    },
-    "date": {
-      "type": "datetime"
     }
   }
 }

@@ -14,10 +14,6 @@
     "name": {
       "type": "string"
     },
-    "zone": {
-      "via": "unit_types",
-      "model": "zones"
-    },
     "units": {
       "via": "unit_type",
       "collection": "unit"

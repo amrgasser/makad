@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_custom_master_plan_sections",
+  "info": {
+    "name": "masterPlanSection",
+    "icon": "audio-description"
+  },
+  "options": {},
+  "attributes": {
+    "zoneName": {
+      "type": "string"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "description": {
+      "type": "string"
+    },
+    "xLocation": {
+      "type": "biginteger"
+    },
+    "yLocation": {
+      "type": "biginteger"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_pages_exterior_images",
+  "info": {
+    "name": "exteriorImages",
+    "icon": "atlas"
+  },
+  "options": {},
+  "attributes": {
+    "imageName": {
+      "type": "string"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    }
+  }
+}

@@ -544,13 +544,7 @@
                 "date": {
                   "type": "string"
                 },
-                "description": {
-                  "type": "string"
-                },
                 "slug": {
-                  "type": "string"
-                },
-                "homeImage": {
                   "type": "string"
                 },
                 "video": {
@@ -560,10 +554,20 @@
                   "type": "string",
                   "enum": [
                     "pressRelease",
-                    "news"
+                    "news",
+                    "awards"
                   ]
                 },
                 "bannerImg": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "body": {
+                  "type": "string"
+                },
+                "gallery": {
                   "type": "array",
                   "items": {
                     "type": "string"
@@ -640,12 +644,6 @@
                 "brochure": {
                   "type": "string"
                 },
-                "unit_types": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
                 "zoneBanner": {
                   "type": "string"
                 },
@@ -653,6 +651,24 @@
                   "type": "component"
                 },
                 "zoneUnitMap": {
+                  "type": "component"
+                },
+                "zoneConcept": {
+                  "type": "component"
+                },
+                "units": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "slug": {
+                  "type": "string"
+                },
+                "within_our_wall": {
+                  "type": "string"
+                },
+                "masterplan": {
                   "type": "component"
                 },
                 "published_at": {

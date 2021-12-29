@@ -2,7 +2,8 @@
   "collectionName": "components_custom_section2s",
   "info": {
     "name": "Section2",
-    "icon": "bars"
+    "icon": "bars",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -38,6 +39,15 @@
       "plugin": "upload",
       "required": false,
       "pluginOptions": {}
+    },
+    "btnLink": {
+      "type": "string"
+    },
+    "btnText": {
+      "type": "string"
+    },
+    "titleLine2": {
+      "type": "string"
     }
   }
 }

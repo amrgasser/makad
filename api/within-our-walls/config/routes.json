@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/within-our-walls",
+      "handler": "within-our-walls.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/within-our-walls/count",
+      "handler": "within-our-walls.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/within-our-walls/:id",
+      "handler": "within-our-walls.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/within-our-walls",
+      "handler": "within-our-walls.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/within-our-walls/:id",
+      "handler": "within-our-walls.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/within-our-walls/:id",
+      "handler": "within-our-walls.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -18,24 +18,9 @@
     "date": {
       "type": "date"
     },
-    "description": {
-      "type": "text"
-    },
     "slug": {
       "type": "string",
       "unique": true
-    },
-    "homeImage": {
-      "model": "file",
-      "via": "related",
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos"
-      ],
-      "plugin": "upload",
-      "required": false,
-      "pluginOptions": {}
     },
     "video": {
       "model": "file",
@@ -53,10 +38,26 @@
       "type": "enumeration",
       "enum": [
         "pressRelease",
-        "news"
+        "news",
+        "awards"
       ]
     },
     "bannerImg": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "body": {
+      "type": "richtext"
+    },
+    "gallery": {
       "collection": "file",
       "via": "related",
       "allowedTypes": [

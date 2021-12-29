@@ -311,6 +311,63 @@
         ],
         "parameters": []
       }
+    },
+    "/master-plan": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Home-at-makadi-heights"
+        ],
+        "parameters": []
+      }
     }
   },
   "components": {
@@ -541,6 +598,15 @@
                     "type": "string"
                   }
                 }
+              },
+              "btnLink": {
+                "type": "string"
+              },
+              "btnText": {
+                "type": "string"
+              },
+              "titleLine2": {
+                "type": "string"
               }
             }
           },
@@ -566,23 +632,8 @@
                     "name": {
                       "type": "string"
                     },
-                    "homeDescription": {
-                      "type": "string"
-                    },
-                    "homeImg": {
-                      "type": "array",
-                      "items": {
-                        "type": "string"
-                      }
-                    },
-                    "homeVideo": {
-                      "type": "string"
-                    },
                     "slug": {
                       "type": "string"
-                    },
-                    "activities": {
-                      "type": "dynamiczone"
                     },
                     "gallery": {
                       "type": "array",
@@ -596,7 +647,22 @@
                         "type": "string"
                       }
                     },
-                    "location": {
+                    "activities": {
+                      "type": "component"
+                    },
+                    "masterplan": {
+                      "type": "component"
+                    },
+                    "bannerTitle": {
+                      "type": "string"
+                    },
+                    "bannerTitleLine2": {
+                      "type": "string"
+                    },
+                    "bodyHeader": {
+                      "type": "string"
+                    },
+                    "body": {
                       "type": "string"
                     },
                     "published_at": {
@@ -633,12 +699,6 @@
                     "brochure": {
                       "type": "string"
                     },
-                    "unit_types": {
-                      "type": "array",
-                      "items": {
-                        "type": "string"
-                      }
-                    },
                     "zoneBanner": {
                       "type": "string"
                     },
@@ -646,6 +706,24 @@
                       "type": "component"
                     },
                     "zoneUnitMap": {
+                      "type": "component"
+                    },
+                    "zoneConcept": {
+                      "type": "component"
+                    },
+                    "units": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "slug": {
+                      "type": "string"
+                    },
+                    "within_our_wall": {
+                      "type": "string"
+                    },
+                    "masterplan": {
                       "type": "component"
                     },
                     "published_at": {
@@ -1115,6 +1193,15 @@
                     "type": "string"
                   }
                 }
+              },
+              "btnLink": {
+                "type": "string"
+              },
+              "btnText": {
+                "type": "string"
+              },
+              "titleLine2": {
+                "type": "string"
               }
             }
           },
@@ -1140,23 +1227,8 @@
                     "name": {
                       "type": "string"
                     },
-                    "homeDescription": {
-                      "type": "string"
-                    },
-                    "homeImg": {
-                      "type": "array",
-                      "items": {
-                        "type": "string"
-                      }
-                    },
-                    "homeVideo": {
-                      "type": "string"
-                    },
                     "slug": {
                       "type": "string"
-                    },
-                    "activities": {
-                      "type": "dynamiczone"
                     },
                     "gallery": {
                       "type": "array",
@@ -1170,7 +1242,22 @@
                         "type": "string"
                       }
                     },
-                    "location": {
+                    "activities": {
+                      "type": "component"
+                    },
+                    "masterplan": {
+                      "type": "component"
+                    },
+                    "bannerTitle": {
+                      "type": "string"
+                    },
+                    "bannerTitleLine2": {
+                      "type": "string"
+                    },
+                    "bodyHeader": {
+                      "type": "string"
+                    },
+                    "body": {
                       "type": "string"
                     },
                     "published_at": {
@@ -1207,12 +1294,6 @@
                     "brochure": {
                       "type": "string"
                     },
-                    "unit_types": {
-                      "type": "array",
-                      "items": {
-                        "type": "string"
-                      }
-                    },
                     "zoneBanner": {
                       "type": "string"
                     },
@@ -1220,6 +1301,24 @@
                       "type": "component"
                     },
                     "zoneUnitMap": {
+                      "type": "component"
+                    },
+                    "zoneConcept": {
+                      "type": "component"
+                    },
+                    "units": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "slug": {
+                      "type": "string"
+                    },
+                    "within_our_wall": {
+                      "type": "string"
+                    },
+                    "masterplan": {
                       "type": "component"
                     },
                     "published_at": {

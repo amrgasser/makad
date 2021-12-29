@@ -1,9 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "units",
+  "collectionName": "within_our_walls",
   "info": {
-    "name": "Unit",
-    "description": ""
+    "name": "WithinOurWalls"
   },
   "options": {
     "increments": true,
@@ -12,10 +11,16 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "unitName": {
+    "name": {
       "type": "string"
     },
-    "frontImg": {
+    "smallDescriptionn": {
+      "type": "string"
+    },
+    "longDescription": {
+      "type": "richtext"
+    },
+    "bannerImage": {
       "model": "file",
       "via": "related",
       "allowedTypes": [
@@ -27,28 +32,7 @@
       "required": false,
       "pluginOptions": {}
     },
-    "backImg": {
-      "model": "file",
-      "via": "related",
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos"
-      ],
-      "plugin": "upload",
-      "required": false,
-      "pluginOptions": {}
-    },
-    "beds": {
-      "type": "integer"
-    },
-    "bathrooms": {
-      "type": "integer"
-    },
-    "bua": {
-      "type": "integer"
-    },
-    "floorPlan": {
+    "gallery": {
       "collection": "file",
       "via": "related",
       "allowedTypes": [
@@ -60,36 +44,32 @@
       "required": false,
       "pluginOptions": {}
     },
-    "unit_type": {
-      "model": "unit-type",
-      "via": "units"
+    "logo": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
     },
-    "availableUnits": {
-      "type": "integer"
+    "phoneNumber1": {
+      "type": "string"
     },
-    "price": {
-      "type": "biginteger"
+    "phoneNumber2": {
+      "type": "string"
     },
-    "exteriorImages": {
-      "type": "component",
-      "repeatable": true,
-      "component": "pages.exterior-images"
-    },
-    "interiorImages": {
-      "type": "component",
-      "repeatable": true,
-      "component": "pages.exterior-images"
-    },
-    "propertySize": {
-      "type": "integer"
-    },
-    "terraces": {
-      "type": "integer"
-    },
-    "masterPlanSection": {
+    "masterplan": {
       "type": "component",
       "repeatable": false,
       "component": "custom.master-plan-section"
+    },
+    "zone": {
+      "via": "within_our_wall",
+      "model": "zones"
     }
   }
 }

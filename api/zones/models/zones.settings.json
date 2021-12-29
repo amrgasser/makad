@@ -51,10 +51,6 @@
       "required": false,
       "pluginOptions": {}
     },
-    "unit_types": {
-      "via": "zone",
-      "collection": "unit-type"
-    },
     "zoneBanner": {
       "model": "file",
       "via": "related",
@@ -76,6 +72,27 @@
       "type": "component",
       "repeatable": false,
       "component": "pages.image"
+    },
+    "zoneConcept": {
+      "type": "component",
+      "repeatable": true,
+      "component": "pages.zone-concept"
+    },
+    "units": {
+      "collection": "unit"
+    },
+    "slug": {
+      "type": "string",
+      "unique": true
+    },
+    "within_our_wall": {
+      "via": "zone",
+      "model": "within-our-walls"
+    },
+    "masterplan": {
+      "type": "component",
+      "repeatable": false,
+      "component": "custom.master-plan-section"
     }
   }
 }

@@ -538,52 +538,6 @@
           "name": {
             "type": "string"
           },
-          "zone": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "zoneName": {
-                "type": "string"
-              },
-              "homeImg": {
-                "type": "string"
-              },
-              "homeVideo": {
-                "type": "string"
-              },
-              "brochure": {
-                "type": "string"
-              },
-              "unit_types": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "zoneBanner": {
-                "type": "string"
-              },
-              "moodboard": {
-                "type": "component"
-              },
-              "zoneUnitMap": {
-                "type": "component"
-              },
-              "published_at": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
           "units": {
             "type": "array",
             "items": {
@@ -609,11 +563,14 @@
                 "bathrooms": {
                   "type": "integer"
                 },
-                "area": {
+                "bua": {
                   "type": "integer"
                 },
                 "floorPlan": {
-                  "type": "string"
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 },
                 "unit_type": {
                   "type": "string"
@@ -623,6 +580,21 @@
                 },
                 "price": {
                   "type": "integer"
+                },
+                "exteriorImages": {
+                  "type": "component"
+                },
+                "interiorImages": {
+                  "type": "component"
+                },
+                "propertySize": {
+                  "type": "integer"
+                },
+                "terraces": {
+                  "type": "integer"
+                },
+                "masterPlanSection": {
+                  "type": "component"
                 },
                 "published_at": {
                   "type": "string"
@@ -645,9 +617,6 @@
       "NewUnit-type": {
         "properties": {
           "name": {
-            "type": "string"
-          },
-          "zone": {
             "type": "string"
           },
           "units": {
