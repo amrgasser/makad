@@ -2,14 +2,16 @@
   "collectionName": "components_pages_zones_sections",
   "info": {
     "name": "zonesSection",
-    "icon": "arrow-circle-right"
+    "icon": "arrow-circle-right",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "zones": {
       "type": "component",
       "repeatable": true,
-      "component": "custom.home-zone"
+      "component": "custom.home-zone",
+      "max": 8
     },
     "title1": {
       "type": "string"

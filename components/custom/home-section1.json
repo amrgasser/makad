@@ -15,7 +15,8 @@
     "usp": {
       "type": "component",
       "repeatable": true,
-      "component": "custom.usps"
+      "component": "custom.usps",
+      "max": 3
     }
   }
 }

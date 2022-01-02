@@ -28,7 +28,8 @@
     "panoramicSection": {
       "type": "component",
       "repeatable": true,
-      "component": "custom.panoramic"
+      "component": "custom.panoramic",
+      "max": 6
     },
     "zonesSection": {
       "type": "component",
