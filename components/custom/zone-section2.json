@@ -1,0 +1,54 @@
+{
+  "collectionName": "components_custom_zone_section2s",
+  "info": {
+    "name": "zoneSection2",
+    "icon": "angry",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "thridFeatureFigure": {
+      "type": "string"
+    },
+    "body": {
+      "type": "text"
+    },
+    "secondFeature": {
+      "type": "string"
+    },
+    "secondFeatureFigure": {
+      "type": "string"
+    },
+    "firstFeature": {
+      "type": "string"
+    },
+    "firstFeatureFigure": {
+      "type": "string"
+    },
+    "thirdFeature": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "brochure": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "propertyType": {
+      "type": "string"
+    },
+    "startingPrice": {
+      "type": "string"
+    },
+    "completionDate": {
+      "type": "string"
+    }
+  }
+}

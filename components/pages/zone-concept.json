@@ -2,7 +2,8 @@
   "collectionName": "components_pages_zone_concepts",
   "info": {
     "name": "zoneConcept",
-    "icon": "barcode"
+    "icon": "barcode",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -35,6 +36,9 @@
       "plugin": "upload",
       "required": false,
       "pluginOptions": {}
+    },
+    "description": {
+      "type": "text"
     }
   }
 }

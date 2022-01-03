@@ -566,12 +566,6 @@
                 "bua": {
                   "type": "integer"
                 },
-                "floorPlan": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
                 "unit_type": {
                   "type": "string"
                 },
@@ -594,6 +588,9 @@
                   "type": "integer"
                 },
                 "masterPlanSection": {
+                  "type": "component"
+                },
+                "floorPlan": {
                   "type": "component"
                 },
                 "published_at": {

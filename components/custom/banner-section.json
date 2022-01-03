@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_custom_banner_sections",
+  "info": {
+    "name": "bannerSection",
+    "icon": "award"
+  },
+  "options": {},
+  "attributes": {
+    "bannerImage": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": ["images", "files", "videos"],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "logoImg": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": ["images", "files", "videos"],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "bannerTitleLine1": {
+      "type": "string"
+    },
+    "banneTitleLine2": {
+      "type": "string"
+    }
+  }
+}

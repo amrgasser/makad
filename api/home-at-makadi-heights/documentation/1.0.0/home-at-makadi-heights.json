@@ -690,18 +690,6 @@
                     "zoneName": {
                       "type": "string"
                     },
-                    "homeImg": {
-                      "type": "string"
-                    },
-                    "homeVideo": {
-                      "type": "string"
-                    },
-                    "brochure": {
-                      "type": "string"
-                    },
-                    "zoneBanner": {
-                      "type": "string"
-                    },
                     "moodboard": {
                       "type": "component"
                     },
@@ -724,6 +712,15 @@
                       "type": "string"
                     },
                     "masterplan": {
+                      "type": "component"
+                    },
+                    "bannerSection": {
+                      "type": "component"
+                    },
+                    "zoneSection2": {
+                      "type": "component"
+                    },
+                    "amenitiesSection": {
                       "type": "component"
                     },
                     "published_at": {
@@ -1285,18 +1282,6 @@
                     "zoneName": {
                       "type": "string"
                     },
-                    "homeImg": {
-                      "type": "string"
-                    },
-                    "homeVideo": {
-                      "type": "string"
-                    },
-                    "brochure": {
-                      "type": "string"
-                    },
-                    "zoneBanner": {
-                      "type": "string"
-                    },
                     "moodboard": {
                       "type": "component"
                     },
@@ -1319,6 +1304,15 @@
                       "type": "string"
                     },
                     "masterplan": {
+                      "type": "component"
+                    },
+                    "bannerSection": {
+                      "type": "component"
+                    },
+                    "zoneSection2": {
+                      "type": "component"
+                    },
+                    "amenitiesSection": {
                       "type": "component"
                     },
                     "published_at": {

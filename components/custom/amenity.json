@@ -2,7 +2,8 @@
   "collectionName": "components_custom_amenities",
   "info": {
     "name": "amenity",
-    "icon": "angle-up"
+    "icon": "angle-up",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -23,9 +24,6 @@
       "plugin": "upload",
       "required": false,
       "pluginOptions": {}
-    },
-    "btnLink": {
-      "type": "string"
     }
   }
 }

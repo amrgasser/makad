@@ -48,18 +48,6 @@
     "bua": {
       "type": "integer"
     },
-    "floorPlan": {
-      "collection": "file",
-      "via": "related",
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos"
-      ],
-      "plugin": "upload",
-      "required": false,
-      "pluginOptions": {}
-    },
     "unit_type": {
       "model": "unit-type",
       "via": "units"
@@ -90,6 +78,11 @@
       "type": "component",
       "repeatable": false,
       "component": "custom.master-plan-section"
+    },
+    "floorPlan": {
+      "type": "component",
+      "repeatable": true,
+      "component": "pages.exterior-images"
     }
   }
 }

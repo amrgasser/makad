@@ -2,7 +2,8 @@
   "kind": "singleType",
   "collectionName": "life_in_one_places",
   "info": {
-    "name": "Life In One Place"
+    "name": "Life In One Place",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -21,7 +22,7 @@
       "type": "string"
     },
     "banner": {
-      "collection": "file",
+      "model": "file",
       "via": "related",
       "allowedTypes": [
         "images",
@@ -41,7 +42,8 @@
     "amenity": {
       "type": "component",
       "repeatable": true,
-      "component": "custom.amenity"
+      "component": "custom.amenity",
+      "max": 6
     }
   }
 }

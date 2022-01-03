@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_pages_amenities_sections",
+  "info": {
+    "name": "amenitiesSection",
+    "icon": "beer"
+  },
+  "options": {},
+  "attributes": {
+    "amenities": {
+      "type": "component",
+      "repeatable": true,
+      "component": "custom.amenity",
+      "max": 6
+    }
+  }
+}
