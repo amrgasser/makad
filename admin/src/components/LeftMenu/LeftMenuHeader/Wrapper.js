@@ -6,7 +6,7 @@ import Logo from '../../../assets/images/logo-strapi.png';
 const Wrapper = styled.div`
   background-color: ${(props) =>
     props.theme.main.colors.leftMenu['background-header-link']};
-  padding-left: 2rem;
+  // padding-left: 2rem;
   height: ${props => props.theme.main.sizes.leftMenu.height};
 
   .leftMenuHeaderLink {
@@ -25,7 +25,7 @@ const Wrapper = styled.div`
 
     background-image: url(${Logo});
     background-repeat: no-repeat;
-    background-position: left center;
+    background-position: center;
     background-size: auto 2.5rem;
   }
 `;

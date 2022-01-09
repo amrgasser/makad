@@ -12,6 +12,7 @@
   "devDependencies": {},
   "dependencies": {
     "cloudinary": "^1.27.1",
+    "html-entities": "^2.3.2",
     "knex": "0.21.18",
     "mysql": "2.18.1",
     "pg": "^8.7.1",

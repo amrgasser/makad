@@ -6,7 +6,7 @@ import Wrapper from './Wrapper';
 const LeftMenuHeader = () => (
   <Wrapper>
     <Link to="/" className="leftMenuHeaderLink">
-      <span className="projectName" />
+      <span className="projectName" style={{ marginRight: '0px' }} />
     </Link>
   </Wrapper>
 );

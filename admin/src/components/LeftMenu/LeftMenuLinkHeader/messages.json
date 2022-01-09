@@ -38,5 +38,29 @@
   "home": {
     "id": "app.components.LeftMenuLinkContainer.home",
     "defaultMessage": "Home"
+  },
+  "event": {
+    "id": "app.components.LeftMenuLinkContainer.event",
+    "defaultMessage": "Events"
+  },
+  "makadi": {
+    "id": "app.components.LeftMenuLinkContainer.makadi",
+    "defaultMessage": "Home at Makadi"
+  },
+  "life": {
+    "id": "app.components.LeftMenuLinkContainer.life",
+    "defaultMessage": "Life in One Place"
+  },
+  "about": {
+    "id": "app.components.LeftMenuLinkContainer.about",
+    "defaultMessage": "About"
+  },
+  "media": {
+    "id": "app.components.LeftMenuLinkContainer.media",
+    "defaultMessage": "Media Center"
+  },
+  "walls": {
+    "id": "app.components.LeftMenuLinkContainer.walls",
+    "defaultMessage": "Within Our Walls"
   }
 }
