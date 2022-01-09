@@ -68,6 +68,11 @@
       "plugin": "upload",
       "required": false,
       "pluginOptions": {}
+    },
+    "eventOuterSection": {
+      "type": "component",
+      "repeatable": false,
+      "component": "pages.media-outer-section"
     }
   }
 }

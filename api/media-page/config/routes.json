@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/media-page",
+      "handler": "media-page.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/media-page",
+      "handler": "media-page.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/media-page",
+      "handler": "media-page.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

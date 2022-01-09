@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_pages_life_place_news",
+  "info": {
+    "name": "lifePlaceNew",
+    "icon": "bread-slice",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "slider": {
+      "type": "component",
+      "repeatable": true,
+      "component": "custom.slider"
+    },
+    "titleLine1": {
+      "type": "string"
+    },
+    "titleLine2": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "btnLink": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    }
+  }
+}

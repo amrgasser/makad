@@ -1,0 +1,39 @@
+{
+  "kind": "singleType",
+  "collectionName": "event_pages",
+  "info": {
+    "name": "Event Page"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "bannerImg": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "titleLine1": {
+      "type": "string"
+    },
+    "titleLine2": {
+      "type": "string"
+    },
+    "upcoming": {
+      "collection": "event"
+    },
+    "latest": {
+      "collection": "event"
+    }
+  }
+}

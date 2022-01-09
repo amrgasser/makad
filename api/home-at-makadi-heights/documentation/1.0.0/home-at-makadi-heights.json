@@ -923,6 +923,9 @@
                 },
                 "thirdFeatureFigure": {
                   "type": "string"
+                },
+                "descriptionLine2": {
+                  "type": "string"
                 }
               }
             }
@@ -1514,6 +1517,9 @@
                   "type": "string"
                 },
                 "thirdFeatureFigure": {
+                  "type": "string"
+                },
+                "descriptionLine2": {
                   "type": "string"
                 }
               }

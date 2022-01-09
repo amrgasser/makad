@@ -21,6 +21,18 @@
       "type": "component",
       "repeatable": false,
       "component": "custom.liop-card3"
+    },
+    "title": {
+      "type": "string"
+    },
+    "title2": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "btnLink": {
+      "type": "string"
     }
   }
 }

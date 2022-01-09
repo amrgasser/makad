@@ -573,6 +573,9 @@
                     "type": "string"
                   }
                 },
+                "eventOuterSection": {
+                  "type": "component"
+                },
                 "published_at": {
                   "type": "string"
                 },

@@ -1,23 +1,18 @@
 {
-  "collectionName": "components_custom_home_zones",
+  "collectionName": "components_custom_sliders",
   "info": {
-    "name": "homeZone",
-    "icon": "align-left",
-    "description": ""
+    "name": "slider",
+    "icon": "angle-right"
   },
   "options": {},
   "attributes": {
-    "Name": {
+    "card3Title": {
       "type": "string"
     },
-    "exploreLink": {
+    "card2Title": {
       "type": "string"
     },
-    "bottomDescription": {
-      "type": "string",
-      "maxLength": 200
-    },
-    "bannerImg": {
+    "image1": {
       "model": "file",
       "via": "related",
       "allowedTypes": [
@@ -29,7 +24,7 @@
       "required": false,
       "pluginOptions": {}
     },
-    "zoneLogo": {
+    "image2": {
       "model": "file",
       "via": "related",
       "allowedTypes": [
@@ -41,38 +36,37 @@
       "required": false,
       "pluginOptions": {}
     },
-    "description": {
-      "type": "string",
-      "maxLength": 100
-    },
-    "completionDate": {
-      "type": "date"
-    },
-    "propertyTypes": {
+    "card1Title": {
       "type": "string"
     },
-    "startingPrice": {
+    "image3": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "card3Description": {
       "type": "string"
     },
-    "firstFeature": {
+    "card2Description": {
       "type": "string"
     },
-    "firstFeatureFigure": {
+    "card1Description": {
       "type": "string"
     },
-    "secondFeature": {
+    "btnLink1": {
       "type": "string"
     },
-    "secondFeatureFigure": {
+    "btnLink2": {
       "type": "string"
     },
-    "thirdFeature": {
-      "type": "string"
-    },
-    "thirdFeatureFigure": {
-      "type": "string"
-    },
-    "descriptionLine2": {
+    "btnLink3": {
       "type": "string"
     }
   }

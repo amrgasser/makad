@@ -101,9 +101,8 @@ const LeftMenu = ({ shouldUpdateStrapi, version, plugins, setUpdateMenu }) => {
             searchable={false}
           />
         )}
-
       </LinksContainer>
-      <LeftMenuFooter key="footer" version={version} />
+      {/* <LeftMenuFooter key="footer" version={version} /> */}
     </Wrapper>
   );
 };

@@ -48,6 +48,17 @@
     },
     "date": {
       "type": "datetime"
+    },
+    "eventOuterSection": {
+      "type": "component",
+      "repeatable": false,
+      "component": "pages.media-outer-section"
+    },
+    "bannerHeadline": {
+      "type": "string"
+    },
+    "bannerSubheadline": {
+      "type": "string"
     }
   }
 }
