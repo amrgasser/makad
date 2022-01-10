@@ -941,7 +941,7 @@
                 "id": {
                   "type": "string"
                 },
-                "Title": {
+                "titleLine1": {
                   "type": "string"
                 },
                 "tabs": {
@@ -1030,6 +1030,9 @@
                       }
                     }
                   }
+                },
+                "titleLine2": {
+                  "type": "string"
                 }
               }
             }
@@ -1536,7 +1539,7 @@
                 "id": {
                   "type": "string"
                 },
-                "Title": {
+                "titleLine1": {
                   "type": "string"
                 },
                 "tabs": {
@@ -1625,6 +1628,9 @@
                       }
                     }
                   }
+                },
+                "titleLine2": {
+                  "type": "string"
                 }
               }
             }

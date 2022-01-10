@@ -1,0 +1,39 @@
+{
+  "collectionName": "components_pages_message_sections",
+  "info": {
+    "name": "messageSection",
+    "icon": "apple-alt"
+  },
+  "options": {},
+  "attributes": {
+    "headline": {
+      "type": "string"
+    },
+    "subheadline": {
+      "type": "string"
+    },
+    "messageBody": {
+      "type": "text"
+    },
+    "posterImage": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "video": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    }
+  }
+}

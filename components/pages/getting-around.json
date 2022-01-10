@@ -7,13 +7,16 @@
   },
   "options": {},
   "attributes": {
-    "Title": {
+    "titleLine1": {
       "type": "string"
     },
     "tabs": {
       "type": "component",
       "repeatable": true,
       "component": "pages.about-partners"
+    },
+    "titleLine2": {
+      "type": "string"
     }
   }
 }

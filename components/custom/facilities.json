@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_custom_facilities",
+  "info": {
+    "name": "facilities",
+    "icon": "arrow-circle-down"
+  },
+  "options": {},
+  "attributes": {
+    "titleLine1": {
+      "type": "string"
+    },
+    "titleLine2": {
+      "type": "string"
+    },
+    "facilitySlider": {
+      "type": "component",
+      "repeatable": true,
+      "component": "custom.facility-slider"
+    }
+  }
+}

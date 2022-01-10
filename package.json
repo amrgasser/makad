@@ -26,7 +26,6 @@
     "strapi-plugin-email": "3.6.8",
     "strapi-plugin-graphql": "^3.6.8",
     "strapi-plugin-i18n": "3.6.8",
-    "strapi-plugin-navigation": "^1.1.2",
     "strapi-plugin-upload": "3.6.8",
     "strapi-plugin-users-permissions": "3.6.8",
     "strapi-provider-upload-cloudinary": "^3.6.8",

@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_custom_getting_around_items",
+  "info": {
+    "name": "gettingAroundItems",
+    "icon": "arrow-alt-circle-left"
+  },
+  "options": {},
+  "attributes": {
+    "minutes": {
+      "type": "integer"
+    },
+    "location": {
+      "type": "string"
+    },
+    "locationImage": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    }
+  }
+}

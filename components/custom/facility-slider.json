@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_custom_facility_sliders",
+  "info": {
+    "name": "facilitySlider",
+    "icon": "arrow-down"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "btnText": {
+      "type": "string"
+    },
+    "btnLink": {
+      "type": "string"
+    }
+  }
+}

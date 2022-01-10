@@ -1,0 +1,40 @@
+{
+  "collectionName": "components_custom_getting_around_distances",
+  "info": {
+    "name": "gettingAroundDistance",
+    "icon": "band-aid",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "titleLine1": {
+      "type": "string"
+    },
+    "titleLine2": {
+      "type": "string"
+    },
+    "headlineDescription": {
+      "type": "string"
+    },
+    "bottomDescription": {
+      "type": "text"
+    },
+    "makadiImage": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "gettingAroundItems": {
+      "type": "component",
+      "repeatable": true,
+      "component": "custom.getting-around-items"
+    }
+  }
+}

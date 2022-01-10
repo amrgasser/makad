@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_custom_partners_sections",
+  "info": {
+    "name": "PartnersSection",
+    "icon": "arrow-alt-circle-right"
+  },
+  "options": {},
+  "attributes": {
+    "partners": {
+      "type": "component",
+      "repeatable": true,
+      "component": "custom.partner"
+    },
+    "titleLine1": {
+      "type": "string"
+    },
+    "titleLine2": {
+      "type": "string"
+    }
+  }
+}

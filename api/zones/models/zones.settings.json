@@ -31,7 +31,9 @@
       "component": "pages.zone-concept"
     },
     "units": {
-      "collection": "unit"
+      "collection": "unit",
+      "via": "zones",
+      "dominant": true
     },
     "slug": {
       "type": "string",

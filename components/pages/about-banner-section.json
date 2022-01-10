@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_pages_about_banner_sections",
+  "info": {
+    "name": "aboutBannerSection",
+    "icon": "ankh"
+  },
+  "options": {},
+  "attributes": {
+    "bannerImage": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "bannerHeadline": {
+      "type": "string"
+    },
+    "bannerSubheadline": {
+      "type": "string"
+    }
+  }
+}

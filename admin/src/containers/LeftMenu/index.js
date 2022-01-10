@@ -35,15 +35,18 @@ const LeftMenu = ({ shouldUpdateStrapi, version, plugins, setUpdateMenu }) => {
   const makadilink = singleTypesSectionLinks.filter(({ label, isDisplayed }) => label === "Home At Makadi Heights" && isDisplayed)
   const lifelink = singleTypesSectionLinks.filter(({ label, isDisplayed }) => label === "Life In One Place" && isDisplayed)
   const medialink = singleTypesSectionLinks.filter(({ label, isDisplayed }) => label === "Media Page" && isDisplayed)
+  const eventlink = singleTypesSectionLinks.filter(({ label, isDisplayed }) => label === "Event Page" && isDisplayed)
 
   const wallslink = filteredCollectionTypeLinks.filter(({ label, isDisplayed }) => label === "WithinOurWalls" && isDisplayed)
   const makadilinks = filteredCollectionTypeLinks.filter(({ label, isDisplayed }) => (label === "Zones" || label === "Units" || label === "Unit Types") && isDisplayed)
   const lifelinks = filteredCollectionTypeLinks.filter(({ label, isDisplayed }) => label === "Amenities" && isDisplayed)
   const medialinks = filteredCollectionTypeLinks.filter(({ label, isDisplayed }) => label === "Centers" && isDisplayed)
+  const eventslinks = filteredCollectionTypeLinks.filter(({ label, isDisplayed }) => label === "Events" && isDisplayed)
 
   makadilinks.unshift(makadilink[0])
   lifelinks.unshift(lifelink[0])
   medialinks.unshift(medialink[0])
+  eventslinks.unshift(eventlink[0])
   // This effect is really temporary until we create the menu api
   // We need this because we need to regenerate the links when the settings are being changed
   // in the content manager configurations list
@@ -52,7 +55,6 @@ const LeftMenu = ({ shouldUpdateStrapi, version, plugins, setUpdateMenu }) => {
       toggleLoading();
       generateMenu();
     });
-
   }, []);
 
   useEffect(() => {
@@ -90,15 +92,6 @@ const LeftMenu = ({ shouldUpdateStrapi, version, plugins, setUpdateMenu }) => {
             location={location}
             searchable={false}
             emptyLinksListMessage="app.components.LeftMenuLinkContainer.noPluginsInstalled"
-          />
-        )}
-        {generalSectionLinks.length > 0 && (
-          <LeftMenuLinksSection
-            section="general"
-            name="general"
-            links={generalSectionLinks}
-            location={location}
-            searchable={false}
           />
         )} */}
         {homelinks.length > 0 && (
@@ -139,8 +132,8 @@ const LeftMenu = ({ shouldUpdateStrapi, version, plugins, setUpdateMenu }) => {
         )}
         {homelinks.length > 0 && (
           <LeftMenuLinksSection
-            section="event"
-            name="event"
+            section="media"
+            name="media"
             links={medialinks}
             location={location}
             searchable={false}
@@ -151,6 +144,24 @@ const LeftMenu = ({ shouldUpdateStrapi, version, plugins, setUpdateMenu }) => {
             section="walls"
             name="walls"
             links={wallslink}
+            location={location}
+            searchable={false}
+          />
+        )}
+        {homelinks.length > 0 && (
+          <LeftMenuLinksSection
+            section="event"
+            name="event"
+            links={eventslinks}
+            location={location}
+            searchable={false}
+          />
+        )}
+        {generalSectionLinks.length > 0 && (
+          <LeftMenuLinksSection
+            section="general"
+            name="general"
+            links={generalSectionLinks}
             location={location}
             searchable={false}
           />

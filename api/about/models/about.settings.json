@@ -12,72 +12,35 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "title": {
-      "type": "string",
-      "maxLength": 100
-    },
-    "bannerImg": {
-      "model": "file",
-      "via": "related",
-      "allowedTypes": [
-        "images"
-      ],
-      "plugin": "upload",
-      "required": false,
-      "pluginOptions": {}
-    },
-    "bannerLowerTitle": {
-      "type": "string"
-    },
-    "bannerLowerSubtitle": {
-      "type": "string"
-    },
-    "bannerLowerDescription": {
-      "type": "string",
-      "required": true
-    },
-    "bannerLowerImg": {
-      "model": "file",
-      "via": "related",
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos"
-      ],
-      "plugin": "upload",
-      "required": false,
-      "pluginOptions": {}
-    },
-    "lifestyleTitle1": {
-      "type": "string"
-    },
-    "lifestyleTitle2": {
-      "type": "string"
-    },
-    "aboutLifestyle": {
-      "type": "component",
-      "repeatable": true,
-      "component": "custom.about-lifestyle"
-    },
-    "DiscoverAbout": {
+    "aboutBannerSection": {
       "type": "component",
       "repeatable": false,
-      "component": "pages.discover-about"
+      "component": "pages.about-banner-section"
     },
-    "Partners": {
+    "messageSection": {
       "type": "component",
       "repeatable": false,
-      "component": "pages.partners"
+      "component": "pages.message-section"
     },
-    "GettingAround": {
+    "gettingAround": {
       "type": "component",
       "repeatable": false,
       "component": "pages.getting-around"
     },
-    "Chairman": {
+    "PartnersSection": {
       "type": "component",
       "repeatable": false,
-      "component": "custom.chairman"
+      "component": "custom.partners-section"
+    },
+    "facilities": {
+      "type": "component",
+      "repeatable": false,
+      "component": "custom.facilities"
+    },
+    "gettingAroundDistance": {
+      "type": "component",
+      "repeatable": false,
+      "component": "custom.getting-around-distance"
     }
   }
 }
