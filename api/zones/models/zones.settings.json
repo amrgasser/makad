@@ -15,11 +15,6 @@
     "zoneName": {
       "type": "string"
     },
-    "moodboard": {
-      "type": "component",
-      "repeatable": true,
-      "component": "pages.image"
-    },
     "zoneUnitMap": {
       "type": "component",
       "repeatable": false,
@@ -39,9 +34,8 @@
       "type": "string",
       "unique": true
     },
-    "within_our_wall": {
-      "via": "zone",
-      "model": "within-our-walls"
+    "within_our_walls": {
+      "collection": "within-our-walls"
     },
     "masterplan": {
       "type": "component",
@@ -62,6 +56,10 @@
       "type": "component",
       "repeatable": false,
       "component": "pages.amenities-section"
+    },
+    "directories": {
+      "collection": "within-our-walls",
+      "via": "zone"
     }
   }
 }

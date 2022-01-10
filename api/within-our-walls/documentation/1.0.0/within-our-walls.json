@@ -844,61 +844,6 @@
               }
             }
           },
-          "zone": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "zoneName": {
-                "type": "string"
-              },
-              "moodboard": {
-                "type": "component"
-              },
-              "zoneUnitMap": {
-                "type": "component"
-              },
-              "zoneConcept": {
-                "type": "component"
-              },
-              "units": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "slug": {
-                "type": "string"
-              },
-              "within_our_wall": {
-                "type": "string"
-              },
-              "masterplan": {
-                "type": "component"
-              },
-              "bannerSection": {
-                "type": "component"
-              },
-              "zoneSection2": {
-                "type": "component"
-              },
-              "amenitiesSection": {
-                "type": "component"
-              },
-              "published_at": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
           "categories": {
             "type": "array",
             "items": {
@@ -927,6 +872,67 @@
                 "updated_by": {
                   "type": "string"
                 }
+              }
+            }
+          },
+          "zone": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "zoneName": {
+                "type": "string"
+              },
+              "zoneUnitMap": {
+                "type": "component"
+              },
+              "zoneConcept": {
+                "type": "component"
+              },
+              "units": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "slug": {
+                "type": "string"
+              },
+              "within_our_walls": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "masterplan": {
+                "type": "component"
+              },
+              "bannerSection": {
+                "type": "component"
+              },
+              "zoneSection2": {
+                "type": "component"
+              },
+              "amenitiesSection": {
+                "type": "component"
+              },
+              "directories": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
               }
             }
           },
@@ -1043,14 +1049,14 @@
               }
             }
           },
-          "zone": {
-            "type": "string"
-          },
           "categories": {
             "type": "array",
             "items": {
               "type": "string"
             }
+          },
+          "zone": {
+            "type": "string"
           },
           "published_at": {
             "type": "string",

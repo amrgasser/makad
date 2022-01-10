@@ -44,7 +44,7 @@ const LeftMenuLinksSection = ({
               // eslint-disable-next-line react/no-array-index-key
               key={index}
               iconName={link.icon}
-              label={link.label}
+              label={section === 'walls' ? 'Our Directory' : link.label}
               destination={link.destination}
               notificationsCount={link.notificationsCount || 0}
               search={link.search}

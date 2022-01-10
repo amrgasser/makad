@@ -68,14 +68,14 @@
       "repeatable": false,
       "component": "custom.master-plan-section"
     },
-    "zone": {
-      "via": "within_our_wall",
-      "model": "zones"
-    },
     "categories": {
       "collection": "category",
       "via": "within_our_walls",
       "dominant": true
+    },
+    "zone": {
+      "via": "directories",
+      "model": "zones"
     }
   }
 }

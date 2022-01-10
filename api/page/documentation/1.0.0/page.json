@@ -638,9 +638,6 @@
                 "zoneName": {
                   "type": "string"
                 },
-                "moodboard": {
-                  "type": "component"
-                },
                 "zoneUnitMap": {
                   "type": "component"
                 },
@@ -656,8 +653,11 @@
                 "slug": {
                   "type": "string"
                 },
-                "within_our_wall": {
-                  "type": "string"
+                "within_our_walls": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 },
                 "masterplan": {
                   "type": "component"
@@ -670,6 +670,12 @@
                 },
                 "amenitiesSection": {
                   "type": "component"
+                },
+                "directories": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 },
                 "published_at": {
                   "type": "string"
