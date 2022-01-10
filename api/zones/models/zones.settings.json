@@ -27,7 +27,7 @@
     },
     "zoneConcept": {
       "type": "component",
-      "repeatable": true,
+      "repeatable": false,
       "component": "pages.zone-concept"
     },
     "units": {

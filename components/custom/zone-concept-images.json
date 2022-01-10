@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_custom_zone_concept_images",
+  "info": {
+    "name": "zoneConceptImages",
+    "icon": "arrows-alt-h"
+  },
+  "options": {},
+  "attributes": {
+    "smallImg": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "largeImg": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    }
+  }
+}

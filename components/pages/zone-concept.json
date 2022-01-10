@@ -13,32 +13,13 @@
     "titleLine2": {
       "type": "string"
     },
-    "smallImg": {
-      "model": "file",
-      "via": "related",
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos"
-      ],
-      "plugin": "upload",
-      "required": false,
-      "pluginOptions": {}
-    },
-    "largeImg": {
-      "model": "file",
-      "via": "related",
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos"
-      ],
-      "plugin": "upload",
-      "required": false,
-      "pluginOptions": {}
-    },
     "description": {
       "type": "text"
+    },
+    "zoneConceptImages": {
+      "type": "component",
+      "repeatable": true,
+      "component": "custom.zone-concept-images"
     }
   }
 }

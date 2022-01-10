@@ -41,16 +41,6 @@
       "repeatable": false,
       "component": "custom.always-in-season-section"
     },
-    "Container": {
-      "type": "component",
-      "repeatable": false,
-      "component": "pages.life-in-one-place-container"
-    },
-    "LifeInOnePlaceSection": {
-      "type": "component",
-      "repeatable": true,
-      "component": "pages.life-in-one-place-sectionn"
-    },
     "lifePlaceNew": {
       "type": "component",
       "repeatable": false,

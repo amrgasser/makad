@@ -12,18 +12,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "banner": {
-      "model": "file",
-      "via": "related",
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos"
-      ],
-      "plugin": "upload",
-      "required": false,
-      "pluginOptions": {}
-    },
     "Section2": {
       "type": "component",
       "repeatable": false,
@@ -43,6 +31,11 @@
       "type": "component",
       "repeatable": true,
       "component": "pages.getting-around"
+    },
+    "bannerSection": {
+      "type": "component",
+      "repeatable": false,
+      "component": "pages.about-banner-section"
     }
   }
 }
