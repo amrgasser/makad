@@ -16,10 +16,7 @@
       "type": "string"
     },
     "smallDescriptionn": {
-      "type": "string"
-    },
-    "longDescription": {
-      "type": "richtext"
+      "type": "text"
     },
     "bannerImage": {
       "model": "file",

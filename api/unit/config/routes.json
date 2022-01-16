@@ -10,6 +10,14 @@
     },
     {
       "method": "GET",
+      "path": "/units/search/:searchString",
+      "handler": "unit.search",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
       "path": "/units/count",
       "handler": "unit.count",
       "config": {

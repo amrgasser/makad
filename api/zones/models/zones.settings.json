@@ -58,8 +58,8 @@
       "component": "pages.amenities-section"
     },
     "directories": {
-      "collection": "within-our-walls",
-      "via": "zone"
+      "via": "zone",
+      "collection": "within-our-walls"
     }
   }
 }

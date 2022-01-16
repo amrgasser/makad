@@ -866,9 +866,6 @@
                 "smallDescriptionn": {
                   "type": "string"
                 },
-                "longDescription": {
-                  "type": "string"
-                },
                 "bannerImage": {
                   "type": "string"
                 },
@@ -1376,9 +1373,6 @@
                   "type": "string"
                 },
                 "smallDescriptionn": {
-                  "type": "string"
-                },
-                "longDescription": {
                   "type": "string"
                 },
                 "bannerImage": {

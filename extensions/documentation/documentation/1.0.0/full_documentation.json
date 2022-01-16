@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "01/10/2022 3:43:33 PM"
+    "x-generation-date": "01/11/2022 2:30:17 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -6011,6 +6011,74 @@
         }
       }
     },
+    "/units/search/{searchString}": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Unit"
+        ],
+        "parameters": [
+          {
+            "name": "searchString",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
     "/units/count": {
       "get": {
         "deprecated": false,
@@ -11475,9 +11543,6 @@
                   "type": "string"
                 },
                 "smallDescriptionn": {
-                  "type": "string"
-                },
-                "longDescription": {
                   "type": "string"
                 },
                 "bannerImage": {
@@ -20875,9 +20940,6 @@
           "smallDescriptionn": {
             "type": "string"
           },
-          "longDescription": {
-            "type": "string"
-          },
           "bannerImage": {
             "required": [
               "id",
@@ -21282,9 +21344,6 @@
             "type": "string"
           },
           "smallDescriptionn": {
-            "type": "string"
-          },
-          "longDescription": {
             "type": "string"
           },
           "phoneNumber1": {
@@ -21754,9 +21813,6 @@
                   "type": "string"
                 },
                 "smallDescriptionn": {
-                  "type": "string"
-                },
-                "longDescription": {
                   "type": "string"
                 },
                 "bannerImage": {
@@ -22266,9 +22322,6 @@
                   "type": "string"
                 },
                 "smallDescriptionn": {
-                  "type": "string"
-                },
-                "longDescription": {
                   "type": "string"
                 },
                 "bannerImage": {

@@ -541,9 +541,6 @@
           "smallDescriptionn": {
             "type": "string"
           },
-          "longDescription": {
-            "type": "string"
-          },
           "bannerImage": {
             "required": [
               "id",
@@ -948,9 +945,6 @@
             "type": "string"
           },
           "smallDescriptionn": {
-            "type": "string"
-          },
-          "longDescription": {
             "type": "string"
           },
           "phoneNumber1": {
