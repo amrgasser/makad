@@ -9,7 +9,7 @@ module.exports = ({ env }) => ({
         port: env.int('DATABASE_PORT', 5432),
         database: env('DATABASE_NAME', 'makadi-heights'),
         username: env('DATABASE_USERNAME', 'beyondcreation'),
-        password: env('DATABASE_PASSWORD', 'Bcreation#1'),
+        password: env('DATABASE_PASSWORD', ''),
       },
       options: {
         ssl: false,
