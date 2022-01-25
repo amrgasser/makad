@@ -4,15 +4,16 @@ module.exports = ({ env }) => ({
     default: {
       connector: 'bookshelf',
       settings: {
-        client: 'mysql',
+        client: 'postgres',
         host: env('DATABASE_HOST', '127.0.0.1'),
-        port: env.int('DATABASE_PORT', 8889),
-        database: env('DATABASE_NAME', 'makadi'),
-        username: env('DATABASE_USERNAME', 'root'),
-        password: env('DATABASE_PASSWORD', 'root'),
-        ssl: env.bool('DATABASE_SSL', false),
+        port: env.int('DATABASE_PORT', 5432),
+        database: env('DATABASE_NAME', 'makadi-heights'),
+        username: env('DATABASE_USERNAME', 'beyondcreation'),
+        password: env('DATABASE_PASSWORD', ''),
       },
-      options: {}
+      options: {
+        ssl: false,
+      },
     },
   },
 });
