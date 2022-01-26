@@ -5,8 +5,8 @@
   "description": "A Strapi application",
   "scripts": {
     "develop": "strapi develop",
-    "start": "strapi start",
-    "build": "strapi build",
+    "start": "NODE_ENV=production strapi start",
+    "build": "NODE_ENV=production strapi build",
     "strapi": "strapi"
   },
   "devDependencies": {},
@@ -29,6 +29,7 @@
     "strapi-plugin-upload": "3.6.8",
     "strapi-plugin-users-permissions": "3.6.8",
     "strapi-provider-upload-cloudinary": "^3.6.8",
+    "strapi-provider-upload-do": "^3.6.6",
     "strapi-utils": "3.6.8"
   },
   "author": {
