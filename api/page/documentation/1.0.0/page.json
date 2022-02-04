@@ -659,9 +659,6 @@
                     "type": "string"
                   }
                 },
-                "masterplan": {
-                  "type": "component"
-                },
                 "bannerSection": {
                   "type": "component"
                 },
@@ -866,16 +863,86 @@
                       }
                     },
                     "header": {
-                      "type": "string"
+                      "type": "string",
+                      "maxLength": 30
                     },
                     "subheader": {
-                      "type": "string"
+                      "type": "string",
+                      "maxLength": 90
                     },
                     "btnText": {
-                      "type": "string"
+                      "type": "string",
+                      "maxLength": 15
                     },
                     "btnLink": {
                       "type": "string"
+                    },
+                    "mediaMobile": {
+                      "required": [
+                        "id",
+                        "name",
+                        "hash",
+                        "mime",
+                        "size",
+                        "url",
+                        "provider"
+                      ],
+                      "properties": {
+                        "id": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "alternativeText": {
+                          "type": "string"
+                        },
+                        "caption": {
+                          "type": "string"
+                        },
+                        "width": {
+                          "type": "integer"
+                        },
+                        "height": {
+                          "type": "integer"
+                        },
+                        "formats": {
+                          "type": "object"
+                        },
+                        "hash": {
+                          "type": "string"
+                        },
+                        "ext": {
+                          "type": "string"
+                        },
+                        "mime": {
+                          "type": "string"
+                        },
+                        "size": {
+                          "type": "number"
+                        },
+                        "url": {
+                          "type": "string"
+                        },
+                        "previewUrl": {
+                          "type": "string"
+                        },
+                        "provider": {
+                          "type": "string"
+                        },
+                        "provider_metadata": {
+                          "type": "object"
+                        },
+                        "related": {
+                          "type": "string"
+                        },
+                        "created_by": {
+                          "type": "string"
+                        },
+                        "updated_by": {
+                          "type": "string"
+                        }
+                      }
                     }
                   },
                   "required": [
@@ -1292,16 +1359,86 @@
                       }
                     },
                     "header": {
-                      "type": "string"
+                      "type": "string",
+                      "maxLength": 30
                     },
                     "subheader": {
-                      "type": "string"
+                      "type": "string",
+                      "maxLength": 90
                     },
                     "btnText": {
-                      "type": "string"
+                      "type": "string",
+                      "maxLength": 15
                     },
                     "btnLink": {
                       "type": "string"
+                    },
+                    "mediaMobile": {
+                      "required": [
+                        "id",
+                        "name",
+                        "hash",
+                        "mime",
+                        "size",
+                        "url",
+                        "provider"
+                      ],
+                      "properties": {
+                        "id": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "alternativeText": {
+                          "type": "string"
+                        },
+                        "caption": {
+                          "type": "string"
+                        },
+                        "width": {
+                          "type": "integer"
+                        },
+                        "height": {
+                          "type": "integer"
+                        },
+                        "formats": {
+                          "type": "object"
+                        },
+                        "hash": {
+                          "type": "string"
+                        },
+                        "ext": {
+                          "type": "string"
+                        },
+                        "mime": {
+                          "type": "string"
+                        },
+                        "size": {
+                          "type": "number"
+                        },
+                        "url": {
+                          "type": "string"
+                        },
+                        "previewUrl": {
+                          "type": "string"
+                        },
+                        "provider": {
+                          "type": "string"
+                        },
+                        "provider_metadata": {
+                          "type": "object"
+                        },
+                        "related": {
+                          "type": "string"
+                        },
+                        "created_by": {
+                          "type": "string"
+                        },
+                        "updated_by": {
+                          "type": "string"
+                        }
+                      }
                     }
                   },
                   "required": [

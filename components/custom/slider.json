@@ -2,7 +2,8 @@
   "collectionName": "components_custom_sliders",
   "info": {
     "name": "slider",
-    "icon": "angle-right"
+    "icon": "angle-right",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -52,13 +53,16 @@
       "pluginOptions": {}
     },
     "card3Description": {
-      "type": "string"
+      "type": "string",
+      "maxLength": 125
     },
     "card2Description": {
-      "type": "string"
+      "type": "string",
+      "maxLength": 125
     },
     "card1Description": {
-      "type": "string"
+      "type": "string",
+      "maxLength": 125
     },
     "btnLink1": {
       "type": "string"

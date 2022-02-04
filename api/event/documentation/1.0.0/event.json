@@ -896,6 +896,64 @@
           "bannerSubheadline": {
             "type": "string"
           },
+          "relatedEvents": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "slug": {
+                  "type": "string"
+                },
+                "banner": {
+                  "type": "string"
+                },
+                "gallery": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "body": {
+                  "type": "string"
+                },
+                "date": {
+                  "type": "string"
+                },
+                "eventOuterSection": {
+                  "type": "component"
+                },
+                "bannerHeadline": {
+                  "type": "string"
+                },
+                "bannerSubheadline": {
+                  "type": "string"
+                },
+                "relatedEvents": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -1140,6 +1198,12 @@
           },
           "bannerSubheadline": {
             "type": "string"
+          },
+          "relatedEvents": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "published_at": {
             "type": "string",

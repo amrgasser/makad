@@ -19,16 +19,31 @@
       "pluginOptions": {}
     },
     "header": {
-      "type": "string"
+      "type": "string",
+      "maxLength": 30
     },
     "subheader": {
-      "type": "string"
+      "type": "string",
+      "maxLength": 90
     },
     "btnText": {
-      "type": "string"
+      "type": "string",
+      "maxLength": 15
     },
     "btnLink": {
       "type": "string"
+    },
+    "mediaMobile": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
     }
   }
 }

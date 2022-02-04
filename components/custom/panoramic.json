@@ -21,13 +21,15 @@
     },
     "logoText": {
       "type": "string",
-      "maxLength": 30
+      "maxLength": 40
     },
     "header": {
-      "type": "string"
+      "type": "string",
+      "maxLength": 45
     },
     "subheader": {
-      "type": "string"
+      "type": "string",
+      "maxLength": 70
     },
     "backgroundImg": {
       "model": "file",

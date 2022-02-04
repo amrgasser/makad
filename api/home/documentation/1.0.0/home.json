@@ -406,16 +406,86 @@
                       }
                     },
                     "header": {
-                      "type": "string"
+                      "type": "string",
+                      "maxLength": 30
                     },
                     "subheader": {
-                      "type": "string"
+                      "type": "string",
+                      "maxLength": 90
                     },
                     "btnText": {
-                      "type": "string"
+                      "type": "string",
+                      "maxLength": 15
                     },
                     "btnLink": {
                       "type": "string"
+                    },
+                    "mediaMobile": {
+                      "required": [
+                        "id",
+                        "name",
+                        "hash",
+                        "mime",
+                        "size",
+                        "url",
+                        "provider"
+                      ],
+                      "properties": {
+                        "id": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "alternativeText": {
+                          "type": "string"
+                        },
+                        "caption": {
+                          "type": "string"
+                        },
+                        "width": {
+                          "type": "integer"
+                        },
+                        "height": {
+                          "type": "integer"
+                        },
+                        "formats": {
+                          "type": "object"
+                        },
+                        "hash": {
+                          "type": "string"
+                        },
+                        "ext": {
+                          "type": "string"
+                        },
+                        "mime": {
+                          "type": "string"
+                        },
+                        "size": {
+                          "type": "number"
+                        },
+                        "url": {
+                          "type": "string"
+                        },
+                        "previewUrl": {
+                          "type": "string"
+                        },
+                        "provider": {
+                          "type": "string"
+                        },
+                        "provider_metadata": {
+                          "type": "object"
+                        },
+                        "related": {
+                          "type": "string"
+                        },
+                        "created_by": {
+                          "type": "string"
+                        },
+                        "updated_by": {
+                          "type": "string"
+                        }
+                      }
                     }
                   }
                 }
@@ -536,9 +606,144 @@
                       "type": "string"
                     },
                     "text": {
-                      "type": "string"
+                      "type": "string",
+                      "maxLength": 125
                     },
                     "images": {
+                      "required": [
+                        "id",
+                        "name",
+                        "hash",
+                        "mime",
+                        "size",
+                        "url",
+                        "provider"
+                      ],
+                      "properties": {
+                        "id": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "alternativeText": {
+                          "type": "string"
+                        },
+                        "caption": {
+                          "type": "string"
+                        },
+                        "width": {
+                          "type": "integer"
+                        },
+                        "height": {
+                          "type": "integer"
+                        },
+                        "formats": {
+                          "type": "object"
+                        },
+                        "hash": {
+                          "type": "string"
+                        },
+                        "ext": {
+                          "type": "string"
+                        },
+                        "mime": {
+                          "type": "string"
+                        },
+                        "size": {
+                          "type": "number"
+                        },
+                        "url": {
+                          "type": "string"
+                        },
+                        "previewUrl": {
+                          "type": "string"
+                        },
+                        "provider": {
+                          "type": "string"
+                        },
+                        "provider_metadata": {
+                          "type": "object"
+                        },
+                        "related": {
+                          "type": "string"
+                        },
+                        "created_by": {
+                          "type": "string"
+                        },
+                        "updated_by": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "mobileImage": {
+                      "required": [
+                        "id",
+                        "name",
+                        "hash",
+                        "mime",
+                        "size",
+                        "url",
+                        "provider"
+                      ],
+                      "properties": {
+                        "id": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "alternativeText": {
+                          "type": "string"
+                        },
+                        "caption": {
+                          "type": "string"
+                        },
+                        "width": {
+                          "type": "integer"
+                        },
+                        "height": {
+                          "type": "integer"
+                        },
+                        "formats": {
+                          "type": "object"
+                        },
+                        "hash": {
+                          "type": "string"
+                        },
+                        "ext": {
+                          "type": "string"
+                        },
+                        "mime": {
+                          "type": "string"
+                        },
+                        "size": {
+                          "type": "number"
+                        },
+                        "url": {
+                          "type": "string"
+                        },
+                        "previewUrl": {
+                          "type": "string"
+                        },
+                        "provider": {
+                          "type": "string"
+                        },
+                        "provider_metadata": {
+                          "type": "object"
+                        },
+                        "related": {
+                          "type": "string"
+                        },
+                        "created_by": {
+                          "type": "string"
+                        },
+                        "updated_by": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "video": {
                       "required": [
                         "id",
                         "name",
@@ -623,9 +828,144 @@
                       "type": "string"
                     },
                     "text": {
-                      "type": "string"
+                      "type": "string",
+                      "maxLength": 125
                     },
                     "images": {
+                      "required": [
+                        "id",
+                        "name",
+                        "hash",
+                        "mime",
+                        "size",
+                        "url",
+                        "provider"
+                      ],
+                      "properties": {
+                        "id": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "alternativeText": {
+                          "type": "string"
+                        },
+                        "caption": {
+                          "type": "string"
+                        },
+                        "width": {
+                          "type": "integer"
+                        },
+                        "height": {
+                          "type": "integer"
+                        },
+                        "formats": {
+                          "type": "object"
+                        },
+                        "hash": {
+                          "type": "string"
+                        },
+                        "ext": {
+                          "type": "string"
+                        },
+                        "mime": {
+                          "type": "string"
+                        },
+                        "size": {
+                          "type": "number"
+                        },
+                        "url": {
+                          "type": "string"
+                        },
+                        "previewUrl": {
+                          "type": "string"
+                        },
+                        "provider": {
+                          "type": "string"
+                        },
+                        "provider_metadata": {
+                          "type": "object"
+                        },
+                        "related": {
+                          "type": "string"
+                        },
+                        "created_by": {
+                          "type": "string"
+                        },
+                        "updated_by": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "mobileImage": {
+                      "required": [
+                        "id",
+                        "name",
+                        "hash",
+                        "mime",
+                        "size",
+                        "url",
+                        "provider"
+                      ],
+                      "properties": {
+                        "id": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "alternativeText": {
+                          "type": "string"
+                        },
+                        "caption": {
+                          "type": "string"
+                        },
+                        "width": {
+                          "type": "integer"
+                        },
+                        "height": {
+                          "type": "integer"
+                        },
+                        "formats": {
+                          "type": "object"
+                        },
+                        "hash": {
+                          "type": "string"
+                        },
+                        "ext": {
+                          "type": "string"
+                        },
+                        "mime": {
+                          "type": "string"
+                        },
+                        "size": {
+                          "type": "number"
+                        },
+                        "url": {
+                          "type": "string"
+                        },
+                        "previewUrl": {
+                          "type": "string"
+                        },
+                        "provider": {
+                          "type": "string"
+                        },
+                        "provider_metadata": {
+                          "type": "object"
+                        },
+                        "related": {
+                          "type": "string"
+                        },
+                        "created_by": {
+                          "type": "string"
+                        },
+                        "updated_by": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "video": {
                       "required": [
                         "id",
                         "name",
@@ -710,9 +1050,144 @@
                       "type": "string"
                     },
                     "text": {
-                      "type": "string"
+                      "type": "string",
+                      "maxLength": 125
                     },
                     "images": {
+                      "required": [
+                        "id",
+                        "name",
+                        "hash",
+                        "mime",
+                        "size",
+                        "url",
+                        "provider"
+                      ],
+                      "properties": {
+                        "id": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "alternativeText": {
+                          "type": "string"
+                        },
+                        "caption": {
+                          "type": "string"
+                        },
+                        "width": {
+                          "type": "integer"
+                        },
+                        "height": {
+                          "type": "integer"
+                        },
+                        "formats": {
+                          "type": "object"
+                        },
+                        "hash": {
+                          "type": "string"
+                        },
+                        "ext": {
+                          "type": "string"
+                        },
+                        "mime": {
+                          "type": "string"
+                        },
+                        "size": {
+                          "type": "number"
+                        },
+                        "url": {
+                          "type": "string"
+                        },
+                        "previewUrl": {
+                          "type": "string"
+                        },
+                        "provider": {
+                          "type": "string"
+                        },
+                        "provider_metadata": {
+                          "type": "object"
+                        },
+                        "related": {
+                          "type": "string"
+                        },
+                        "created_by": {
+                          "type": "string"
+                        },
+                        "updated_by": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "mobileImage": {
+                      "required": [
+                        "id",
+                        "name",
+                        "hash",
+                        "mime",
+                        "size",
+                        "url",
+                        "provider"
+                      ],
+                      "properties": {
+                        "id": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "alternativeText": {
+                          "type": "string"
+                        },
+                        "caption": {
+                          "type": "string"
+                        },
+                        "width": {
+                          "type": "integer"
+                        },
+                        "height": {
+                          "type": "integer"
+                        },
+                        "formats": {
+                          "type": "object"
+                        },
+                        "hash": {
+                          "type": "string"
+                        },
+                        "ext": {
+                          "type": "string"
+                        },
+                        "mime": {
+                          "type": "string"
+                        },
+                        "size": {
+                          "type": "number"
+                        },
+                        "url": {
+                          "type": "string"
+                        },
+                        "previewUrl": {
+                          "type": "string"
+                        },
+                        "provider": {
+                          "type": "string"
+                        },
+                        "provider_metadata": {
+                          "type": "object"
+                        },
+                        "related": {
+                          "type": "string"
+                        },
+                        "created_by": {
+                          "type": "string"
+                        },
+                        "updated_by": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "video": {
                       "required": [
                         "id",
                         "name",
@@ -924,13 +1399,15 @@
                 },
                 "logoText": {
                   "type": "string",
-                  "maxLength": 30
+                  "maxLength": 40
                 },
                 "header": {
-                  "type": "string"
+                  "type": "string",
+                  "maxLength": 45
                 },
                 "subheader": {
-                  "type": "string"
+                  "type": "string",
+                  "maxLength": 70
                 },
                 "backgroundImg": {
                   "required": [
@@ -1031,7 +1508,7 @@
                     },
                     "bottomDescription": {
                       "type": "string",
-                      "maxLength": 200
+                      "maxLength": 170
                     },
                     "bannerImg": {
                       "required": [
@@ -1169,7 +1646,7 @@
                     },
                     "description": {
                       "type": "string",
-                      "maxLength": 100
+                      "maxLength": 30
                     },
                     "completionDate": {
                       "type": "string",
@@ -1182,35 +1659,44 @@
                       "type": "string"
                     },
                     "firstFeature": {
-                      "type": "string"
+                      "type": "string",
+                      "maxLength": 14
                     },
                     "firstFeatureFigure": {
-                      "type": "string"
+                      "type": "string",
+                      "maxLength": 3
                     },
                     "secondFeature": {
-                      "type": "string"
+                      "type": "string",
+                      "maxLength": 14
                     },
                     "secondFeatureFigure": {
-                      "type": "string"
+                      "type": "string",
+                      "maxLength": 3
                     },
                     "thirdFeature": {
-                      "type": "string"
+                      "type": "string",
+                      "maxLength": 14
                     },
                     "thirdFeatureFigure": {
-                      "type": "string"
+                      "type": "string",
+                      "maxLength": 3
                     },
                     "descriptionLine2": {
-                      "type": "string"
+                      "type": "string",
+                      "maxLength": 30
                     }
                   }
                 },
                 "maxItems": 8
               },
               "title1": {
-                "type": "string"
+                "type": "string",
+                "maxLength": 16
               },
               "title2": {
-                "type": "string"
+                "type": "string",
+                "maxLength": 16
               }
             }
           },
@@ -1788,28 +2274,18 @@
                     },
                     "titleLine1": {
                       "type": "string",
-                      "maxLength": 15
+                      "maxLength": 16
                     },
                     "titleLine2": {
                       "type": "string",
-                      "maxLength": 15
+                      "maxLength": 16
                     },
                     "alwaysInSeasonDescription": {
                       "type": "string",
-                      "maxLength": 120
+                      "maxLength": 125
                     }
                   }
                 }
-              },
-              "alwaysInSeasonTitle1": {
-                "type": "string"
-              },
-              "alwaysInSeasonTitle2": {
-                "type": "string"
-              },
-              "alwaysInSeasonDescription": {
-                "type": "string",
-                "maxLength": 120
               }
             }
           },
@@ -2044,13 +2520,16 @@
                       }
                     },
                     "card3Description": {
-                      "type": "string"
+                      "type": "string",
+                      "maxLength": 125
                     },
                     "card2Description": {
-                      "type": "string"
+                      "type": "string",
+                      "maxLength": 125
                     },
                     "card1Description": {
-                      "type": "string"
+                      "type": "string",
+                      "maxLength": 125
                     },
                     "btnLink1": {
                       "type": "string"
@@ -2071,7 +2550,8 @@
                 "type": "string"
               },
               "description": {
-                "type": "string"
+                "type": "string",
+                "maxLength": 125
               },
               "btnLink": {
                 "type": "string"
@@ -2177,16 +2657,86 @@
                       }
                     },
                     "header": {
-                      "type": "string"
+                      "type": "string",
+                      "maxLength": 30
                     },
                     "subheader": {
-                      "type": "string"
+                      "type": "string",
+                      "maxLength": 90
                     },
                     "btnText": {
-                      "type": "string"
+                      "type": "string",
+                      "maxLength": 15
                     },
                     "btnLink": {
                       "type": "string"
+                    },
+                    "mediaMobile": {
+                      "required": [
+                        "id",
+                        "name",
+                        "hash",
+                        "mime",
+                        "size",
+                        "url",
+                        "provider"
+                      ],
+                      "properties": {
+                        "id": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "alternativeText": {
+                          "type": "string"
+                        },
+                        "caption": {
+                          "type": "string"
+                        },
+                        "width": {
+                          "type": "integer"
+                        },
+                        "height": {
+                          "type": "integer"
+                        },
+                        "formats": {
+                          "type": "object"
+                        },
+                        "hash": {
+                          "type": "string"
+                        },
+                        "ext": {
+                          "type": "string"
+                        },
+                        "mime": {
+                          "type": "string"
+                        },
+                        "size": {
+                          "type": "number"
+                        },
+                        "url": {
+                          "type": "string"
+                        },
+                        "previewUrl": {
+                          "type": "string"
+                        },
+                        "provider": {
+                          "type": "string"
+                        },
+                        "provider_metadata": {
+                          "type": "object"
+                        },
+                        "related": {
+                          "type": "string"
+                        },
+                        "created_by": {
+                          "type": "string"
+                        },
+                        "updated_by": {
+                          "type": "string"
+                        }
+                      }
                     }
                   }
                 }
@@ -2307,9 +2857,144 @@
                       "type": "string"
                     },
                     "text": {
-                      "type": "string"
+                      "type": "string",
+                      "maxLength": 125
                     },
                     "images": {
+                      "required": [
+                        "id",
+                        "name",
+                        "hash",
+                        "mime",
+                        "size",
+                        "url",
+                        "provider"
+                      ],
+                      "properties": {
+                        "id": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "alternativeText": {
+                          "type": "string"
+                        },
+                        "caption": {
+                          "type": "string"
+                        },
+                        "width": {
+                          "type": "integer"
+                        },
+                        "height": {
+                          "type": "integer"
+                        },
+                        "formats": {
+                          "type": "object"
+                        },
+                        "hash": {
+                          "type": "string"
+                        },
+                        "ext": {
+                          "type": "string"
+                        },
+                        "mime": {
+                          "type": "string"
+                        },
+                        "size": {
+                          "type": "number"
+                        },
+                        "url": {
+                          "type": "string"
+                        },
+                        "previewUrl": {
+                          "type": "string"
+                        },
+                        "provider": {
+                          "type": "string"
+                        },
+                        "provider_metadata": {
+                          "type": "object"
+                        },
+                        "related": {
+                          "type": "string"
+                        },
+                        "created_by": {
+                          "type": "string"
+                        },
+                        "updated_by": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "mobileImage": {
+                      "required": [
+                        "id",
+                        "name",
+                        "hash",
+                        "mime",
+                        "size",
+                        "url",
+                        "provider"
+                      ],
+                      "properties": {
+                        "id": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "alternativeText": {
+                          "type": "string"
+                        },
+                        "caption": {
+                          "type": "string"
+                        },
+                        "width": {
+                          "type": "integer"
+                        },
+                        "height": {
+                          "type": "integer"
+                        },
+                        "formats": {
+                          "type": "object"
+                        },
+                        "hash": {
+                          "type": "string"
+                        },
+                        "ext": {
+                          "type": "string"
+                        },
+                        "mime": {
+                          "type": "string"
+                        },
+                        "size": {
+                          "type": "number"
+                        },
+                        "url": {
+                          "type": "string"
+                        },
+                        "previewUrl": {
+                          "type": "string"
+                        },
+                        "provider": {
+                          "type": "string"
+                        },
+                        "provider_metadata": {
+                          "type": "object"
+                        },
+                        "related": {
+                          "type": "string"
+                        },
+                        "created_by": {
+                          "type": "string"
+                        },
+                        "updated_by": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "video": {
                       "required": [
                         "id",
                         "name",
@@ -2394,9 +3079,144 @@
                       "type": "string"
                     },
                     "text": {
-                      "type": "string"
+                      "type": "string",
+                      "maxLength": 125
                     },
                     "images": {
+                      "required": [
+                        "id",
+                        "name",
+                        "hash",
+                        "mime",
+                        "size",
+                        "url",
+                        "provider"
+                      ],
+                      "properties": {
+                        "id": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "alternativeText": {
+                          "type": "string"
+                        },
+                        "caption": {
+                          "type": "string"
+                        },
+                        "width": {
+                          "type": "integer"
+                        },
+                        "height": {
+                          "type": "integer"
+                        },
+                        "formats": {
+                          "type": "object"
+                        },
+                        "hash": {
+                          "type": "string"
+                        },
+                        "ext": {
+                          "type": "string"
+                        },
+                        "mime": {
+                          "type": "string"
+                        },
+                        "size": {
+                          "type": "number"
+                        },
+                        "url": {
+                          "type": "string"
+                        },
+                        "previewUrl": {
+                          "type": "string"
+                        },
+                        "provider": {
+                          "type": "string"
+                        },
+                        "provider_metadata": {
+                          "type": "object"
+                        },
+                        "related": {
+                          "type": "string"
+                        },
+                        "created_by": {
+                          "type": "string"
+                        },
+                        "updated_by": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "mobileImage": {
+                      "required": [
+                        "id",
+                        "name",
+                        "hash",
+                        "mime",
+                        "size",
+                        "url",
+                        "provider"
+                      ],
+                      "properties": {
+                        "id": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "alternativeText": {
+                          "type": "string"
+                        },
+                        "caption": {
+                          "type": "string"
+                        },
+                        "width": {
+                          "type": "integer"
+                        },
+                        "height": {
+                          "type": "integer"
+                        },
+                        "formats": {
+                          "type": "object"
+                        },
+                        "hash": {
+                          "type": "string"
+                        },
+                        "ext": {
+                          "type": "string"
+                        },
+                        "mime": {
+                          "type": "string"
+                        },
+                        "size": {
+                          "type": "number"
+                        },
+                        "url": {
+                          "type": "string"
+                        },
+                        "previewUrl": {
+                          "type": "string"
+                        },
+                        "provider": {
+                          "type": "string"
+                        },
+                        "provider_metadata": {
+                          "type": "object"
+                        },
+                        "related": {
+                          "type": "string"
+                        },
+                        "created_by": {
+                          "type": "string"
+                        },
+                        "updated_by": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "video": {
                       "required": [
                         "id",
                         "name",
@@ -2481,9 +3301,144 @@
                       "type": "string"
                     },
                     "text": {
-                      "type": "string"
+                      "type": "string",
+                      "maxLength": 125
                     },
                     "images": {
+                      "required": [
+                        "id",
+                        "name",
+                        "hash",
+                        "mime",
+                        "size",
+                        "url",
+                        "provider"
+                      ],
+                      "properties": {
+                        "id": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "alternativeText": {
+                          "type": "string"
+                        },
+                        "caption": {
+                          "type": "string"
+                        },
+                        "width": {
+                          "type": "integer"
+                        },
+                        "height": {
+                          "type": "integer"
+                        },
+                        "formats": {
+                          "type": "object"
+                        },
+                        "hash": {
+                          "type": "string"
+                        },
+                        "ext": {
+                          "type": "string"
+                        },
+                        "mime": {
+                          "type": "string"
+                        },
+                        "size": {
+                          "type": "number"
+                        },
+                        "url": {
+                          "type": "string"
+                        },
+                        "previewUrl": {
+                          "type": "string"
+                        },
+                        "provider": {
+                          "type": "string"
+                        },
+                        "provider_metadata": {
+                          "type": "object"
+                        },
+                        "related": {
+                          "type": "string"
+                        },
+                        "created_by": {
+                          "type": "string"
+                        },
+                        "updated_by": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "mobileImage": {
+                      "required": [
+                        "id",
+                        "name",
+                        "hash",
+                        "mime",
+                        "size",
+                        "url",
+                        "provider"
+                      ],
+                      "properties": {
+                        "id": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "alternativeText": {
+                          "type": "string"
+                        },
+                        "caption": {
+                          "type": "string"
+                        },
+                        "width": {
+                          "type": "integer"
+                        },
+                        "height": {
+                          "type": "integer"
+                        },
+                        "formats": {
+                          "type": "object"
+                        },
+                        "hash": {
+                          "type": "string"
+                        },
+                        "ext": {
+                          "type": "string"
+                        },
+                        "mime": {
+                          "type": "string"
+                        },
+                        "size": {
+                          "type": "number"
+                        },
+                        "url": {
+                          "type": "string"
+                        },
+                        "previewUrl": {
+                          "type": "string"
+                        },
+                        "provider": {
+                          "type": "string"
+                        },
+                        "provider_metadata": {
+                          "type": "object"
+                        },
+                        "related": {
+                          "type": "string"
+                        },
+                        "created_by": {
+                          "type": "string"
+                        },
+                        "updated_by": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "video": {
                       "required": [
                         "id",
                         "name",
@@ -2641,13 +3596,15 @@
                 },
                 "logoText": {
                   "type": "string",
-                  "maxLength": 30
+                  "maxLength": 40
                 },
                 "header": {
-                  "type": "string"
+                  "type": "string",
+                  "maxLength": 45
                 },
                 "subheader": {
-                  "type": "string"
+                  "type": "string",
+                  "maxLength": 70
                 },
                 "backgroundImg": {
                   "required": [
@@ -2748,7 +3705,7 @@
                     },
                     "bottomDescription": {
                       "type": "string",
-                      "maxLength": 200
+                      "maxLength": 170
                     },
                     "bannerImg": {
                       "required": [
@@ -2886,7 +3843,7 @@
                     },
                     "description": {
                       "type": "string",
-                      "maxLength": 100
+                      "maxLength": 30
                     },
                     "completionDate": {
                       "type": "string",
@@ -2899,35 +3856,44 @@
                       "type": "string"
                     },
                     "firstFeature": {
-                      "type": "string"
+                      "type": "string",
+                      "maxLength": 14
                     },
                     "firstFeatureFigure": {
-                      "type": "string"
+                      "type": "string",
+                      "maxLength": 3
                     },
                     "secondFeature": {
-                      "type": "string"
+                      "type": "string",
+                      "maxLength": 14
                     },
                     "secondFeatureFigure": {
-                      "type": "string"
+                      "type": "string",
+                      "maxLength": 3
                     },
                     "thirdFeature": {
-                      "type": "string"
+                      "type": "string",
+                      "maxLength": 14
                     },
                     "thirdFeatureFigure": {
-                      "type": "string"
+                      "type": "string",
+                      "maxLength": 3
                     },
                     "descriptionLine2": {
-                      "type": "string"
+                      "type": "string",
+                      "maxLength": 30
                     }
                   }
                 },
                 "maxItems": 8
               },
               "title1": {
-                "type": "string"
+                "type": "string",
+                "maxLength": 16
               },
               "title2": {
-                "type": "string"
+                "type": "string",
+                "maxLength": 16
               }
             }
           },
@@ -3505,28 +4471,18 @@
                     },
                     "titleLine1": {
                       "type": "string",
-                      "maxLength": 15
+                      "maxLength": 16
                     },
                     "titleLine2": {
                       "type": "string",
-                      "maxLength": 15
+                      "maxLength": 16
                     },
                     "alwaysInSeasonDescription": {
                       "type": "string",
-                      "maxLength": 120
+                      "maxLength": 125
                     }
                   }
                 }
-              },
-              "alwaysInSeasonTitle1": {
-                "type": "string"
-              },
-              "alwaysInSeasonTitle2": {
-                "type": "string"
-              },
-              "alwaysInSeasonDescription": {
-                "type": "string",
-                "maxLength": 120
               }
             }
           },
@@ -3761,13 +4717,16 @@
                       }
                     },
                     "card3Description": {
-                      "type": "string"
+                      "type": "string",
+                      "maxLength": 125
                     },
                     "card2Description": {
-                      "type": "string"
+                      "type": "string",
+                      "maxLength": 125
                     },
                     "card1Description": {
-                      "type": "string"
+                      "type": "string",
+                      "maxLength": 125
                     },
                     "btnLink1": {
                       "type": "string"
@@ -3788,7 +4747,8 @@
                 "type": "string"
               },
               "description": {
-                "type": "string"
+                "type": "string",
+                "maxLength": 125
               },
               "btnLink": {
                 "type": "string"

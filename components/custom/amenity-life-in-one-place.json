@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_custom_amenity_life_in_one_places",
+  "info": {
+    "name": "amenityLifeInOnePlace",
+    "icon": "arrow-circle-left",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string",
+      "maxLength": 60
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    }
+  }
+}

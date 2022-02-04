@@ -14,8 +14,8 @@
       "type": "string"
     },
     "bottomDescription": {
-      "type": "string",
-      "maxLength": 200
+      "type": "text",
+      "maxLength": 170
     },
     "bannerImg": {
       "model": "file",
@@ -43,7 +43,7 @@
     },
     "description": {
       "type": "string",
-      "maxLength": 100
+      "maxLength": 30
     },
     "completionDate": {
       "type": "date"
@@ -55,25 +55,32 @@
       "type": "string"
     },
     "firstFeature": {
-      "type": "string"
+      "type": "string",
+      "maxLength": 14
     },
     "firstFeatureFigure": {
-      "type": "string"
+      "type": "string",
+      "maxLength": 3
     },
     "secondFeature": {
-      "type": "string"
+      "type": "string",
+      "maxLength": 14
     },
     "secondFeatureFigure": {
-      "type": "string"
+      "type": "string",
+      "maxLength": 3
     },
     "thirdFeature": {
-      "type": "string"
+      "type": "string",
+      "maxLength": 14
     },
     "thirdFeatureFigure": {
-      "type": "string"
+      "type": "string",
+      "maxLength": 3
     },
     "descriptionLine2": {
-      "type": "string"
+      "type": "string",
+      "maxLength": 30
     }
   }
 }

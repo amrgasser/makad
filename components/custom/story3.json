@@ -2,7 +2,8 @@
   "collectionName": "components_custom_story3s",
   "info": {
     "name": "story3",
-    "icon": "arrow-circle-up"
+    "icon": "arrow-circle-up",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -13,12 +14,40 @@
       "type": "string"
     },
     "text": {
-      "type": "richtext"
+      "type": "richtext",
+      "maxLength": 125
     },
     "images": {
       "model": "file",
       "via": "related",
-      "allowedTypes": ["images", "videos"],
+      "allowedTypes": [
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "mobileImage": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "video": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
       "plugin": "upload",
       "required": false,
       "pluginOptions": {}

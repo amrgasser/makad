@@ -11,10 +11,12 @@
       "type": "string"
     },
     "firstParagraph": {
-      "type": "richtext"
+      "type": "richtext",
+      "maxLength": 200
     },
     "secondParagraph": {
-      "type": "richtext"
+      "type": "richtext",
+      "maxLength": 375
     },
     "smallImg": {
       "model": "file",

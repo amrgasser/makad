@@ -544,12 +544,6 @@
                 "bannerImage": {
                   "type": "string"
                 },
-                "gallery": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
                 "logo": {
                   "type": "string"
                 },
@@ -558,9 +552,6 @@
                 },
                 "phoneNumber2": {
                   "type": "string"
-                },
-                "masterplan": {
-                  "type": "component"
                 },
                 "categories": {
                   "type": "array",

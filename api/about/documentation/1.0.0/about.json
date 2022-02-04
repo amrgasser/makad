@@ -412,13 +412,16 @@
                 "type": "string"
               },
               "headline": {
-                "type": "string"
+                "type": "string",
+                "maxLength": 16
               },
               "subheadline": {
-                "type": "string"
+                "type": "string",
+                "maxLength": 16
               },
               "messageBody": {
-                "type": "string"
+                "type": "string",
+                "maxLength": 175
               },
               "posterImage": {
                 "required": [
@@ -580,7 +583,8 @@
                       "type": "string"
                     },
                     "body": {
-                      "type": "string"
+                      "type": "string",
+                      "maxLength": 600
                     },
                     "img": {
                       "required": [
@@ -650,7 +654,8 @@
                       }
                     },
                     "tabName": {
-                      "type": "string"
+                      "type": "string",
+                      "maxLength": 30
                     }
                   }
                 }
@@ -751,10 +756,12 @@
                       "type": "string"
                     },
                     "body": {
-                      "type": "string"
+                      "type": "string",
+                      "maxLength": 180
                     },
                     "description": {
-                      "type": "string"
+                      "type": "string",
+                      "maxLength": 100
                     }
                   }
                 }
@@ -890,10 +897,12 @@
                 "type": "string"
               },
               "headlineDescription": {
-                "type": "string"
+                "type": "string",
+                "maxLength": 125
               },
               "bottomDescription": {
-                "type": "string"
+                "type": "string",
+                "maxLength": 300
               },
               "makadiImage": {
                 "required": [
@@ -1153,13 +1162,16 @@
                 "type": "string"
               },
               "headline": {
-                "type": "string"
+                "type": "string",
+                "maxLength": 16
               },
               "subheadline": {
-                "type": "string"
+                "type": "string",
+                "maxLength": 16
               },
               "messageBody": {
-                "type": "string"
+                "type": "string",
+                "maxLength": 175
               },
               "posterImage": {
                 "required": [
@@ -1321,7 +1333,8 @@
                       "type": "string"
                     },
                     "body": {
-                      "type": "string"
+                      "type": "string",
+                      "maxLength": 600
                     },
                     "img": {
                       "required": [
@@ -1391,7 +1404,8 @@
                       }
                     },
                     "tabName": {
-                      "type": "string"
+                      "type": "string",
+                      "maxLength": 30
                     }
                   }
                 }
@@ -1492,10 +1506,12 @@
                       "type": "string"
                     },
                     "body": {
-                      "type": "string"
+                      "type": "string",
+                      "maxLength": 180
                     },
                     "description": {
-                      "type": "string"
+                      "type": "string",
+                      "maxLength": 100
                     }
                   }
                 }
@@ -1631,10 +1647,12 @@
                 "type": "string"
               },
               "headlineDescription": {
-                "type": "string"
+                "type": "string",
+                "maxLength": 125
               },
               "bottomDescription": {
-                "type": "string"
+                "type": "string",
+                "maxLength": 300
               },
               "makadiImage": {
                 "required": [

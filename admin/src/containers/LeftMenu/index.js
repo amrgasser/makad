@@ -37,6 +37,7 @@ const LeftMenu = ({ shouldUpdateStrapi, version, plugins, setUpdateMenu }) => {
   const medialink = singleTypesSectionLinks.filter(({ label, isDisplayed }) => label === "Media Page" && isDisplayed)
   const eventlink = singleTypesSectionLinks.filter(({ label, isDisplayed }) => label === "Event Page" && isDisplayed)
   const wallslink = filteredCollectionTypeLinks.filter(({ label, isDisplayed }) => label === "WithinOurWalls" && isDisplayed)
+  const masterplan = filteredCollectionTypeLinks.filter(({ label, isDisplayed }) => label === "Master Plans" && isDisplayed)
 
   const makadilinks = filteredCollectionTypeLinks.filter(({ label, isDisplayed }) => (label === "Zones" || label === "Units" || label === "Unit Types") && isDisplayed)
   const lifelinks = filteredCollectionTypeLinks.filter(({ label, isDisplayed }) => label === "Amenities" && isDisplayed)
@@ -47,6 +48,7 @@ const LeftMenu = ({ shouldUpdateStrapi, version, plugins, setUpdateMenu }) => {
   lifelinks.unshift(lifelink[0])
   medialinks.unshift(medialink[0])
   eventslinks.unshift(eventlink[0])
+  masterplan.unshift(aboutlink[0])
   // This effect is really temporary until we create the menu api
   // We need this because we need to regenerate the links when the settings are being changed
   // in the content manager configurations list
@@ -107,7 +109,7 @@ const LeftMenu = ({ shouldUpdateStrapi, version, plugins, setUpdateMenu }) => {
           <LeftMenuLinksSection
             section="about"
             name="about"
-            links={aboutlink || []}
+            links={masterplan || []}
             location={location}
             searchable={false}
           />

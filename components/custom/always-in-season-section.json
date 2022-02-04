@@ -11,16 +11,6 @@
       "type": "component",
       "repeatable": true,
       "component": "custom.always-in-season-slider"
-    },
-    "alwaysInSeasonTitle1": {
-      "type": "string"
-    },
-    "alwaysInSeasonTitle2": {
-      "type": "string"
-    },
-    "alwaysInSeasonDescription": {
-      "type": "string",
-      "maxLength": 120
     }
   }
 }

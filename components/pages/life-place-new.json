@@ -19,7 +19,8 @@
       "type": "string"
     },
     "description": {
-      "type": "string"
+      "type": "string",
+      "maxLength": 125
     },
     "btnLink": {
       "type": "string"

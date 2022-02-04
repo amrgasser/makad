@@ -105,15 +105,15 @@
     },
     "titleLine1": {
       "type": "string",
-      "maxLength": 15
+      "maxLength": 16
     },
     "titleLine2": {
       "type": "string",
-      "maxLength": 15
+      "maxLength": 16
     },
     "alwaysInSeasonDescription": {
       "type": "richtext",
-      "maxLength": 120
+      "maxLength": 125
     }
   }
 }

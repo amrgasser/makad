@@ -14,7 +14,8 @@
       "type": "string"
     },
     "description": {
-      "type": "text"
+      "type": "text",
+      "maxLength": 160
     },
     "zoneConceptImages": {
       "type": "component",

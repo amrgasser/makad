@@ -2,7 +2,8 @@
   "collectionName": "components_pages_images",
   "info": {
     "name": "image",
-    "icon": "palette"
+    "icon": "palette",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -20,6 +21,23 @@
     },
     "caption": {
       "type": "string"
+    },
+    "zoneUnitMapCard": {
+      "type": "component",
+      "repeatable": true,
+      "component": "custom.zone-unit-map-card"
+    },
+    "imageMobile": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
     }
   }
 }

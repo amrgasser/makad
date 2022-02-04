@@ -16,22 +16,11 @@
       "type": "string"
     },
     "smallDescriptionn": {
-      "type": "text"
+      "type": "text",
+      "maxLength": 100
     },
     "bannerImage": {
       "model": "file",
-      "via": "related",
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos"
-      ],
-      "plugin": "upload",
-      "required": false,
-      "pluginOptions": {}
-    },
-    "gallery": {
-      "collection": "file",
       "via": "related",
       "allowedTypes": [
         "images",
@@ -59,11 +48,6 @@
     },
     "phoneNumber2": {
       "type": "string"
-    },
-    "masterplan": {
-      "type": "component",
-      "repeatable": false,
-      "component": "custom.master-plan-section"
     },
     "categories": {
       "collection": "category",

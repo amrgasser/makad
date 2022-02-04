@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/master-plans",
+      "handler": "master-plan.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/master-plans/count",
+      "handler": "master-plan.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/master-plans/:id",
+      "handler": "master-plan.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/master-plans",
+      "handler": "master-plan.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/master-plans/:id",
+      "handler": "master-plan.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/master-plans/:id",
+      "handler": "master-plan.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

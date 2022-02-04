@@ -59,6 +59,9 @@
     },
     "bannerSubheadline": {
       "type": "string"
+    },
+    "relatedEvents": {
+      "collection": "event"
     }
   }
 }

@@ -2,18 +2,22 @@
   "collectionName": "components_pages_message_sections",
   "info": {
     "name": "messageSection",
-    "icon": "apple-alt"
+    "icon": "apple-alt",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "headline": {
-      "type": "string"
+      "type": "string",
+      "maxLength": 16
     },
     "subheadline": {
-      "type": "string"
+      "type": "string",
+      "maxLength": 16
     },
     "messageBody": {
-      "type": "text"
+      "type": "text",
+      "maxLength": 175
     },
     "posterImage": {
       "model": "file",

@@ -396,64 +396,127 @@
               }
             }
           },
-          "upcoming": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "title": {
-                "type": "string"
-              },
-              "date": {
-                "type": "string"
-              },
-              "slug": {
-                "type": "string"
-              },
-              "video": {
-                "type": "string"
-              },
-              "type": {
-                "type": "string",
-                "enum": [
-                  "pressRelease",
-                  "news",
-                  "awards"
-                ]
-              },
-              "bannerImg": {
-                "type": "array",
-                "items": {
+          "latest_generals": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "date": {
+                  "type": "string"
+                },
+                "slug": {
+                  "type": "string"
+                },
+                "video": {
+                  "type": "string"
+                },
+                "type": {
+                  "type": "string",
+                  "enum": [
+                    "pressRelease",
+                    "news",
+                    "awards"
+                  ]
+                },
+                "bannerImg": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "body": {
+                  "type": "string"
+                },
+                "gallery": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "eventOuterSection": {
+                  "type": "component"
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
                   "type": "string"
                 }
-              },
-              "body": {
-                "type": "string"
-              },
-              "gallery": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "eventOuterSection": {
-                "type": "component"
-              },
-              "published_at": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
               }
             }
           },
-          "latestEvents": {
+          "latestNews": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "date": {
+                  "type": "string"
+                },
+                "slug": {
+                  "type": "string"
+                },
+                "video": {
+                  "type": "string"
+                },
+                "type": {
+                  "type": "string",
+                  "enum": [
+                    "pressRelease",
+                    "news",
+                    "awards"
+                  ]
+                },
+                "bannerImg": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "body": {
+                  "type": "string"
+                },
+                "gallery": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "eventOuterSection": {
+                  "type": "component"
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "latestPressReleases": {
             "type": "array",
             "items": {
               "required": [
@@ -527,10 +590,19 @@
           "subheader": {
             "type": "string"
           },
-          "upcoming": {
-            "type": "string"
+          "latest_generals": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
-          "latestEvents": {
+          "latestNews": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "latestPressReleases": {
             "type": "array",
             "items": {
               "type": "string"

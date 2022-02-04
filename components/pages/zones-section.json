@@ -14,10 +14,12 @@
       "max": 8
     },
     "title1": {
-      "type": "string"
+      "type": "string",
+      "maxLength": 16
     },
     "title2": {
-      "type": "string"
+      "type": "string",
+      "maxLength": 16
     }
   }
 }

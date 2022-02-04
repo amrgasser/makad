@@ -8,7 +8,8 @@
   "options": {},
   "attributes": {
     "body": {
-      "type": "richtext"
+      "type": "richtext",
+      "maxLength": 600
     },
     "img": {
       "model": "file",
@@ -23,7 +24,8 @@
       "pluginOptions": {}
     },
     "tabName": {
-      "type": "string"
+      "type": "string",
+      "maxLength": 30
     }
   }
 }

@@ -37,11 +37,6 @@
     "within_our_walls": {
       "collection": "within-our-walls"
     },
-    "masterplan": {
-      "type": "component",
-      "repeatable": false,
-      "component": "custom.master-plan-section"
-    },
     "bannerSection": {
       "type": "component",
       "repeatable": false,

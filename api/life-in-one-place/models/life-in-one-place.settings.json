@@ -34,16 +34,17 @@
       "pluginOptions": {}
     },
     "header": {
-      "type": "string"
+      "type": "text",
+      "maxLength": 140
     },
     "body": {
-      "type": "richtext"
+      "type": "richtext",
+      "maxLength": 375
     },
     "amenity": {
       "type": "component",
       "repeatable": true,
-      "component": "custom.amenity",
-      "max": 6
+      "component": "custom.amenity-life-in-one-place"
     }
   }
 }

@@ -1,0 +1,81 @@
+{
+  "collectionName": "components_custom_makadi_zones",
+  "info": {
+    "name": "homeZone",
+    "icon": "align-left",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "exploreLink": {
+      "type": "string"
+    },
+    "bottomDescription": {
+      "type": "text",
+      "maxLength": 170
+    },
+    "bannerImg": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "zoneLogo": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "completionDate": {
+      "type": "date"
+    },
+    "propertyTypes": {
+      "type": "string"
+    },
+    "startingPrice": {
+      "type": "string"
+    },
+    "firstFeature": {
+      "type": "string",
+      "maxLength": 14
+    },
+    "firstFeatureFigure": {
+      "type": "string",
+      "maxLength": 3
+    },
+    "secondFeature": {
+      "type": "string",
+      "maxLength": 14
+    },
+    "secondFeatureFigure": {
+      "type": "string",
+      "maxLength": 3
+    },
+    "thirdFeature": {
+      "type": "string",
+      "maxLength": 14
+    },
+    "thirdFeatureFigure": {
+      "type": "string",
+      "maxLength": 3
+    },
+    "isSoldOut": {
+      "type": "boolean"
+    }
+  }
+}

@@ -14,10 +14,12 @@
       "type": "string"
     },
     "headlineDescription": {
-      "type": "string"
+      "type": "string",
+      "maxLength": 125
     },
     "bottomDescription": {
-      "type": "text"
+      "type": "text",
+      "maxLength": 300
     },
     "makadiImage": {
       "model": "file",

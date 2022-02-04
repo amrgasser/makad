@@ -603,6 +603,169 @@
               },
               "caption": {
                 "type": "string"
+              },
+              "zoneUnitMapCard": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "id"
+                  ],
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "xPosition": {
+                      "type": "string"
+                    },
+                    "yPosition": {
+                      "type": "string"
+                    },
+                    "unitName": {
+                      "type": "string"
+                    },
+                    "xPositionMobile": {
+                      "type": "string"
+                    },
+                    "yPositionMobile": {
+                      "type": "string"
+                    },
+                    "unitImage": {
+                      "required": [
+                        "id",
+                        "name",
+                        "hash",
+                        "mime",
+                        "size",
+                        "url",
+                        "provider"
+                      ],
+                      "properties": {
+                        "id": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "alternativeText": {
+                          "type": "string"
+                        },
+                        "caption": {
+                          "type": "string"
+                        },
+                        "width": {
+                          "type": "integer"
+                        },
+                        "height": {
+                          "type": "integer"
+                        },
+                        "formats": {
+                          "type": "object"
+                        },
+                        "hash": {
+                          "type": "string"
+                        },
+                        "ext": {
+                          "type": "string"
+                        },
+                        "mime": {
+                          "type": "string"
+                        },
+                        "size": {
+                          "type": "number"
+                        },
+                        "url": {
+                          "type": "string"
+                        },
+                        "previewUrl": {
+                          "type": "string"
+                        },
+                        "provider": {
+                          "type": "string"
+                        },
+                        "provider_metadata": {
+                          "type": "object"
+                        },
+                        "related": {
+                          "type": "string"
+                        },
+                        "created_by": {
+                          "type": "string"
+                        },
+                        "updated_by": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "imageMobile": {
+                "required": [
+                  "id",
+                  "name",
+                  "hash",
+                  "mime",
+                  "size",
+                  "url",
+                  "provider"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "alternativeText": {
+                    "type": "string"
+                  },
+                  "caption": {
+                    "type": "string"
+                  },
+                  "width": {
+                    "type": "integer"
+                  },
+                  "height": {
+                    "type": "integer"
+                  },
+                  "formats": {
+                    "type": "object"
+                  },
+                  "hash": {
+                    "type": "string"
+                  },
+                  "ext": {
+                    "type": "string"
+                  },
+                  "mime": {
+                    "type": "string"
+                  },
+                  "size": {
+                    "type": "number"
+                  },
+                  "url": {
+                    "type": "string"
+                  },
+                  "previewUrl": {
+                    "type": "string"
+                  },
+                  "provider": {
+                    "type": "string"
+                  },
+                  "provider_metadata": {
+                    "type": "object"
+                  },
+                  "related": {
+                    "type": "string"
+                  },
+                  "created_by": {
+                    "type": "string"
+                  },
+                  "updated_by": {
+                    "type": "string"
+                  }
+                }
               }
             }
           },
@@ -622,7 +785,8 @@
                 "type": "string"
               },
               "description": {
-                "type": "string"
+                "type": "string",
+                "maxLength": 160
               },
               "zoneConceptImages": {
                 "type": "array",
@@ -869,12 +1033,6 @@
                 "bannerImage": {
                   "type": "string"
                 },
-                "gallery": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
                 "logo": {
                   "type": "string"
                 },
@@ -883,9 +1041,6 @@
                 },
                 "phoneNumber2": {
                   "type": "string"
-                },
-                "masterplan": {
-                  "type": "component"
                 },
                 "categories": {
                   "type": "array",
@@ -905,96 +1060,6 @@
                 "updated_by": {
                   "type": "string"
                 }
-              }
-            }
-          },
-          "masterplan": {
-            "type": "object",
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "zoneName": {
-                "type": "string"
-              },
-              "image": {
-                "required": [
-                  "id",
-                  "name",
-                  "hash",
-                  "mime",
-                  "size",
-                  "url",
-                  "provider"
-                ],
-                "properties": {
-                  "id": {
-                    "type": "string"
-                  },
-                  "name": {
-                    "type": "string"
-                  },
-                  "alternativeText": {
-                    "type": "string"
-                  },
-                  "caption": {
-                    "type": "string"
-                  },
-                  "width": {
-                    "type": "integer"
-                  },
-                  "height": {
-                    "type": "integer"
-                  },
-                  "formats": {
-                    "type": "object"
-                  },
-                  "hash": {
-                    "type": "string"
-                  },
-                  "ext": {
-                    "type": "string"
-                  },
-                  "mime": {
-                    "type": "string"
-                  },
-                  "size": {
-                    "type": "number"
-                  },
-                  "url": {
-                    "type": "string"
-                  },
-                  "previewUrl": {
-                    "type": "string"
-                  },
-                  "provider": {
-                    "type": "string"
-                  },
-                  "provider_metadata": {
-                    "type": "object"
-                  },
-                  "related": {
-                    "type": "string"
-                  },
-                  "created_by": {
-                    "type": "string"
-                  },
-                  "updated_by": {
-                    "type": "string"
-                  }
-                }
-              },
-              "description": {
-                "type": "string"
-              },
-              "xLocation": {
-                "type": "integer"
-              },
-              "yLocation": {
-                "type": "integer"
               }
             }
           },
@@ -1142,10 +1207,12 @@
                 }
               },
               "bannerTitleLine1": {
-                "type": "string"
+                "type": "string",
+                "maxLength": 40
               },
               "banneTitleLine2": {
-                "type": "string"
+                "type": "string",
+                "maxLength": 40
               }
             }
           },
@@ -1165,19 +1232,22 @@
                 "type": "string"
               },
               "secondFeature": {
-                "type": "string"
+                "type": "string",
+                "maxLength": 40
               },
               "secondFeatureFigure": {
                 "type": "string"
               },
               "firstFeature": {
-                "type": "string"
+                "type": "string",
+                "maxLength": 40
               },
               "firstFeatureFigure": {
                 "type": "string"
               },
               "thirdFeature": {
-                "type": "string"
+                "type": "string",
+                "maxLength": 40
               },
               "title": {
                 "type": "string"
@@ -1284,7 +1354,8 @@
                       "type": "string"
                     },
                     "description": {
-                      "type": "string"
+                      "type": "string",
+                      "maxLength": 60
                     },
                     "image": {
                       "required": [
@@ -1378,12 +1449,6 @@
                 "bannerImage": {
                   "type": "string"
                 },
-                "gallery": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
                 "logo": {
                   "type": "string"
                 },
@@ -1392,9 +1457,6 @@
                 },
                 "phoneNumber2": {
                   "type": "string"
-                },
-                "masterplan": {
-                  "type": "component"
                 },
                 "categories": {
                   "type": "array",
@@ -1506,6 +1568,169 @@
               },
               "caption": {
                 "type": "string"
+              },
+              "zoneUnitMapCard": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "id"
+                  ],
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "xPosition": {
+                      "type": "string"
+                    },
+                    "yPosition": {
+                      "type": "string"
+                    },
+                    "unitName": {
+                      "type": "string"
+                    },
+                    "xPositionMobile": {
+                      "type": "string"
+                    },
+                    "yPositionMobile": {
+                      "type": "string"
+                    },
+                    "unitImage": {
+                      "required": [
+                        "id",
+                        "name",
+                        "hash",
+                        "mime",
+                        "size",
+                        "url",
+                        "provider"
+                      ],
+                      "properties": {
+                        "id": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "alternativeText": {
+                          "type": "string"
+                        },
+                        "caption": {
+                          "type": "string"
+                        },
+                        "width": {
+                          "type": "integer"
+                        },
+                        "height": {
+                          "type": "integer"
+                        },
+                        "formats": {
+                          "type": "object"
+                        },
+                        "hash": {
+                          "type": "string"
+                        },
+                        "ext": {
+                          "type": "string"
+                        },
+                        "mime": {
+                          "type": "string"
+                        },
+                        "size": {
+                          "type": "number"
+                        },
+                        "url": {
+                          "type": "string"
+                        },
+                        "previewUrl": {
+                          "type": "string"
+                        },
+                        "provider": {
+                          "type": "string"
+                        },
+                        "provider_metadata": {
+                          "type": "object"
+                        },
+                        "related": {
+                          "type": "string"
+                        },
+                        "created_by": {
+                          "type": "string"
+                        },
+                        "updated_by": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "imageMobile": {
+                "required": [
+                  "id",
+                  "name",
+                  "hash",
+                  "mime",
+                  "size",
+                  "url",
+                  "provider"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "alternativeText": {
+                    "type": "string"
+                  },
+                  "caption": {
+                    "type": "string"
+                  },
+                  "width": {
+                    "type": "integer"
+                  },
+                  "height": {
+                    "type": "integer"
+                  },
+                  "formats": {
+                    "type": "object"
+                  },
+                  "hash": {
+                    "type": "string"
+                  },
+                  "ext": {
+                    "type": "string"
+                  },
+                  "mime": {
+                    "type": "string"
+                  },
+                  "size": {
+                    "type": "number"
+                  },
+                  "url": {
+                    "type": "string"
+                  },
+                  "previewUrl": {
+                    "type": "string"
+                  },
+                  "provider": {
+                    "type": "string"
+                  },
+                  "provider_metadata": {
+                    "type": "object"
+                  },
+                  "related": {
+                    "type": "string"
+                  },
+                  "created_by": {
+                    "type": "string"
+                  },
+                  "updated_by": {
+                    "type": "string"
+                  }
+                }
               }
             }
           },
@@ -1525,7 +1750,8 @@
                 "type": "string"
               },
               "description": {
-                "type": "string"
+                "type": "string",
+                "maxLength": 160
               },
               "zoneConceptImages": {
                 "type": "array",
@@ -1692,96 +1918,6 @@
               "type": "string"
             }
           },
-          "masterplan": {
-            "type": "object",
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "zoneName": {
-                "type": "string"
-              },
-              "image": {
-                "required": [
-                  "id",
-                  "name",
-                  "hash",
-                  "mime",
-                  "size",
-                  "url",
-                  "provider"
-                ],
-                "properties": {
-                  "id": {
-                    "type": "string"
-                  },
-                  "name": {
-                    "type": "string"
-                  },
-                  "alternativeText": {
-                    "type": "string"
-                  },
-                  "caption": {
-                    "type": "string"
-                  },
-                  "width": {
-                    "type": "integer"
-                  },
-                  "height": {
-                    "type": "integer"
-                  },
-                  "formats": {
-                    "type": "object"
-                  },
-                  "hash": {
-                    "type": "string"
-                  },
-                  "ext": {
-                    "type": "string"
-                  },
-                  "mime": {
-                    "type": "string"
-                  },
-                  "size": {
-                    "type": "number"
-                  },
-                  "url": {
-                    "type": "string"
-                  },
-                  "previewUrl": {
-                    "type": "string"
-                  },
-                  "provider": {
-                    "type": "string"
-                  },
-                  "provider_metadata": {
-                    "type": "object"
-                  },
-                  "related": {
-                    "type": "string"
-                  },
-                  "created_by": {
-                    "type": "string"
-                  },
-                  "updated_by": {
-                    "type": "string"
-                  }
-                }
-              },
-              "description": {
-                "type": "string"
-              },
-              "xLocation": {
-                "type": "integer"
-              },
-              "yLocation": {
-                "type": "integer"
-              }
-            }
-          },
           "bannerSection": {
             "type": "object",
             "required": [
@@ -1926,10 +2062,12 @@
                 }
               },
               "bannerTitleLine1": {
-                "type": "string"
+                "type": "string",
+                "maxLength": 40
               },
               "banneTitleLine2": {
-                "type": "string"
+                "type": "string",
+                "maxLength": 40
               }
             }
           },
@@ -1949,19 +2087,22 @@
                 "type": "string"
               },
               "secondFeature": {
-                "type": "string"
+                "type": "string",
+                "maxLength": 40
               },
               "secondFeatureFigure": {
                 "type": "string"
               },
               "firstFeature": {
-                "type": "string"
+                "type": "string",
+                "maxLength": 40
               },
               "firstFeatureFigure": {
                 "type": "string"
               },
               "thirdFeature": {
-                "type": "string"
+                "type": "string",
+                "maxLength": 40
               },
               "title": {
                 "type": "string"
@@ -2068,7 +2209,8 @@
                       "type": "string"
                     },
                     "description": {
-                      "type": "string"
+                      "type": "string",
+                      "maxLength": 60
                     },
                     "image": {
                       "required": [

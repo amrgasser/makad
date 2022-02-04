@@ -400,10 +400,12 @@
             }
           },
           "header": {
-            "type": "string"
+            "type": "string",
+            "maxLength": 140
           },
           "body": {
-            "type": "string"
+            "type": "string",
+            "maxLength": 375
           },
           "amenity": {
             "type": "array",
@@ -420,7 +422,8 @@
                   "type": "string"
                 },
                 "description": {
-                  "type": "string"
+                  "type": "string",
+                  "maxLength": 60
                 },
                 "image": {
                   "required": [
@@ -490,8 +493,7 @@
                   }
                 }
               }
-            },
-            "maxItems": 6
+            }
           },
           "published_at": {
             "type": "string",
@@ -511,10 +513,12 @@
             "type": "string"
           },
           "header": {
-            "type": "string"
+            "type": "string",
+            "maxLength": 140
           },
           "body": {
-            "type": "string"
+            "type": "string",
+            "maxLength": 375
           },
           "amenity": {
             "type": "array",
@@ -531,7 +535,8 @@
                   "type": "string"
                 },
                 "description": {
-                  "type": "string"
+                  "type": "string",
+                  "maxLength": 60
                 },
                 "image": {
                   "required": [
@@ -601,8 +606,7 @@
                   }
                 }
               }
-            },
-            "maxItems": 6
+            }
           },
           "published_at": {
             "type": "string",

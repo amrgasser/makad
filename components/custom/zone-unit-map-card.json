@@ -1,0 +1,38 @@
+{
+  "collectionName": "components_custom_zone_unit_map_cards",
+  "info": {
+    "name": "zoneUnitMapCard",
+    "icon": "arrow-left",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "xPosition": {
+      "type": "string"
+    },
+    "yPosition": {
+      "type": "string"
+    },
+    "unitName": {
+      "type": "string"
+    },
+    "xPositionMobile": {
+      "type": "string"
+    },
+    "yPositionMobile": {
+      "type": "string"
+    },
+    "unitImage": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    }
+  }
+}

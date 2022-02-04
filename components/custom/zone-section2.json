@@ -14,19 +14,22 @@
       "type": "text"
     },
     "secondFeature": {
-      "type": "string"
+      "type": "string",
+      "maxLength": 40
     },
     "secondFeatureFigure": {
       "type": "string"
     },
     "firstFeature": {
-      "type": "string"
+      "type": "string",
+      "maxLength": 40
     },
     "firstFeatureFigure": {
       "type": "string"
     },
     "thirdFeature": {
-      "type": "string"
+      "type": "string",
+      "maxLength": 40
     },
     "title": {
       "type": "string"
