@@ -36,6 +36,7 @@ const LeftMenu = ({ shouldUpdateStrapi, version, plugins, setUpdateMenu }) => {
   const lifelink = singleTypesSectionLinks.filter(({ label, isDisplayed }) => label === "Life In One Place" && isDisplayed)
   const medialink = singleTypesSectionLinks.filter(({ label, isDisplayed }) => label === "Media Page" && isDisplayed)
   const eventlink = singleTypesSectionLinks.filter(({ label, isDisplayed }) => label === "Event Page" && isDisplayed)
+
   const wallslink = filteredCollectionTypeLinks.filter(({ label, isDisplayed }) => label === "WithinOurWalls" && isDisplayed)
   const masterplan = filteredCollectionTypeLinks.filter(({ label, isDisplayed }) => label === "Master Plans" && isDisplayed)
 
@@ -43,12 +44,15 @@ const LeftMenu = ({ shouldUpdateStrapi, version, plugins, setUpdateMenu }) => {
   const lifelinks = filteredCollectionTypeLinks.filter(({ label, isDisplayed }) => label === "Amenities" && isDisplayed)
   const medialinks = filteredCollectionTypeLinks.filter(({ label, isDisplayed }) => label === "Centers" && isDisplayed)
   const eventslinks = filteredCollectionTypeLinks.filter(({ label, isDisplayed }) => label === "Events" && isDisplayed)
+  const categorieslink = filteredCollectionTypeLinks.filter(({ label, isDisplayed }) => label === "Categories" && isDisplayed)
 
   makadilinks.unshift(makadilink[0])
   lifelinks.unshift(lifelink[0])
   medialinks.unshift(medialink[0])
   eventslinks.unshift(eventlink[0])
   masterplan.unshift(aboutlink[0])
+  wallslink.push(categorieslink[0])
+  // categorieslink.unshift(wallslink[0])
   // This effect is really temporary until we create the menu api
   // We need this because we need to regenerate the links when the settings are being changed
   // in the content manager configurations list

@@ -558,22 +558,22 @@
                   "type": "string"
                 },
                 "beds": {
-                  "type": "integer"
+                  "type": "string"
                 },
                 "bathrooms": {
-                  "type": "integer"
+                  "type": "string"
                 },
                 "bua": {
-                  "type": "integer"
+                  "type": "string"
                 },
                 "unit_type": {
                   "type": "string"
                 },
                 "availableUnits": {
-                  "type": "integer"
+                  "type": "string"
                 },
                 "price": {
-                  "type": "integer"
+                  "type": "string"
                 },
                 "exteriorImages": {
                   "type": "component"
@@ -582,10 +582,10 @@
                   "type": "component"
                 },
                 "propertySize": {
-                  "type": "integer"
+                  "type": "string"
                 },
                 "terraces": {
-                  "type": "integer"
+                  "type": "string"
                 },
                 "masterPlanSection": {
                   "type": "component"

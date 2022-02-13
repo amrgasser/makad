@@ -41,6 +41,11 @@
       "type": "component",
       "repeatable": false,
       "component": "custom.getting-around-distance"
+    },
+    "Section2": {
+      "type": "component",
+      "repeatable": true,
+      "component": "custom.section2"
     }
   }
 }

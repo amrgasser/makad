@@ -40,23 +40,23 @@
       "pluginOptions": {}
     },
     "beds": {
-      "type": "integer"
+      "type": "string"
     },
     "bathrooms": {
-      "type": "integer"
+      "type": "string"
     },
     "bua": {
-      "type": "integer"
+      "type": "string"
     },
     "unit_type": {
       "model": "unit-type",
       "via": "units"
     },
     "availableUnits": {
-      "type": "integer"
+      "type": "string"
     },
     "price": {
-      "type": "biginteger"
+      "type": "string"
     },
     "exteriorImages": {
       "type": "component",
@@ -69,10 +69,10 @@
       "component": "pages.exterior-images"
     },
     "propertySize": {
-      "type": "integer"
+      "type": "string"
     },
     "terraces": {
-      "type": "integer"
+      "type": "string"
     },
     "masterPlanSection": {
       "type": "component",

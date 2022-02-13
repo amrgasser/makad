@@ -2,20 +2,22 @@
   "collectionName": "components_custom_facilities",
   "info": {
     "name": "facilities",
-    "icon": "arrow-circle-down"
+    "icon": "arrow-circle-down",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "titleLine1": {
-      "type": "string"
-    },
-    "titleLine2": {
-      "type": "string"
-    },
-    "facilitySlider": {
-      "type": "component",
-      "repeatable": true,
-      "component": "custom.facility-slider"
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
     }
   }
 }

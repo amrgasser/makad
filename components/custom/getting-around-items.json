@@ -2,13 +2,11 @@
   "collectionName": "components_custom_getting_around_items",
   "info": {
     "name": "gettingAroundItems",
-    "icon": "arrow-alt-circle-left"
+    "icon": "arrow-alt-circle-left",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "minutes": {
-      "type": "integer"
-    },
     "location": {
       "type": "string"
     },
@@ -23,6 +21,9 @@
       "plugin": "upload",
       "required": false,
       "pluginOptions": {}
+    },
+    "minutes": {
+      "type": "string"
     }
   }
 }

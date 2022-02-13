@@ -12,11 +12,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "Section2": {
-      "type": "component",
-      "repeatable": false,
-      "component": "custom.section2"
-    },
     "MasterPlan": {
       "type": "component",
       "repeatable": false,

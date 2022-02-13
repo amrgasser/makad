@@ -491,6 +491,9 @@
                       "type": "string"
                     }
                   }
+                },
+                "btnLink": {
+                  "type": "string"
                 }
               }
             }
@@ -604,6 +607,9 @@
                       "type": "string"
                     }
                   }
+                },
+                "btnLink": {
+                  "type": "string"
                 }
               }
             }

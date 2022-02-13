@@ -48,6 +48,15 @@
       "plugin": "upload",
       "required": false,
       "pluginOptions": {}
+    },
+    "btnLink": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "date": {
+      "type": "date"
     }
   }
 }

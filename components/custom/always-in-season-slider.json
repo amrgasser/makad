@@ -114,6 +114,18 @@
     "alwaysInSeasonDescription": {
       "type": "richtext",
       "maxLength": 125
+    },
+    "leftHeadline2": {
+      "type": "string"
+    },
+    "centerHeadline2": {
+      "type": "string"
+    },
+    "topRightHeadline2": {
+      "type": "string"
+    },
+    "bottomRightHeadline2": {
+      "type": "string"
     }
   }
 }

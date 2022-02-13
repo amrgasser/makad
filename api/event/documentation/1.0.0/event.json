@@ -887,6 +887,16 @@
                     "type": "string"
                   }
                 }
+              },
+              "btnLink": {
+                "type": "string"
+              },
+              "title": {
+                "type": "string"
+              },
+              "date": {
+                "type": "string",
+                "format": "date"
               }
             }
           },
@@ -1190,6 +1200,16 @@
                     "type": "string"
                   }
                 }
+              },
+              "btnLink": {
+                "type": "string"
+              },
+              "title": {
+                "type": "string"
+              },
+              "date": {
+                "type": "string",
+                "format": "date"
               }
             }
           },

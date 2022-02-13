@@ -2,7 +2,8 @@
   "collectionName": "components_pages_about_banner_sections",
   "info": {
     "name": "aboutBannerSection",
-    "icon": "ankh"
+    "icon": "ankh",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -23,6 +24,18 @@
     },
     "bannerSubheadline": {
       "type": "string"
+    },
+    "bannerImageMobile": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
     }
   }
 }
