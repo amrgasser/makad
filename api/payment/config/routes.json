@@ -1,0 +1,20 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/payment",
+      "handler": "payment.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/payment-link",
+      "handler": "payment.generatePaymentLink",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

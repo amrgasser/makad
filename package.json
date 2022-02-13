@@ -15,6 +15,7 @@
     "html-entities": "^2.3.2",
     "knex": "0.21.18",
     "mysql": "2.18.1",
+    "node-libcurl": "^2.3.4",
     "pg": "^8.7.1",
     "pg-connection-string": "^2.5.0",
     "strapi": "3.6.8",
