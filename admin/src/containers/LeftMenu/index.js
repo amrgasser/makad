@@ -63,10 +63,6 @@ const LeftMenu = ({ shouldUpdateStrapi, version, plugins, setUpdateMenu }) => {
     });
   }, []);
 
-  useEffect(() => {
-
-  }, [wallslink])
-
   return (
     <Wrapper>
       <Loader show={isLoading} />

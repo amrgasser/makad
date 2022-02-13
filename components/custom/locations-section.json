@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_custom_locations_sections",
+  "info": {
+    "name": "LocationsSection",
+    "icon": "battery-quarter"
+  },
+  "options": {},
+  "attributes": {
+    "location": {
+      "type": "component",
+      "repeatable": false,
+      "component": "custom.location"
+    }
+  }
+}

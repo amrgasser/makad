@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_custom_locations",
+  "info": {
+    "name": "location",
+    "icon": "at"
+  },
+  "options": {},
+  "attributes": {
+    "data": {
+      "type": "json"
+    }
+  }
+}

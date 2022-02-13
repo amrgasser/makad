@@ -46,6 +46,11 @@
       "type": "component",
       "repeatable": true,
       "component": "custom.section2"
+    },
+    "LocationsSection": {
+      "type": "component",
+      "repeatable": false,
+      "component": "custom.locations-section"
     }
   }
 }
