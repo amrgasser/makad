@@ -26,7 +26,7 @@ const Wrapper = styled.div`
     background-image: url(${Logo});
     background-repeat: no-repeat;
     background-position: center;
-    background-size: auto 2.5rem;
+    background-size: auto 3.5rem;
   }
 `;
 

@@ -766,6 +766,12 @@
                     "type": "string"
                   }
                 }
+              },
+              "headlineLine1": {
+                "type": "string"
+              },
+              "headlineLine2": {
+                "type": "string"
               }
             }
           },
@@ -1731,6 +1737,12 @@
                     "type": "string"
                   }
                 }
+              },
+              "headlineLine1": {
+                "type": "string"
+              },
+              "headlineLine2": {
+                "type": "string"
               }
             }
           },

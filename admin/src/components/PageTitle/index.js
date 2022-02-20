@@ -5,11 +5,11 @@ import PropTypes from 'prop-types';
 import favicon from '../../favicon.png';
 
 const PageTitle = ({ title }) => (
-  <Helmet title={title} link={[{ rel: 'icon', type: 'image/png', href: favicon }]} />
+  <Helmet title={"Makadi Heights CMS"} link={[{ rel: 'icon', type: 'image/png', href: favicon }]} />
 );
 
 PageTitle.propTypes = {
-  title: PropTypes.string.isRequired,
+  title: "Makadi Heights CMS",
 };
 
 export default memo(PageTitle);

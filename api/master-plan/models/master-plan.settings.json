@@ -65,9 +65,7 @@
       "model": "file",
       "via": "related",
       "allowedTypes": [
-        "files",
-        "images",
-        "videos"
+        "images"
       ],
       "plugin": "upload",
       "required": false,
@@ -80,6 +78,16 @@
         "images",
         "files",
         "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "planImageMobile": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
       ],
       "plugin": "upload",
       "required": false,

@@ -38,6 +38,12 @@
       "plugin": "upload",
       "required": false,
       "pluginOptions": {}
+    },
+    "headlineLine1": {
+      "type": "string"
+    },
+    "headlineLine2": {
+      "type": "string"
     }
   }
 }

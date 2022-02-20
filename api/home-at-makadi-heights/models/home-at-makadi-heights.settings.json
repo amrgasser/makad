@@ -22,11 +22,6 @@
       "repeatable": true,
       "component": "custom.makadi-zone"
     },
-    "GettingAround": {
-      "type": "component",
-      "repeatable": true,
-      "component": "pages.getting-around"
-    },
     "bannerSection": {
       "type": "component",
       "repeatable": false,

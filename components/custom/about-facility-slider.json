@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_custom_about_facility_sliders",
+  "info": {
+    "name": "aboutFacilitySlider",
+    "icon": "angle-double-up"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "btnLink": {
+      "type": "string"
+    }
+  }
+}
