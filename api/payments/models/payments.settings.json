@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "payments",
+  "info": {
+    "name": "Payments",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "phonenumber": {
+      "type": "string"
+    },
+    "address": {
+      "type": "text"
+    },
+    "personalID": {
+      "type": "string",
+      "unique": false
+    },
+    "unitUniqueReference": {
+      "type": "string",
+      "unique": true
+    },
+    "unit": {
+      "model": "unit",
+      "via": "payments"
+    },
+    "generatedPaymentLink": {
+      "type": "string",
+      "private": true
+    },
+    "email": {
+      "type": "email",
+      "unique": false
+    }
+  }
+}

@@ -18,6 +18,7 @@
     "node-libcurl": "^2.3.4",
     "pg": "^8.7.1",
     "pg-connection-string": "^2.5.0",
+    "request": "^2.88.2",
     "strapi": "3.6.8",
     "strapi-admin": "3.6.8",
     "strapi-connector-bookshelf": "3.6.8",

@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "02/20/2022 6:07:02 PM"
+    "x-generation-date": "02/22/2022 12:34:10 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -5246,20 +5246,19 @@
         ]
       }
     },
-    "/payment": {
+    "/payments": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Find all the payments's records",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve payments document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Payments"
                   }
                 }
               }
@@ -5298,7 +5297,7 @@
         },
         "summary": "",
         "tags": [
-          "Payment"
+          "Payments"
         ],
         "parameters": [
           {
@@ -5438,15 +5437,333 @@
             "deprecated": false
           }
         ]
-      }
-    },
-    "/payment-link": {
+      },
       "post": {
         "deprecated": false,
-        "description": "Create a new record",
+        "description": "Create a new payments record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve payments document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Payments"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Payments"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewPayments"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/payments/count": {
+      "get": {
+        "deprecated": false,
+        "description": "Retrieve the number of payments documents",
+        "responses": {
+          "200": {
+            "description": "Retrieve payments document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "count": {
+                      "type": "integer"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Payments"
+        ],
+        "parameters": []
+      }
+    },
+    "/payments/{id}": {
+      "get": {
+        "deprecated": false,
+        "description": "Find one payments record",
+        "responses": {
+          "200": {
+            "description": "Retrieve payments document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Payments"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Payments"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "put": {
+        "deprecated": false,
+        "description": "Update a single payments record",
+        "responses": {
+          "200": {
+            "description": "Retrieve payments document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Payments"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Payments"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewPayments"
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "delete": {
+        "deprecated": false,
+        "description": "Delete a single payments record",
+        "responses": {
+          "200": {
+            "description": "deletes a single payments based on the ID supplied",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int64"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Payments"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/payments/generate": {
+      "post": {
+        "deprecated": false,
+        "description": "Create a new payments record",
+        "responses": {
+          "200": {
+            "description": "Retrieve payments document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -5492,7 +5809,7 @@
         },
         "summary": "",
         "tags": [
-          "Payment"
+          "Payments"
         ],
         "requestBody": {
           "description": "",
@@ -11088,102 +11405,6 @@
               },
               "headlineLine2": {
                 "type": "string"
-              },
-              "titleLine1": {
-                "type": "string"
-              },
-              "titleLine2": {
-                "type": "string"
-              },
-              "facilitySlider": {
-                "type": "array",
-                "items": {
-                  "type": "object",
-                  "required": [
-                    "id"
-                  ],
-                  "properties": {
-                    "id": {
-                      "type": "string"
-                    },
-                    "name": {
-                      "type": "string"
-                    },
-                    "image": {
-                      "required": [
-                        "id",
-                        "name",
-                        "hash",
-                        "mime",
-                        "size",
-                        "url",
-                        "provider"
-                      ],
-                      "properties": {
-                        "id": {
-                          "type": "string"
-                        },
-                        "name": {
-                          "type": "string"
-                        },
-                        "alternativeText": {
-                          "type": "string"
-                        },
-                        "caption": {
-                          "type": "string"
-                        },
-                        "width": {
-                          "type": "integer"
-                        },
-                        "height": {
-                          "type": "integer"
-                        },
-                        "formats": {
-                          "type": "object"
-                        },
-                        "hash": {
-                          "type": "string"
-                        },
-                        "ext": {
-                          "type": "string"
-                        },
-                        "mime": {
-                          "type": "string"
-                        },
-                        "size": {
-                          "type": "number"
-                        },
-                        "url": {
-                          "type": "string"
-                        },
-                        "previewUrl": {
-                          "type": "string"
-                        },
-                        "provider": {
-                          "type": "string"
-                        },
-                        "provider_metadata": {
-                          "type": "object"
-                        },
-                        "related": {
-                          "type": "string"
-                        },
-                        "created_by": {
-                          "type": "string"
-                        },
-                        "updated_by": {
-                          "type": "string"
-                        }
-                      }
-                    },
-                    "btnText": {
-                      "type": "string"
-                    },
-                    "btnLink": {
-                      "type": "string"
-                    }
-                  }
-                }
               }
             }
           },
@@ -11359,7 +11580,7 @@
                       }
                     },
                     "minutes": {
-                      "type": "integer"
+                      "type": "string"
                     }
                   }
                 }
@@ -12233,102 +12454,6 @@
               },
               "headlineLine2": {
                 "type": "string"
-              },
-              "titleLine1": {
-                "type": "string"
-              },
-              "titleLine2": {
-                "type": "string"
-              },
-              "facilitySlider": {
-                "type": "array",
-                "items": {
-                  "type": "object",
-                  "required": [
-                    "id"
-                  ],
-                  "properties": {
-                    "id": {
-                      "type": "string"
-                    },
-                    "name": {
-                      "type": "string"
-                    },
-                    "image": {
-                      "required": [
-                        "id",
-                        "name",
-                        "hash",
-                        "mime",
-                        "size",
-                        "url",
-                        "provider"
-                      ],
-                      "properties": {
-                        "id": {
-                          "type": "string"
-                        },
-                        "name": {
-                          "type": "string"
-                        },
-                        "alternativeText": {
-                          "type": "string"
-                        },
-                        "caption": {
-                          "type": "string"
-                        },
-                        "width": {
-                          "type": "integer"
-                        },
-                        "height": {
-                          "type": "integer"
-                        },
-                        "formats": {
-                          "type": "object"
-                        },
-                        "hash": {
-                          "type": "string"
-                        },
-                        "ext": {
-                          "type": "string"
-                        },
-                        "mime": {
-                          "type": "string"
-                        },
-                        "size": {
-                          "type": "number"
-                        },
-                        "url": {
-                          "type": "string"
-                        },
-                        "previewUrl": {
-                          "type": "string"
-                        },
-                        "provider": {
-                          "type": "string"
-                        },
-                        "provider_metadata": {
-                          "type": "object"
-                        },
-                        "related": {
-                          "type": "string"
-                        },
-                        "created_by": {
-                          "type": "string"
-                        },
-                        "updated_by": {
-                          "type": "string"
-                        }
-                      }
-                    },
-                    "btnText": {
-                      "type": "string"
-                    },
-                    "btnLink": {
-                      "type": "string"
-                    }
-                  }
-                }
               }
             }
           },
@@ -12504,7 +12629,7 @@
                       }
                     },
                     "minutes": {
-                      "type": "integer"
+                      "type": "string"
                     }
                   }
                 }
@@ -22896,6 +23021,152 @@
           }
         }
       },
+      "Payments": {
+        "required": [
+          "id"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "phonenumber": {
+            "type": "string"
+          },
+          "address": {
+            "type": "string"
+          },
+          "personalID": {
+            "type": "string"
+          },
+          "unitUniqueReference": {
+            "type": "string"
+          },
+          "unit": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "unitName": {
+                "type": "string"
+              },
+              "frontImg": {
+                "type": "string"
+              },
+              "backImg": {
+                "type": "string"
+              },
+              "beds": {
+                "type": "string"
+              },
+              "bathrooms": {
+                "type": "string"
+              },
+              "bua": {
+                "type": "string"
+              },
+              "unit_type": {
+                "type": "string"
+              },
+              "availableUnits": {
+                "type": "string"
+              },
+              "price": {
+                "type": "string"
+              },
+              "exteriorImages": {
+                "type": "component"
+              },
+              "interiorImages": {
+                "type": "component"
+              },
+              "propertySize": {
+                "type": "string"
+              },
+              "terraces": {
+                "type": "string"
+              },
+              "masterPlanSection": {
+                "type": "component"
+              },
+              "floorPlan": {
+                "type": "component"
+              },
+              "zones": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "payments": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "email": {
+            "type": "string"
+          },
+          "published_at": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "NewPayments": {
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "phonenumber": {
+            "type": "string"
+          },
+          "address": {
+            "type": "string"
+          },
+          "personalID": {
+            "type": "string"
+          },
+          "unitUniqueReference": {
+            "type": "string"
+          },
+          "unit": {
+            "type": "string"
+          },
+          "generatedPaymentLink": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string"
+          },
+          "published_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "created_by": {
+            "type": "string"
+          },
+          "updated_by": {
+            "type": "string"
+          }
+        }
+      },
       "Story": {
         "required": [
           "id"
@@ -23143,6 +23414,12 @@
                   "type": "component"
                 },
                 "zones": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "payments": {
                   "type": "array",
                   "items": {
                     "type": "string"
@@ -23795,6 +24072,52 @@
               }
             }
           },
+          "payments": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "phonenumber": {
+                  "type": "string"
+                },
+                "address": {
+                  "type": "string"
+                },
+                "personalID": {
+                  "type": "string"
+                },
+                "unitUniqueReference": {
+                  "type": "string"
+                },
+                "unit": {
+                  "type": "string"
+                },
+                "generatedPaymentLink": {
+                  "type": "string"
+                },
+                "email": {
+                  "type": "string"
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -24182,6 +24505,12 @@
             }
           },
           "zones": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "payments": {
             "type": "array",
             "items": {
               "type": "string"
@@ -24971,6 +25300,12 @@
                   "type": "component"
                 },
                 "zones": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "payments": {
                   "type": "array",
                   "items": {
                     "type": "string"
@@ -26594,7 +26929,7 @@
       "name": "Page"
     },
     {
-      "name": "Payment"
+      "name": "Payments"
     },
     {
       "name": "Story"

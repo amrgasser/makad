@@ -87,6 +87,10 @@
     "zones": {
       "via": "units",
       "collection": "zones"
+    },
+    "payments": {
+      "via": "unit",
+      "collection": "payments"
     }
   }
 }
