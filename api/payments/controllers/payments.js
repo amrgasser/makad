@@ -1,38 +1,47 @@
 'use strict';
+const PDFDocument = require('pdfkit');
+const fs = require('fs');
+const { parseMultipartData, sanitizeEntity } = require('strapi-utils');
+
 const querystring = require("querystring");
 const { Curl } = require("node-libcurl");
 require('dotenv').config();
 const crypto = require('crypto');
-const algorithm = 'aes-256-cbc';
-// const key = crypto.randomBytes(32);
-const iv = crypto.randomBytes(16);
-const http = require('http');
+// const IV = crypto.randomBytes(32);
+const IV = 'PGKEYENCDECIVSPC';
 
 var request = require('request');
+var aesjs = require('aes-js');
 
-function encrypt(text) {
-  let cipher = crypto.createCipheriv('aes-256-cbc', Buffer.from(process.env.TERMINAL_RESOURCE_KEY), iv);
-  let encrypted = cipher.update(text);
-  encrypted = Buffer.concat([encrypted, cipher.final()]);
-  return { iv: iv.toString('hex'), encryptedData: encrypted.toString('hex') };
+function aesEncrypt(trandata, key) {
+  var iv = "PGKEYENCDECIVSPC";
+  var rkEncryptionIv = aesjs.utils.utf8.toBytes(iv);
+  var enckey = aesjs.utils.utf8.toBytes(key);
+  var aesCtr = new aesjs.ModeOfOperation.cbc(enckey, rkEncryptionIv);
+  var textBytes = aesjs.utils.utf8.toBytes(trandata);
+  var encryptedBytes = aesCtr.encrypt(aesjs.padding.pkcs7.pad(textBytes));
+  var encryptedHex = aesjs.utils.hex.fromBytes(encryptedBytes);
+  // console.log(encryptedHex);
+  return encryptedHex;
 }
+var encrypt = ((val, key) => {
+  let cipher = crypto.createCipheriv('aes-256-cbc', key, IV);
+  let encrypted = cipher.update(val, 'utf8', 'base64');
+  encrypted += cipher.final('base64');
+  console.log(encrypted);
 
-function decrypt(text) {
-  let iv = Buffer.from(text.iv, 'hex');
-  let encryptedText = Buffer.from(text.encryptedData, 'hex');
-  let decipher = crypto.createDecipheriv('aes-256-cbc', Buffer.from(process.env.TERMINAL_RESOURCE_KEY), iv);
-  let decrypted = decipher.update(encryptedText);
-  decrypted = Buffer.concat([decrypted, decipher.final()]);
-  return decrypted.toString();
-}
-
+  return encrypted;
+});
+var decrypt = ((encrypted) => {
+  let decipher = crypto.createDecipheriv('aes-256-cbc', process.env.TERMINAL_RESOURCE_KEY, IV);
+  let decrypted = decipher.update(encrypted, 'base64', 'utf8');
+  return (decrypted + decipher.final('utf8'));
+});
 
 // function beginGatewayRequest(body) {
 
 //   const curlTest = new Curl();
 //   const terminate = curlTest.close.bind(curlTest);
-
-//   let dataresponse = ""
 //   const url = "https://securepayments.alrajhibank.com.sa/pg/payment/hosted.htm";
 
 //   curlTest.setOpt(Curl.option.URL, url)
@@ -47,9 +56,8 @@ function decrypt(text) {
 
 //   curlTest.on("end", (statusCode, data, headers) => {
 //     console.log("Ended Succesfuly\n " + "Status Code: " + statusCode);
-//     // console.log("Data: \n" + data);
-//     console.log(headers);
-
+//     console.log("Data: \n" + data);
+//     // console.log(data);
 //     return data
 //   })
 //   curlTest.on("error", (e) => {
@@ -57,7 +65,7 @@ function decrypt(text) {
 //     return "Error";
 //   })
 
-//   dataresponse = curlTest.perform();
+//   let dataresponse = curlTest.perform();
 //   curlTest.close()
 
 //   return dataresponse
@@ -103,10 +111,9 @@ function decrypt(text) {
 
 //   return "asd"
 // }
+
 async function beginGatewayRequest(body) {
-
-  const url = "securepayments.alrajhibank.com.sa";
-
+  // body = JSON.stringify(body)
   let response = request(
     {
       url: "https://securepayments.alrajhibank.com.sa/pg/payment/hosted.htm",
@@ -116,18 +123,23 @@ async function beginGatewayRequest(body) {
         'charset': 'utf-8'
       },
       method: "POST",
-      json: true,   // <--Very important!!!
-      body: body,
+      body: body
     },
     function (error, response, body) {
-      console.log(response.toJSON());
-      return response
+      // console.log("Response Body:\n", body);
+      return body
     }
   );
 
   return response
 }
+async function processQuotationPaymentRequest(response) {
+  let decodedResponse = response
 
+  // console.log(decodedResponse);
+
+  return decodedResponse
+}
 /**
  * Read the documentation (https://strapi.io/documentation/developer-docs/latest/development/backend-customization.html#core-controllers)
  * to customize this controller
@@ -135,34 +147,51 @@ async function beginGatewayRequest(body) {
 
 module.exports = {
   generatePaymentLink: async (ctx) => {
-
     // const body = new TextEncoder().encode(JSON.stringify(ctx.request.body))
-
     let trandata =
     {
-      amt: 10000,
+      amt: 10000.00,
       action: 1,
-      id: process.env.TRANPORTAL_ID,
-      password: process.env.TRANPORTAL_PASSWORD,
+      id: process.env.FORD_TRANPORTAL_ID,
+      password: process.env.FORD_TRANPORTAL_PASSWORD,
       currencyCode: 682,
-      trackId: 1293103901,
-      responseURL: 'https://www.facebbook.com', //route(‘payment-redirect’),
-      errorURL: 'https://www.google.com'
+      trackId: 123456,
+      responseURL: 'http://localhost:8000/admin', //route(‘payment-redirect’),
+      errorURL: 'http://localhost:8000/admin'
     }
 
-    trandata = new TextEncoder().encode(JSON.stringify(trandata))
+    trandata = JSON.stringify(trandata)
+    let body = [{
+      id: process.env.FORD_TRANPORTAL_ID,
+      trandata: aesEncrypt(trandata, process.env.FORD_TERMINAL_RESOURCE_KEY),
+      responseURL: 'http://localhost:8000/admin',
+      errorURL: 'http://localhost:8000/adminn'
+    }]
 
-    let body = {
-      trandata: encrypt(trandata),
-      id: process.env.TRANPORTAL_ID,
-      responseURL: 'https://www.google.com',
-      errorURL: 'https://www.linkedin.com'
-    }
-    body = new TextEncoder().encode(JSON.stringify(body))
-    body = '[' + body + ']'
+    body = JSON.stringify(body)
 
     let response = beginGatewayRequest(body)
+    // let finalresponse = processQuotationPaymentRequest(response)
 
     return response
   },
+  update: async (ctx) => {
+    const { id } = ctx.params;
+
+    let entity;
+    if (ctx.is('multipart')) {
+      const { data, files } = parseMultipartData(ctx);
+      entity = await strapi.services.payments.update({ id }, data, {
+        files,
+      });
+    } else {
+      const payment = await strapi.services.payments.findOne({ id })
+      // const doc = new PDFDocument();
+      // doc.pipe(fs.createWriteStream('output.pdf'));
+
+
+      entity = await strapi.services.payments.update({ id }, ctx.request.body);
+    }
+    return sanitizeEntity(entity, { model: strapi.models.payments });
+  }
 };

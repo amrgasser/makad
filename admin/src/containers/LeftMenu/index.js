@@ -86,16 +86,7 @@ const LeftMenu = ({ shouldUpdateStrapi, version, plugins, setUpdateMenu }) => {
             searchable
           />
         )} */}
-        {/* {pluginsSectionLinks.length > 0 && (
-          <LeftMenuLinksSection
-            section="plugins"
-            name="plugins"
-            links={pluginsSectionLinks}
-            location={location}
-            searchable={false}
-            emptyLinksListMessage="app.components.LeftMenuLinkContainer.noPluginsInstalled"
-          />
-        )} */}
+
         {homelinks.length > 0 && (
           <LeftMenuLinksSection
             section="home"
@@ -166,6 +157,16 @@ const LeftMenu = ({ shouldUpdateStrapi, version, plugins, setUpdateMenu }) => {
             links={generalSectionLinks}
             location={location}
             searchable={false}
+          />
+        )}
+        {pluginsSectionLinks.length > 0 && (
+          <LeftMenuLinksSection
+            section="plugins"
+            name="plugins"
+            links={pluginsSectionLinks}
+            location={location}
+            searchable={false}
+            emptyLinksListMessage="app.components.LeftMenuLinkContainer.noPluginsInstalled"
           />
         )}
       </LinksContainer>

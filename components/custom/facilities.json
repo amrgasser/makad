@@ -18,17 +18,6 @@
       "plugin": "upload",
       "required": false,
       "pluginOptions": {}
-    },
-    "aboutFacilitySlider": {
-      "type": "component",
-      "repeatable": true,
-      "component": "custom.about-facility-slider"
-    },
-    "headlineLine1": {
-      "type": "string"
-    },
-    "headlineLine2": {
-      "type": "string"
     }
   }
 }
