@@ -730,12 +730,6 @@
               "zoneConcept": {
                 "type": "component"
               },
-              "units": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
               "slug": {
                 "type": "string"
               },
@@ -755,6 +749,18 @@
                 "type": "component"
               },
               "directories": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "building_types": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "units": {
                 "type": "array",
                 "items": {
                   "type": "string"

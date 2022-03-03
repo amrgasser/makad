@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "03/03/2022 2:42:30 PM"
+    "x-generation-date": "03/03/2022 3:48:08 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -13956,6 +13956,12 @@
                   "type": "string"
                 }
               },
+              "building_types": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
               "units": {
                 "type": "array",
                 "items": {
@@ -13970,88 +13976,6 @@
               },
               "updated_by": {
                 "type": "string"
-              }
-            }
-          },
-          "units": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "unitName": {
-                  "type": "string"
-                },
-                "frontImg": {
-                  "type": "string"
-                },
-                "backImg": {
-                  "type": "string"
-                },
-                "beds": {
-                  "type": "string"
-                },
-                "bathrooms": {
-                  "type": "string"
-                },
-                "bua": {
-                  "type": "string"
-                },
-                "unit_type": {
-                  "type": "string"
-                },
-                "availableUnits": {
-                  "type": "string"
-                },
-                "price": {
-                  "type": "string"
-                },
-                "exteriorImages": {
-                  "type": "component"
-                },
-                "interiorImages": {
-                  "type": "component"
-                },
-                "propertySize": {
-                  "type": "string"
-                },
-                "terraces": {
-                  "type": "string"
-                },
-                "masterPlanSection": {
-                  "type": "component"
-                },
-                "floorPlan": {
-                  "type": "component"
-                },
-                "zones": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "payments": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "building_type": {
-                  "type": "string"
-                },
-                "published_at": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
               }
             }
           },
@@ -14289,6 +14213,88 @@
                       }
                     }
                   }
+                }
+              }
+            }
+          },
+          "units": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "unitName": {
+                  "type": "string"
+                },
+                "frontImg": {
+                  "type": "string"
+                },
+                "backImg": {
+                  "type": "string"
+                },
+                "beds": {
+                  "type": "string"
+                },
+                "bathrooms": {
+                  "type": "string"
+                },
+                "bua": {
+                  "type": "string"
+                },
+                "unit_type": {
+                  "type": "string"
+                },
+                "availableUnits": {
+                  "type": "string"
+                },
+                "price": {
+                  "type": "string"
+                },
+                "exteriorImages": {
+                  "type": "component"
+                },
+                "interiorImages": {
+                  "type": "component"
+                },
+                "propertySize": {
+                  "type": "string"
+                },
+                "terraces": {
+                  "type": "string"
+                },
+                "masterPlanSection": {
+                  "type": "component"
+                },
+                "floorPlan": {
+                  "type": "component"
+                },
+                "zones": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "payments": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "building_type": {
+                  "type": "string"
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
                 }
               }
             }
@@ -14585,12 +14591,6 @@
           "zone": {
             "type": "string"
           },
-          "units": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
           "unitMapSlide": {
             "type": "object",
             "required": [
@@ -14827,6 +14827,12 @@
                   }
                 }
               }
+            }
+          },
+          "units": {
+            "type": "array",
+            "items": {
+              "type": "string"
             }
           },
           "created_by": {
@@ -16711,12 +16717,6 @@
                     "zoneConcept": {
                       "type": "component"
                     },
-                    "units": {
-                      "type": "array",
-                      "items": {
-                        "type": "string"
-                      }
-                    },
                     "slug": {
                       "type": "string"
                     },
@@ -16736,6 +16736,18 @@
                       "type": "component"
                     },
                     "directories": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "building_types": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "units": {
                       "type": "array",
                       "items": {
                         "type": "string"
@@ -17262,12 +17274,6 @@
                     "zoneConcept": {
                       "type": "component"
                     },
-                    "units": {
-                      "type": "array",
-                      "items": {
-                        "type": "string"
-                      }
-                    },
                     "slug": {
                       "type": "string"
                     },
@@ -17287,6 +17293,18 @@
                       "type": "component"
                     },
                     "directories": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "building_types": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "units": {
                       "type": "array",
                       "items": {
                         "type": "string"
@@ -23374,12 +23392,6 @@
                 "zoneConcept": {
                   "type": "component"
                 },
-                "units": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
                 "slug": {
                   "type": "string"
                 },
@@ -23399,6 +23411,18 @@
                   "type": "component"
                 },
                 "directories": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "building_types": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "units": {
                   "type": "array",
                   "items": {
                     "type": "string"
@@ -25427,6 +25451,12 @@
                     "type": "string"
                   }
                 },
+                "building_types": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
                 "units": {
                   "type": "array",
                   "items": {
@@ -25535,14 +25565,14 @@
               "zone": {
                 "type": "string"
               },
+              "unitMapSlide": {
+                "type": "component"
+              },
               "units": {
                 "type": "array",
                 "items": {
                   "type": "string"
                 }
-              },
-              "unitMapSlide": {
-                "type": "component"
               },
               "created_by": {
                 "type": "string"
@@ -26168,12 +26198,6 @@
               "zoneConcept": {
                 "type": "component"
               },
-              "units": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
               "slug": {
                 "type": "string"
               },
@@ -26193,6 +26217,18 @@
                 "type": "component"
               },
               "directories": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "building_types": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "units": {
                 "type": "array",
                 "items": {
                   "type": "string"
@@ -27149,7 +27185,7 @@
               }
             }
           },
-          "units": {
+          "building_types": {
             "type": "array",
             "items": {
               "required": [
@@ -27195,14 +27231,96 @@
                 "zone": {
                   "type": "string"
                 },
+                "unitMapSlide": {
+                  "type": "component"
+                },
                 "units": {
                   "type": "array",
                   "items": {
                     "type": "string"
                   }
                 },
-                "unitMapSlide": {
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "units": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "unitName": {
+                  "type": "string"
+                },
+                "frontImg": {
+                  "type": "string"
+                },
+                "backImg": {
+                  "type": "string"
+                },
+                "beds": {
+                  "type": "string"
+                },
+                "bathrooms": {
+                  "type": "string"
+                },
+                "bua": {
+                  "type": "string"
+                },
+                "unit_type": {
+                  "type": "string"
+                },
+                "availableUnits": {
+                  "type": "string"
+                },
+                "price": {
+                  "type": "string"
+                },
+                "exteriorImages": {
                   "type": "component"
+                },
+                "interiorImages": {
+                  "type": "component"
+                },
+                "propertySize": {
+                  "type": "string"
+                },
+                "terraces": {
+                  "type": "string"
+                },
+                "masterPlanSection": {
+                  "type": "component"
+                },
+                "floorPlan": {
+                  "type": "component"
+                },
+                "zones": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "payments": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "building_type": {
+                  "type": "string"
+                },
+                "published_at": {
+                  "type": "string"
                 },
                 "created_by": {
                   "type": "string"
@@ -28020,6 +28138,12 @@
             }
           },
           "directories": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "building_types": {
             "type": "array",
             "items": {
               "type": "string"

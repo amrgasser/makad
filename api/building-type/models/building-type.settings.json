@@ -53,16 +53,16 @@
     },
     "zone": {
       "model": "zones",
-      "via": "units"
-    },
-    "units": {
-      "collection": "unit",
-      "via": "building_type"
+      "via": "building_types"
     },
     "unitMapSlide": {
       "type": "component",
       "repeatable": false,
       "component": "custom.unit-map-slide"
+    },
+    "units": {
+      "via": "building_type",
+      "collection": "unit"
     }
   }
 }

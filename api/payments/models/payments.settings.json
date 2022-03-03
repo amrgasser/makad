@@ -30,8 +30,8 @@
       "unique": true
     },
     "unit": {
-      "model": "unit",
-      "via": "payments"
+      "via": "payments",
+      "model": "unit"
     },
     "generatedPaymentLink": {
       "type": "string",

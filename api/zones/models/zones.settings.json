@@ -51,9 +51,14 @@
       "via": "zone",
       "collection": "within-our-walls"
     },
-    "units": {
+    "building_types": {
       "via": "zone",
       "collection": "building-type"
+    },
+    "units": {
+      "via": "zones",
+      "collection": "unit",
+      "dominant": true
     }
   }
 }

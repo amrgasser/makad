@@ -1170,6 +1170,12 @@
                     "type": "string"
                   }
                 },
+                "building_types": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
                 "units": {
                   "type": "array",
                   "items": {
@@ -1278,14 +1284,14 @@
               "zone": {
                 "type": "string"
               },
+              "unitMapSlide": {
+                "type": "component"
+              },
               "units": {
                 "type": "array",
                 "items": {
                   "type": "string"
                 }
-              },
-              "unitMapSlide": {
-                "type": "component"
               },
               "created_by": {
                 "type": "string"
