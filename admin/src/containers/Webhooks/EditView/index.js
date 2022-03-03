@@ -25,7 +25,6 @@ import Wrapper from './Wrapper';
 
 function EditView() {
   const { isLoading: isLoadingForModels, collectionTypes } = useModels();
-
   const isMounted = useRef();
   const { formatMessage } = useGlobalContext();
   const [submittedOnce, setSubmittedOnce] = useState(false);
@@ -106,22 +105,24 @@ function EditView() {
   /* eslint-disable indent */
   const headerTitle = isCreating
     ? formatMessage({
-        id: 'Settings.webhooks.create',
-      })
+      id: 'Settings.webhooks.create',
+    })
     : initialData.name;
 
   const headersActions = [
     {
       color: 'primary',
       disabled: isTriggerActionDisabled,
-      label: formatMessage({
-        id: 'Settings.webhooks.trigger',
-      }),
+      label:
+        formatMessage({
+          id: 'Settings.webhooks.trigger',
+        })
+      ,
       onClick: () => handleTrigger(),
       title: isTriggerActionDisabled
         ? formatMessage({
-            id: 'Settings.webhooks.trigger.save',
-          })
+          id: 'Settings.webhooks.trigger.save',
+        })
         : null,
       type: 'button',
       icon: (

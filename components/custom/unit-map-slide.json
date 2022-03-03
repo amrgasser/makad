@@ -1,0 +1,39 @@
+{
+  "collectionName": "components_custom_unit_map_slides",
+  "info": {
+    "name": "unitMapSlide",
+    "icon": "bell"
+  },
+  "options": {},
+  "attributes": {
+    "backgroundImage": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "backgroundImageMobile": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "card": {
+      "type": "component",
+      "repeatable": false,
+      "component": "custom.zone-unit-map-card"
+    }
+  }
+}

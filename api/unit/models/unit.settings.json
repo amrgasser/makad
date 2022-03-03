@@ -91,6 +91,10 @@
     "payments": {
       "via": "unit",
       "collection": "payments"
+    },
+    "building_type": {
+      "via": "units",
+      "model": "building-type"
     }
   }
 }

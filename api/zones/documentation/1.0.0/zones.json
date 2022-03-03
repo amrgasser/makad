@@ -944,85 +944,6 @@
               }
             }
           },
-          "units": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "unitName": {
-                  "type": "string"
-                },
-                "frontImg": {
-                  "type": "string"
-                },
-                "backImg": {
-                  "type": "string"
-                },
-                "beds": {
-                  "type": "string"
-                },
-                "bathrooms": {
-                  "type": "string"
-                },
-                "bua": {
-                  "type": "string"
-                },
-                "unit_type": {
-                  "type": "string"
-                },
-                "availableUnits": {
-                  "type": "string"
-                },
-                "price": {
-                  "type": "string"
-                },
-                "exteriorImages": {
-                  "type": "component"
-                },
-                "interiorImages": {
-                  "type": "component"
-                },
-                "propertySize": {
-                  "type": "string"
-                },
-                "terraces": {
-                  "type": "string"
-                },
-                "masterPlanSection": {
-                  "type": "component"
-                },
-                "floorPlan": {
-                  "type": "component"
-                },
-                "zones": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "payments": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "published_at": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
-          },
           "slug": {
             "type": "string"
           },
@@ -1481,6 +1402,70 @@
                 },
                 "published_at": {
                   "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "units": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "unitName": {
+                  "type": "string"
+                },
+                "numberOfUnits": {
+                  "type": "string"
+                },
+                "bathrooms": {
+                  "type": "string"
+                },
+                "bua": {
+                  "type": "string"
+                },
+                "availableUnits": {
+                  "type": "string"
+                },
+                "price": {
+                  "type": "string"
+                },
+                "exteriorImages": {
+                  "type": "component"
+                },
+                "interiorImages": {
+                  "type": "component"
+                },
+                "propertySize": {
+                  "type": "string"
+                },
+                "types": {
+                  "type": "string"
+                },
+                "floorPlan": {
+                  "type": "component"
+                },
+                "zone": {
+                  "type": "string"
+                },
+                "units": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "unitMapSlide": {
+                  "type": "component"
                 },
                 "created_by": {
                   "type": "string"
@@ -1921,12 +1906,6 @@
               }
             }
           },
-          "units": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
           "slug": {
             "type": "string"
           },
@@ -2304,6 +2283,12 @@
             }
           },
           "directories": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "units": {
             "type": "array",
             "items": {
               "type": "string"

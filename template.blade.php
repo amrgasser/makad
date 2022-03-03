@@ -6,25 +6,6 @@
 @section('profile-section')
     ​
     <div id="my-invoices" class="tab-pane user-profile fade">
-        @if ($errors->any())
-            <div class="alert alert-danger">
-                <ul>
-                    @foreach ($errors->all() as $error)
-                        <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
-            </div>
-        @endif
-        @if (session('update'))
-            <br>
-            <br>
-            <div class="alert alert-success alert-dismissible fade show" role="alert">
-                <strong>{{ __('messages.success') }}! </strong> {{ session('update') }}
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-        @endif
         <div class="invoice-box">
             <table cellpadding="0" cellspacing="0">
                 <tr class="top">
@@ -115,44 +96,5 @@
                 </a>
                 {!! $qr_code !!}
             </div>
-            {{-- <form action="{{route('quotation-status-update',$quotation->id)}}" method="POST">
-      @method('PUT')
-      @csrf
-      <div class="form-group">
-        <input type="checkbox" name="agree" id="agree">
-        <label for="agree">I hereby agree on the quotation and agreed on the vehicle condition in the report!</label>
-      </div>
-      <div class="update-quotation-status d-flex">
-        @if ($quotation->status == 2)
-          <button type="submit" id="reject-btn" class="main-btn white-btn w-100" value="1" name="status">
-            Reject Quotation
-          </button>
-        @elseif ($quotation->status == 1)
-          <button type="submit" class="main-btn black-btn w-100" value="2" name="status">
-            Accept Quotation
-          </button>
-        @else
-          <button type="submit" id="reject-btn" class="main-btn white-btn w-100" value="1" name="status">
-            Reject Quotation
-          </button>
-          <button type="submit" class="main-btn black-btn w-100" value="2" name="status">
-            Accept Quotation
-          </button>
-        @endif
-      </div>
-    </form> --}}
         </div>
     </div>
-@endsection
-@section('profile-scripts')
-    @if ($invoice->status == \App\Models\Quotation::SENT_TO_CUSTOMER)
-        <script>
-            document.querySelector('.dues-link').classList.add('active')
-        </script>
-    @elseif ($invoice->status != \App\Models\Quotation::SENT_TO_CUSTOMER)
-        <script>
-            document.querySelector('.invoices-link').classList.add('active')
-        </script>
-    @endif
-    <script src="{{ asset('js/customer-quotation.js') }}"></script>
-@endsection

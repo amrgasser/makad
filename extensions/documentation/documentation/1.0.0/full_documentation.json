@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "02/23/2022 4:11:11 PM"
+    "x-generation-date": "03/03/2022 2:42:30 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -848,6 +848,530 @@
         "summary": "",
         "tags": [
           "Amenity"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/building-types": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Building-type"
+        ],
+        "parameters": [
+          {
+            "name": "_limit",
+            "in": "query",
+            "required": false,
+            "description": "Maximum number of results possible",
+            "schema": {
+              "type": "integer"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_sort",
+            "in": "query",
+            "required": false,
+            "description": "Sort according to a specific field.",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_start",
+            "in": "query",
+            "required": false,
+            "description": "Skip a specific number of entries (especially useful for pagination)",
+            "schema": {
+              "type": "integer"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "=",
+            "in": "query",
+            "required": false,
+            "description": "Get entries that matches exactly your input",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_ne",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are not equals to something",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_lt",
+            "in": "query",
+            "required": false,
+            "description": "Get record that are lower than a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_lte",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are lower than or equal to a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_gt",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are greater than a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_gte",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are greater than  or equal a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_contains",
+            "in": "query",
+            "required": false,
+            "description": "Get records that contains a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_containss",
+            "in": "query",
+            "required": false,
+            "description": "Get records that contains (case sensitive) a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_in",
+            "in": "query",
+            "required": false,
+            "description": "Get records that matches any value in the array of values",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_nin",
+            "in": "query",
+            "required": false,
+            "description": "Get records that doesn't match any value in the array of values",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "deprecated": false
+          }
+        ]
+      },
+      "post": {
+        "deprecated": false,
+        "description": "Create a new record",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Building-type"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewBuilding-type"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/building-types/count": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Building-type"
+        ],
+        "parameters": []
+      }
+    },
+    "/building-types/{id}": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Building-type"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "put": {
+        "deprecated": false,
+        "description": "Update a record",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Building-type"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewBuilding-type"
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "delete": {
+        "deprecated": false,
+        "description": "Delete a record",
+        "responses": {
+          "200": {
+            "description": "deletes a single record based on the ID supplied",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int64"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Building-type"
         ],
         "parameters": [
           {
@@ -13098,6 +13622,1221 @@
           }
         }
       },
+      "Building-type": {
+        "required": [
+          "id"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "unitName": {
+            "type": "string"
+          },
+          "numberOfUnits": {
+            "type": "string"
+          },
+          "bathrooms": {
+            "type": "string"
+          },
+          "bua": {
+            "type": "string"
+          },
+          "availableUnits": {
+            "type": "string"
+          },
+          "price": {
+            "type": "string"
+          },
+          "exteriorImages": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "label": {
+                  "type": "string"
+                },
+                "image": {
+                  "type": "array",
+                  "items": {
+                    "required": [
+                      "id",
+                      "name",
+                      "hash",
+                      "mime",
+                      "size",
+                      "url",
+                      "provider"
+                    ],
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "name": {
+                        "type": "string"
+                      },
+                      "alternativeText": {
+                        "type": "string"
+                      },
+                      "caption": {
+                        "type": "string"
+                      },
+                      "width": {
+                        "type": "integer"
+                      },
+                      "height": {
+                        "type": "integer"
+                      },
+                      "formats": {
+                        "type": "object"
+                      },
+                      "hash": {
+                        "type": "string"
+                      },
+                      "ext": {
+                        "type": "string"
+                      },
+                      "mime": {
+                        "type": "string"
+                      },
+                      "size": {
+                        "type": "number"
+                      },
+                      "url": {
+                        "type": "string"
+                      },
+                      "previewUrl": {
+                        "type": "string"
+                      },
+                      "provider": {
+                        "type": "string"
+                      },
+                      "provider_metadata": {
+                        "type": "object"
+                      },
+                      "related": {
+                        "type": "string"
+                      },
+                      "created_by": {
+                        "type": "string"
+                      },
+                      "updated_by": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "interiorImages": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "label": {
+                  "type": "string"
+                },
+                "image": {
+                  "type": "array",
+                  "items": {
+                    "required": [
+                      "id",
+                      "name",
+                      "hash",
+                      "mime",
+                      "size",
+                      "url",
+                      "provider"
+                    ],
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "name": {
+                        "type": "string"
+                      },
+                      "alternativeText": {
+                        "type": "string"
+                      },
+                      "caption": {
+                        "type": "string"
+                      },
+                      "width": {
+                        "type": "integer"
+                      },
+                      "height": {
+                        "type": "integer"
+                      },
+                      "formats": {
+                        "type": "object"
+                      },
+                      "hash": {
+                        "type": "string"
+                      },
+                      "ext": {
+                        "type": "string"
+                      },
+                      "mime": {
+                        "type": "string"
+                      },
+                      "size": {
+                        "type": "number"
+                      },
+                      "url": {
+                        "type": "string"
+                      },
+                      "previewUrl": {
+                        "type": "string"
+                      },
+                      "provider": {
+                        "type": "string"
+                      },
+                      "provider_metadata": {
+                        "type": "object"
+                      },
+                      "related": {
+                        "type": "string"
+                      },
+                      "created_by": {
+                        "type": "string"
+                      },
+                      "updated_by": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "propertySize": {
+            "type": "string"
+          },
+          "types": {
+            "type": "string"
+          },
+          "floorPlan": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "label": {
+                  "type": "string"
+                },
+                "image": {
+                  "type": "array",
+                  "items": {
+                    "required": [
+                      "id",
+                      "name",
+                      "hash",
+                      "mime",
+                      "size",
+                      "url",
+                      "provider"
+                    ],
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "name": {
+                        "type": "string"
+                      },
+                      "alternativeText": {
+                        "type": "string"
+                      },
+                      "caption": {
+                        "type": "string"
+                      },
+                      "width": {
+                        "type": "integer"
+                      },
+                      "height": {
+                        "type": "integer"
+                      },
+                      "formats": {
+                        "type": "object"
+                      },
+                      "hash": {
+                        "type": "string"
+                      },
+                      "ext": {
+                        "type": "string"
+                      },
+                      "mime": {
+                        "type": "string"
+                      },
+                      "size": {
+                        "type": "number"
+                      },
+                      "url": {
+                        "type": "string"
+                      },
+                      "previewUrl": {
+                        "type": "string"
+                      },
+                      "provider": {
+                        "type": "string"
+                      },
+                      "provider_metadata": {
+                        "type": "object"
+                      },
+                      "related": {
+                        "type": "string"
+                      },
+                      "created_by": {
+                        "type": "string"
+                      },
+                      "updated_by": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "zone": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "zoneName": {
+                "type": "string"
+              },
+              "zoneUnitMap": {
+                "type": "component"
+              },
+              "zoneConcept": {
+                "type": "component"
+              },
+              "slug": {
+                "type": "string"
+              },
+              "within_our_walls": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "bannerSection": {
+                "type": "component"
+              },
+              "zoneSection2": {
+                "type": "component"
+              },
+              "amenitiesSection": {
+                "type": "component"
+              },
+              "directories": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "units": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "units": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "unitName": {
+                  "type": "string"
+                },
+                "frontImg": {
+                  "type": "string"
+                },
+                "backImg": {
+                  "type": "string"
+                },
+                "beds": {
+                  "type": "string"
+                },
+                "bathrooms": {
+                  "type": "string"
+                },
+                "bua": {
+                  "type": "string"
+                },
+                "unit_type": {
+                  "type": "string"
+                },
+                "availableUnits": {
+                  "type": "string"
+                },
+                "price": {
+                  "type": "string"
+                },
+                "exteriorImages": {
+                  "type": "component"
+                },
+                "interiorImages": {
+                  "type": "component"
+                },
+                "propertySize": {
+                  "type": "string"
+                },
+                "terraces": {
+                  "type": "string"
+                },
+                "masterPlanSection": {
+                  "type": "component"
+                },
+                "floorPlan": {
+                  "type": "component"
+                },
+                "zones": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "payments": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "building_type": {
+                  "type": "string"
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "unitMapSlide": {
+            "type": "object",
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "backgroundImage": {
+                "required": [
+                  "id",
+                  "name",
+                  "hash",
+                  "mime",
+                  "size",
+                  "url",
+                  "provider"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "alternativeText": {
+                    "type": "string"
+                  },
+                  "caption": {
+                    "type": "string"
+                  },
+                  "width": {
+                    "type": "integer"
+                  },
+                  "height": {
+                    "type": "integer"
+                  },
+                  "formats": {
+                    "type": "object"
+                  },
+                  "hash": {
+                    "type": "string"
+                  },
+                  "ext": {
+                    "type": "string"
+                  },
+                  "mime": {
+                    "type": "string"
+                  },
+                  "size": {
+                    "type": "number"
+                  },
+                  "url": {
+                    "type": "string"
+                  },
+                  "previewUrl": {
+                    "type": "string"
+                  },
+                  "provider": {
+                    "type": "string"
+                  },
+                  "provider_metadata": {
+                    "type": "object"
+                  },
+                  "related": {
+                    "type": "string"
+                  },
+                  "created_by": {
+                    "type": "string"
+                  },
+                  "updated_by": {
+                    "type": "string"
+                  }
+                }
+              },
+              "backgroundImageMobile": {
+                "required": [
+                  "id",
+                  "name",
+                  "hash",
+                  "mime",
+                  "size",
+                  "url",
+                  "provider"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "alternativeText": {
+                    "type": "string"
+                  },
+                  "caption": {
+                    "type": "string"
+                  },
+                  "width": {
+                    "type": "integer"
+                  },
+                  "height": {
+                    "type": "integer"
+                  },
+                  "formats": {
+                    "type": "object"
+                  },
+                  "hash": {
+                    "type": "string"
+                  },
+                  "ext": {
+                    "type": "string"
+                  },
+                  "mime": {
+                    "type": "string"
+                  },
+                  "size": {
+                    "type": "number"
+                  },
+                  "url": {
+                    "type": "string"
+                  },
+                  "previewUrl": {
+                    "type": "string"
+                  },
+                  "provider": {
+                    "type": "string"
+                  },
+                  "provider_metadata": {
+                    "type": "object"
+                  },
+                  "related": {
+                    "type": "string"
+                  },
+                  "created_by": {
+                    "type": "string"
+                  },
+                  "updated_by": {
+                    "type": "string"
+                  }
+                }
+              },
+              "card": {
+                "type": "object",
+                "required": [
+                  "id"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "xPosition": {
+                    "type": "string"
+                  },
+                  "yPosition": {
+                    "type": "string"
+                  },
+                  "unitName": {
+                    "type": "string"
+                  },
+                  "xPositionMobile": {
+                    "type": "string"
+                  },
+                  "yPositionMobile": {
+                    "type": "string"
+                  },
+                  "unitImage": {
+                    "required": [
+                      "id",
+                      "name",
+                      "hash",
+                      "mime",
+                      "size",
+                      "url",
+                      "provider"
+                    ],
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "name": {
+                        "type": "string"
+                      },
+                      "alternativeText": {
+                        "type": "string"
+                      },
+                      "caption": {
+                        "type": "string"
+                      },
+                      "width": {
+                        "type": "integer"
+                      },
+                      "height": {
+                        "type": "integer"
+                      },
+                      "formats": {
+                        "type": "object"
+                      },
+                      "hash": {
+                        "type": "string"
+                      },
+                      "ext": {
+                        "type": "string"
+                      },
+                      "mime": {
+                        "type": "string"
+                      },
+                      "size": {
+                        "type": "number"
+                      },
+                      "url": {
+                        "type": "string"
+                      },
+                      "previewUrl": {
+                        "type": "string"
+                      },
+                      "provider": {
+                        "type": "string"
+                      },
+                      "provider_metadata": {
+                        "type": "object"
+                      },
+                      "related": {
+                        "type": "string"
+                      },
+                      "created_by": {
+                        "type": "string"
+                      },
+                      "updated_by": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "NewBuilding-type": {
+        "properties": {
+          "unitName": {
+            "type": "string"
+          },
+          "numberOfUnits": {
+            "type": "string"
+          },
+          "bathrooms": {
+            "type": "string"
+          },
+          "bua": {
+            "type": "string"
+          },
+          "availableUnits": {
+            "type": "string"
+          },
+          "price": {
+            "type": "string"
+          },
+          "exteriorImages": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "label": {
+                  "type": "string"
+                },
+                "image": {
+                  "type": "array",
+                  "items": {
+                    "required": [
+                      "id",
+                      "name",
+                      "hash",
+                      "mime",
+                      "size",
+                      "url",
+                      "provider"
+                    ],
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "name": {
+                        "type": "string"
+                      },
+                      "alternativeText": {
+                        "type": "string"
+                      },
+                      "caption": {
+                        "type": "string"
+                      },
+                      "width": {
+                        "type": "integer"
+                      },
+                      "height": {
+                        "type": "integer"
+                      },
+                      "formats": {
+                        "type": "object"
+                      },
+                      "hash": {
+                        "type": "string"
+                      },
+                      "ext": {
+                        "type": "string"
+                      },
+                      "mime": {
+                        "type": "string"
+                      },
+                      "size": {
+                        "type": "number"
+                      },
+                      "url": {
+                        "type": "string"
+                      },
+                      "previewUrl": {
+                        "type": "string"
+                      },
+                      "provider": {
+                        "type": "string"
+                      },
+                      "provider_metadata": {
+                        "type": "object"
+                      },
+                      "related": {
+                        "type": "string"
+                      },
+                      "created_by": {
+                        "type": "string"
+                      },
+                      "updated_by": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "interiorImages": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "label": {
+                  "type": "string"
+                },
+                "image": {
+                  "type": "array",
+                  "items": {
+                    "required": [
+                      "id",
+                      "name",
+                      "hash",
+                      "mime",
+                      "size",
+                      "url",
+                      "provider"
+                    ],
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "name": {
+                        "type": "string"
+                      },
+                      "alternativeText": {
+                        "type": "string"
+                      },
+                      "caption": {
+                        "type": "string"
+                      },
+                      "width": {
+                        "type": "integer"
+                      },
+                      "height": {
+                        "type": "integer"
+                      },
+                      "formats": {
+                        "type": "object"
+                      },
+                      "hash": {
+                        "type": "string"
+                      },
+                      "ext": {
+                        "type": "string"
+                      },
+                      "mime": {
+                        "type": "string"
+                      },
+                      "size": {
+                        "type": "number"
+                      },
+                      "url": {
+                        "type": "string"
+                      },
+                      "previewUrl": {
+                        "type": "string"
+                      },
+                      "provider": {
+                        "type": "string"
+                      },
+                      "provider_metadata": {
+                        "type": "object"
+                      },
+                      "related": {
+                        "type": "string"
+                      },
+                      "created_by": {
+                        "type": "string"
+                      },
+                      "updated_by": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "propertySize": {
+            "type": "string"
+          },
+          "types": {
+            "type": "string"
+          },
+          "floorPlan": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "label": {
+                  "type": "string"
+                },
+                "image": {
+                  "type": "array",
+                  "items": {
+                    "required": [
+                      "id",
+                      "name",
+                      "hash",
+                      "mime",
+                      "size",
+                      "url",
+                      "provider"
+                    ],
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "name": {
+                        "type": "string"
+                      },
+                      "alternativeText": {
+                        "type": "string"
+                      },
+                      "caption": {
+                        "type": "string"
+                      },
+                      "width": {
+                        "type": "integer"
+                      },
+                      "height": {
+                        "type": "integer"
+                      },
+                      "formats": {
+                        "type": "object"
+                      },
+                      "hash": {
+                        "type": "string"
+                      },
+                      "ext": {
+                        "type": "string"
+                      },
+                      "mime": {
+                        "type": "string"
+                      },
+                      "size": {
+                        "type": "number"
+                      },
+                      "url": {
+                        "type": "string"
+                      },
+                      "previewUrl": {
+                        "type": "string"
+                      },
+                      "provider": {
+                        "type": "string"
+                      },
+                      "provider_metadata": {
+                        "type": "object"
+                      },
+                      "related": {
+                        "type": "string"
+                      },
+                      "created_by": {
+                        "type": "string"
+                      },
+                      "updated_by": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "zone": {
+            "type": "string"
+          },
+          "units": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "unitMapSlide": {
+            "type": "object",
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "backgroundImage": {
+                "required": [
+                  "id",
+                  "name",
+                  "hash",
+                  "mime",
+                  "size",
+                  "url",
+                  "provider"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "alternativeText": {
+                    "type": "string"
+                  },
+                  "caption": {
+                    "type": "string"
+                  },
+                  "width": {
+                    "type": "integer"
+                  },
+                  "height": {
+                    "type": "integer"
+                  },
+                  "formats": {
+                    "type": "object"
+                  },
+                  "hash": {
+                    "type": "string"
+                  },
+                  "ext": {
+                    "type": "string"
+                  },
+                  "mime": {
+                    "type": "string"
+                  },
+                  "size": {
+                    "type": "number"
+                  },
+                  "url": {
+                    "type": "string"
+                  },
+                  "previewUrl": {
+                    "type": "string"
+                  },
+                  "provider": {
+                    "type": "string"
+                  },
+                  "provider_metadata": {
+                    "type": "object"
+                  },
+                  "related": {
+                    "type": "string"
+                  },
+                  "created_by": {
+                    "type": "string"
+                  },
+                  "updated_by": {
+                    "type": "string"
+                  }
+                }
+              },
+              "backgroundImageMobile": {
+                "required": [
+                  "id",
+                  "name",
+                  "hash",
+                  "mime",
+                  "size",
+                  "url",
+                  "provider"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "alternativeText": {
+                    "type": "string"
+                  },
+                  "caption": {
+                    "type": "string"
+                  },
+                  "width": {
+                    "type": "integer"
+                  },
+                  "height": {
+                    "type": "integer"
+                  },
+                  "formats": {
+                    "type": "object"
+                  },
+                  "hash": {
+                    "type": "string"
+                  },
+                  "ext": {
+                    "type": "string"
+                  },
+                  "mime": {
+                    "type": "string"
+                  },
+                  "size": {
+                    "type": "number"
+                  },
+                  "url": {
+                    "type": "string"
+                  },
+                  "previewUrl": {
+                    "type": "string"
+                  },
+                  "provider": {
+                    "type": "string"
+                  },
+                  "provider_metadata": {
+                    "type": "object"
+                  },
+                  "related": {
+                    "type": "string"
+                  },
+                  "created_by": {
+                    "type": "string"
+                  },
+                  "updated_by": {
+                    "type": "string"
+                  }
+                }
+              },
+              "card": {
+                "type": "object",
+                "required": [
+                  "id"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "xPosition": {
+                    "type": "string"
+                  },
+                  "yPosition": {
+                    "type": "string"
+                  },
+                  "unitName": {
+                    "type": "string"
+                  },
+                  "xPositionMobile": {
+                    "type": "string"
+                  },
+                  "yPositionMobile": {
+                    "type": "string"
+                  },
+                  "unitImage": {
+                    "required": [
+                      "id",
+                      "name",
+                      "hash",
+                      "mime",
+                      "size",
+                      "url",
+                      "provider"
+                    ],
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "name": {
+                        "type": "string"
+                      },
+                      "alternativeText": {
+                        "type": "string"
+                      },
+                      "caption": {
+                        "type": "string"
+                      },
+                      "width": {
+                        "type": "integer"
+                      },
+                      "height": {
+                        "type": "integer"
+                      },
+                      "formats": {
+                        "type": "object"
+                      },
+                      "hash": {
+                        "type": "string"
+                      },
+                      "ext": {
+                        "type": "string"
+                      },
+                      "mime": {
+                        "type": "string"
+                      },
+                      "size": {
+                        "type": "number"
+                      },
+                      "url": {
+                        "type": "string"
+                      },
+                      "previewUrl": {
+                        "type": "string"
+                      },
+                      "provider": {
+                        "type": "string"
+                      },
+                      "provider_metadata": {
+                        "type": "object"
+                      },
+                      "related": {
+                        "type": "string"
+                      },
+                      "created_by": {
+                        "type": "string"
+                      },
+                      "updated_by": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "created_by": {
+            "type": "string"
+          },
+          "updated_by": {
+            "type": "string"
+          }
+        }
+      },
       "Category": {
         "required": [
           "id"
@@ -22737,6 +24476,9 @@
                   "type": "string"
                 }
               },
+              "building_type": {
+                "type": "string"
+              },
               "published_at": {
                 "type": "string"
               },
@@ -23052,6 +24794,9 @@
                   "items": {
                     "type": "string"
                   }
+                },
+                "building_type": {
+                  "type": "string"
                 },
                 "published_at": {
                   "type": "string"
@@ -23658,12 +25403,6 @@
                 "zoneConcept": {
                   "type": "component"
                 },
-                "units": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
                 "slug": {
                   "type": "string"
                 },
@@ -23683,6 +25422,12 @@
                   "type": "component"
                 },
                 "directories": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "units": {
                   "type": "array",
                   "items": {
                     "type": "string"
@@ -23743,6 +25488,67 @@
                 "updated_by": {
                   "type": "string"
                 }
+              }
+            }
+          },
+          "building_type": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "unitName": {
+                "type": "string"
+              },
+              "numberOfUnits": {
+                "type": "string"
+              },
+              "bathrooms": {
+                "type": "string"
+              },
+              "bua": {
+                "type": "string"
+              },
+              "availableUnits": {
+                "type": "string"
+              },
+              "price": {
+                "type": "string"
+              },
+              "exteriorImages": {
+                "type": "component"
+              },
+              "interiorImages": {
+                "type": "component"
+              },
+              "propertySize": {
+                "type": "string"
+              },
+              "types": {
+                "type": "string"
+              },
+              "floorPlan": {
+                "type": "component"
+              },
+              "zone": {
+                "type": "string"
+              },
+              "units": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "unitMapSlide": {
+                "type": "component"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
               }
             }
           },
@@ -24143,6 +25949,9 @@
             "items": {
               "type": "string"
             }
+          },
+          "building_type": {
+            "type": "string"
           },
           "published_at": {
             "type": "string",
@@ -24872,85 +26681,6 @@
               }
             }
           },
-          "units": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "unitName": {
-                  "type": "string"
-                },
-                "frontImg": {
-                  "type": "string"
-                },
-                "backImg": {
-                  "type": "string"
-                },
-                "beds": {
-                  "type": "string"
-                },
-                "bathrooms": {
-                  "type": "string"
-                },
-                "bua": {
-                  "type": "string"
-                },
-                "unit_type": {
-                  "type": "string"
-                },
-                "availableUnits": {
-                  "type": "string"
-                },
-                "price": {
-                  "type": "string"
-                },
-                "exteriorImages": {
-                  "type": "component"
-                },
-                "interiorImages": {
-                  "type": "component"
-                },
-                "propertySize": {
-                  "type": "string"
-                },
-                "terraces": {
-                  "type": "string"
-                },
-                "masterPlanSection": {
-                  "type": "component"
-                },
-                "floorPlan": {
-                  "type": "component"
-                },
-                "zones": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "payments": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "published_at": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
-          },
           "slug": {
             "type": "string"
           },
@@ -25409,6 +27139,70 @@
                 },
                 "published_at": {
                   "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "units": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "unitName": {
+                  "type": "string"
+                },
+                "numberOfUnits": {
+                  "type": "string"
+                },
+                "bathrooms": {
+                  "type": "string"
+                },
+                "bua": {
+                  "type": "string"
+                },
+                "availableUnits": {
+                  "type": "string"
+                },
+                "price": {
+                  "type": "string"
+                },
+                "exteriorImages": {
+                  "type": "component"
+                },
+                "interiorImages": {
+                  "type": "component"
+                },
+                "propertySize": {
+                  "type": "string"
+                },
+                "types": {
+                  "type": "string"
+                },
+                "floorPlan": {
+                  "type": "component"
+                },
+                "zone": {
+                  "type": "string"
+                },
+                "units": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "unitMapSlide": {
+                  "type": "component"
                 },
                 "created_by": {
                   "type": "string"
@@ -25849,12 +27643,6 @@
               }
             }
           },
-          "units": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
           "slug": {
             "type": "string"
           },
@@ -26232,6 +28020,12 @@
             }
           },
           "directories": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "units": {
             "type": "array",
             "items": {
               "type": "string"

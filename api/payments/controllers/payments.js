@@ -1,17 +1,30 @@
 'use strict';
-const PDFDocument = require('pdfkit');
-const fs = require('fs');
-const { parseMultipartData, sanitizeEntity } = require('strapi-utils');
 
-const querystring = require("querystring");
-const { Curl } = require("node-libcurl");
+const fs = require('fs-extra');
+const hbs = require('handlebars')
+const { parseMultipartData, sanitizeEntity } = require('strapi-utils');
+const puppeteer = require('puppeteer')
 require('dotenv').config();
 const crypto = require('crypto');
 // const IV = crypto.randomBytes(32);
 const IV = 'PGKEYENCDECIVSPC';
-
+const path = require('path')
+const moment = require('moment')
 var request = require('request');
 var aesjs = require('aes-js');
+
+
+// Compiling of handlebars template to PDF
+const compile = async (templateName, data) => {
+  const filePath = path.join(process.cwd(), 'templates', `${templateName}.hbs`)
+  const html = await fs.readFile(filePath, 'utf-8')
+
+  return hbs.compile(html)(data)
+}
+
+hbs.registerHelper('dateFormat', (value, format) => {
+  return moment(value).format(format)
+})
 
 function aesEncrypt(trandata, key) {
   var iv = "PGKEYENCDECIVSPC";
@@ -38,82 +51,32 @@ var decrypt = ((encrypted) => {
   return (decrypted + decipher.final('utf8'));
 });
 
-// function beginGatewayRequest(body) {
 
-//   const curlTest = new Curl();
-//   const terminate = curlTest.close.bind(curlTest);
-//   const url = "https://securepayments.alrajhibank.com.sa/pg/payment/hosted.htm";
+async function createPDF(payment) {
 
-//   curlTest.setOpt(Curl.option.URL, url)
-//   curlTest.setOpt(Curl.option.VERBOSE, true)
-//   curlTest.setOpt(Curl.option.SSL_VERIFYPEER, false)
-//   // curlTest.setOpt(Curl.option.r)
-//   curlTest.setOpt(Curl.option.POST, 1)
-//   curlTest.setOpt(Curl.option.HEADER, ['Content-Type: application/json', 'charset: utf-8', 'Content-Length: ' + body.length])
-//   curlTest.setOpt(Curl.option.CONNECTTIMEOUT, 3)
-//   curlTest.setOpt(Curl.option.TIMEOUT, 20)
-//   curlTest.setOpt(Curl.option.POSTFIELDS, body)
+  try {
 
-//   curlTest.on("end", (statusCode, data, headers) => {
-//     console.log("Ended Succesfuly\n " + "Status Code: " + statusCode);
-//     console.log("Data: \n" + data);
-//     // console.log(data);
-//     return data
-//   })
-//   curlTest.on("error", (e) => {
-//     console.log(e.message);
-//     return "Error";
-//   })
+    const browser = await puppeteer.launch()
+    const page = await browser.newPage()
 
-//   let dataresponse = curlTest.perform();
-//   curlTest.close()
-
-//   return dataresponse
-// }
-
-// async function beginGatewayRequest2(body) {
-
-//   const url = "securepayments.alrajhibank.com.sa";
-//   let dataresponse = "not changed"
-//   const options = {
-//     hostname: url,
-//     path: '/pg/payment/hosted.htm',
-//     method: 'POST',
-//     // port: 443,
-//     body: body,
-//     headers: {
-//       'Content-Type': 'application/json',
-//       'Content-Length': Buffer.byteLength(body)
-//     }
-//   };
-//   const req = http.request(options, (res) => {
-//     console.log(`STATUS: ${res.statusCode}`);
-//     console.log(`HEADERS: ${JSON.stringify(res.headers)}`);
-//     res.setEncoding('utf8');
-//     res.on('data', (chunk) => {
-//       console.log(`BODY: ${chunk}`);
-//     });
-//     res.on('end', () => {
-//       console.log('No more data in response.');
-
-//     });
-//     console.log("end of request, \n", res);
-//   });
-
-//   req.on('error', (e) => {
-//     console.error(`problem with request: ${e.message}`);
-//     return e.message
-//   });
-
-//   // Write data to request body
-//   // req.write(body);
-//   req.end();
-
-//   return "asd"
-// }
+    const content = await compile('template', [])
+    const path = `./public/invoices/${payment.name}-${payment.id}.pdf`
+    await page.setContent(content);
+    await page.pdf({
+      path,
+      format: 'A4',
+      printBackground: true
+    })
+    await browser.close()
+    process.exit
+    return path
+  } catch (error) {
+    console.log(error);
+  }
+}
 
 async function beginGatewayRequest(body) {
-  // body = JSON.stringify(body)
+
   let response = request(
     {
       url: "https://securepayments.alrajhibank.com.sa/pg/payment/hosted.htm",
@@ -130,7 +93,6 @@ async function beginGatewayRequest(body) {
       return body
     }
   );
-
   return response
 }
 async function processQuotationPaymentRequest(response) {
@@ -147,33 +109,39 @@ async function processQuotationPaymentRequest(response) {
 
 module.exports = {
   generatePaymentLink: async (ctx) => {
-    // const body = new TextEncoder().encode(JSON.stringify(ctx.request.body))
-    let trandata =
-    {
-      amt: 10000.00,
-      action: 1,
-      id: process.env.FORD_TRANPORTAL_ID,
-      password: process.env.FORD_TRANPORTAL_PASSWORD,
-      currencyCode: 682,
-      trackId: 123456,
-      responseURL: 'http://localhost:8000/admin', //route(‘payment-redirect’),
-      errorURL: 'http://localhost:8000/admin'
+    try {
+      let trandata =
+      {
+        amt: 10000.00,
+        action: 1,
+        id: process.env.FORD_TRANPORTAL_ID,
+        password: process.env.FORD_TRANPORTAL_PASSWORD,
+        currencyCode: 682,
+        trackId: 123456,
+        responseURL: 'http://localhost:8000/admin', //route(‘payment-redirect’),
+        errorURL: 'http://localhost:8000/admin'
+      }
+
+      trandata = JSON.stringify(trandata)
+      let body = [{
+        id: process.env.FORD_TRANPORTAL_ID,
+        trandata: aesEncrypt(trandata, process.env.FORD_TERMINAL_RESOURCE_KEY),
+        responseURL: 'http://localhost:8000/admin',
+        errorURL: 'http://localhost:8000/adminn'
+      }]
+
+      body = JSON.stringify(body)
+
+      let response = beginGatewayRequest(body)
+      // let finalresponse = processQuotationPaymentRequest(response)
+
+      return response
+
+    } catch (error) {
+      console.log(error.message);
     }
 
-    trandata = JSON.stringify(trandata)
-    let body = [{
-      id: process.env.FORD_TRANPORTAL_ID,
-      trandata: aesEncrypt(trandata, process.env.FORD_TERMINAL_RESOURCE_KEY),
-      responseURL: 'http://localhost:8000/admin',
-      errorURL: 'http://localhost:8000/adminn'
-    }]
-
-    body = JSON.stringify(body)
-
-    let response = beginGatewayRequest(body)
-    // let finalresponse = processQuotationPaymentRequest(response)
-
-    return response
+    // let body = ctx.request.body
   },
   update: async (ctx) => {
     const { id } = ctx.params;
@@ -186,12 +154,11 @@ module.exports = {
       });
     } else {
       const payment = await strapi.services.payments.findOne({ id })
-      // const doc = new PDFDocument();
-      // doc.pipe(fs.createWriteStream('output.pdf'));
+      const Link = createPDF(payment)
+      entity = await strapi.services.payments.update({ id }, { ...ctx.request.body, status: 'paid', invoice: '', Link });
 
-
-      entity = await strapi.services.payments.update({ id }, ctx.request.body);
     }
     return sanitizeEntity(entity, { model: strapi.models.payments });
-  }
+  },
+
 };

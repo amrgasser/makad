@@ -1,0 +1,307 @@
+<style>
+  .invoice-box {
+    padding: 30px;
+    border: 1px solid #eee;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    font-size: 16px;
+    line-height: 24px;
+    color: #555;
+  }
+
+  .invoice-box svg {
+    display: block;
+    /* margin: 0 auto; */
+  }
+
+  .invoice-box table {
+    width: 100%;
+    line-height: inherit;
+    text-align: left;
+  }
+
+  .invoice-box table td {
+    padding: 5px;
+    vertical-align: top;
+  }
+
+  .invoice-box table tr td:nth-child(6) {
+    text-align: right;
+  }
+
+  .invoice-box table tr.top table td {
+    padding-bottom: 20px;
+  }
+
+  .invoice-box table tr.top table td.title {
+    font-size: 45px;
+    line-height: 45px;
+    color: #333;
+  }
+
+  .invoice-box table tr.information table td {
+    padding-bottom: 40px;
+  }
+
+  .invoice-box table tr.heading td {
+    background: #eee;
+    border-bottom: 1px solid #ddd;
+    font-weight: bold;
+  }
+
+  .invoice-box table tr.details td {
+    padding-bottom: 20px;
+  }
+
+  .invoice-box table tr.item td {
+    border-bottom: 1px solid #eee;
+  }
+
+  .invoice-box table tr.item.last td {
+    border-bottom: none;
+  }
+
+  .invoice-box table tr.item.rejected td {
+    text-decoration-line: line-through;
+  }
+
+  .invoice-box table tr.item td.options {
+    text-decoration-line: none;
+  }
+
+  .invoice-box table tr.total span {
+    font-size: 13px;
+  }
+
+  .invoice-box table tr.total td:nth-child(6) span {
+    border-top: 2px solid #eee;
+    font-weight: bold;
+    font-family: 'Montserrat-Bold' !important;
+  }
+
+  .invoice-box table form {
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .invoice-box table button {
+    border: none;
+    background-color: transparent;
+    box-shadow: none;
+    padding: 0;
+  }
+
+  .invoice-box table tr.rejected {
+    color: #c3c3c3;
+  }
+
+  .invoice-box table button#remove-button {
+    /* color: red; */
+    display: flex;
+    align-items: center;
+  }
+
+  .invoice-box table button#accept-button {
+    color: green;
+  }
+
+  .view-report .main-btn {
+    width: 35%;
+    margin-bottom: 20px;
+  }
+
+  .view-report p {
+    font-size: 12px;
+  }
+
+  .mandatory,
+  .mandatory * {
+    color: red;
+  }
+
+  .accepted,
+  .accepted * {
+    color: green;
+  }
+
+  .content-wrapper .nav-pills {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav-pills .nav-link.active,
+  .nav-pills .show>.nav-link {
+    background-color: #212529;
+  }
+
+  .quotation-card {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 30px;
+    margin-top: 13px;
+    border-radius: 8px;
+    border: 1px solid #eeeeee;
+    column-gap: 30px;
+    flex-direction: column;
+  }
+
+  .align-self-center {
+    width: 30%;
+  }
+
+  .update-quotation-status button:disabled {
+    background-color: #EBEBE4 !important;
+    border: 1px solid #EBEBE4;
+    color: #C6C6C6 !important;
+  }
+
+  form .update-quotation-status button.main-btn:disabled:hover {
+    background-color: #EBEBE4 !important;
+    border: 1px solid #EBEBE4;
+    color: #C6C6C6 !important;
+  }
+
+  .quotation-status-alert {
+    padding: 30px;
+    border: 1px solid #c3e6cb;
+    color: #0d1b25;
+    background-color: #f8f8f8;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .quotation-status-alert p {
+    margin-bottom: 0;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .invoice-box table {
+      display: block;
+      overflow-x: auto;
+      white-space: nowrap;
+      width: 100%;
+    }
+
+    .invoice-box table tbody {
+      display: table;
+      width: 100%;
+    }
+
+    .view-report .main-btn {
+      width: 100%;
+    }
+
+    .update-quotation-status .main-btn {
+      height: auto;
+    }
+
+    .invoice-box .black-btn {
+      height: auto;
+    }
+
+    .invoice-box table tr.top table td {
+      width: 100%;
+      display: block;
+      text-align: center;
+    }
+
+    .invoice-box table tr.information table td {
+      width: 100%;
+      display: block;
+      text-align: center;
+    }
+  }
+</style>
+<html>
+
+<body>
+
+  <div id="my-invoices" class="tab-pane user-profile fade">
+    <div class="invoice-box">
+      <table cellpadding="0" cellspacing="0">
+        <tr class="top">
+          <td colspan="6">
+            <table>
+              <tr>
+                <td class="title">
+                  <img src="" style="width: 100%; max-width: 300px" />
+                </td>
+                <td style="text-align: right">
+                  <strong>Invoice #:</strong> ' $invoice->id' <br />
+                  <strong>Date:</strong> 'March'
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+        <tr class="information">
+          <td colspan="6">
+            <table>
+              <tr>
+                <td>
+                  Sparksuite, Inc.<br />
+                  12345 Sunny Road<br />
+                  Sunnyville, CA 12345
+                </td>
+
+                <td style="text-align: right">
+                  <strong>Customer Name:</strong>
+                  'Amr Gasser'<br />
+                  <strong>Customer Email:</strong> 'agasser@beyond-creation.net'
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+        <tr class="heading">
+          <td>Zone</td>
+          <td>Unit Type</td>
+          <td>Unit ID</td>
+          <td>Unit Price</td>
+          <td>Item Subtotal</td>
+        </tr>
+        <tr class="item   'last' ">
+          <td> 'amr gasser' </td>
+          <td> 'Villa' </td>
+          <td> 'F-73' </td>
+          <td> '10,000,000' </td>
+          <td> '10,000,000' </td>
+        </tr>
+        <tr>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+        </tr>
+        <tr class="total">
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+
+          <td>
+            Final Price:
+            <strong>
+              '10,000,000'
+            </strong>
+          </td>
+        </tr>
+      </table>
+      <hr>
+      <div class="d-flex justify-content-between align-items-center">
+        <a target="_blank" href="" class="main-btn white-btn mr-3">
+          <i class="fas fa-receipt"></i> &nbsp;
+          View Invoice PDF
+        </a>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

@@ -25,11 +25,6 @@
       "repeatable": false,
       "component": "pages.zone-concept"
     },
-    "units": {
-      "collection": "unit",
-      "via": "zones",
-      "dominant": true
-    },
     "slug": {
       "type": "string",
       "unique": true
@@ -55,6 +50,10 @@
     "directories": {
       "via": "zone",
       "collection": "within-our-walls"
+    },
+    "units": {
+      "via": "zone",
+      "collection": "building-type"
     }
   }
 }

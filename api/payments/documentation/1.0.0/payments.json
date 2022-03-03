@@ -673,6 +673,9 @@
                   "type": "string"
                 }
               },
+              "building_type": {
+                "type": "string"
+              },
               "published_at": {
                 "type": "string"
               },

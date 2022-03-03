@@ -1,0 +1,68 @@
+{
+  "kind": "collectionType",
+  "collectionName": "building_types",
+  "info": {
+    "name": "Building Type",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "unitName": {
+      "type": "string"
+    },
+    "numberOfUnits": {
+      "type": "string"
+    },
+    "bathrooms": {
+      "type": "string"
+    },
+    "bua": {
+      "type": "string"
+    },
+    "availableUnits": {
+      "type": "string"
+    },
+    "price": {
+      "type": "string"
+    },
+    "exteriorImages": {
+      "type": "component",
+      "repeatable": true,
+      "component": "pages.exterior-images"
+    },
+    "interiorImages": {
+      "type": "component",
+      "repeatable": true,
+      "component": "pages.exterior-images"
+    },
+    "propertySize": {
+      "type": "string"
+    },
+    "types": {
+      "type": "string"
+    },
+    "floorPlan": {
+      "type": "component",
+      "repeatable": true,
+      "component": "pages.exterior-images"
+    },
+    "zone": {
+      "model": "zones",
+      "via": "units"
+    },
+    "units": {
+      "collection": "unit",
+      "via": "building_type"
+    },
+    "unitMapSlide": {
+      "type": "component",
+      "repeatable": false,
+      "component": "custom.unit-map-slide"
+    }
+  }
+}

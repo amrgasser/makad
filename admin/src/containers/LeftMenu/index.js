@@ -45,12 +45,17 @@ const LeftMenu = ({ shouldUpdateStrapi, version, plugins, setUpdateMenu }) => {
   const medialinks = filteredCollectionTypeLinks.filter(({ label, isDisplayed }) => label === "Centers" && isDisplayed)
   const eventslinks = filteredCollectionTypeLinks.filter(({ label, isDisplayed }) => label === "Events" && isDisplayed)
   const categorieslink = filteredCollectionTypeLinks.filter(({ label, isDisplayed }) => label === "Categories" && isDisplayed)
+  // const payments = filteredCollectionTypeLinks.filter(({ label, isDisplayed }) => label === "Payments" && isDisplayed)
+  const buildingType = filteredCollectionTypeLinks.filter(({ label, isDisplayed }) => label === "Building Types" && isDisplayed)
 
   makadilinks.unshift(makadilink[0])
+  makadilinks.unshift(buildingType[0])
+  console.log(makadilinks);
   lifelinks.unshift(lifelink[0])
   medialinks.unshift(medialink[0])
   eventslinks.unshift(eventlink[0])
   masterplan.unshift(aboutlink[0])
+  // masterplan.push(payments[0])
   wallslink.push(categorieslink[0])
   // categorieslink.unshift(wallslink[0])
   // This effect is really temporary until we create the menu api
