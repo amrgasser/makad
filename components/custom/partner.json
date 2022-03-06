@@ -23,12 +23,11 @@
       "type": "string"
     },
     "body": {
-      "type": "richtext",
-      "maxLength": 180
+      "type": "richtext"
+
     },
     "description": {
-      "type": "richtext",
-      "maxLength": 100
+      "type": "richtext"
     }
   }
 }
