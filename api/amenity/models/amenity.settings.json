@@ -61,11 +61,6 @@
       "required": false,
       "pluginOptions": {}
     },
-    "others": {
-      "type": "component",
-      "repeatable": false,
-      "component": "custom.facilities"
-    },
     "bannerImageMobile": {
       "model": "file",
       "via": "related",
@@ -77,6 +72,11 @@
       "plugin": "upload",
       "required": false,
       "pluginOptions": {}
+    },
+    "others": {
+      "type": "component",
+      "repeatable": false,
+      "component": "custom.others"
     }
   }
 }

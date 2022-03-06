@@ -81,6 +81,9 @@
     "descriptionLine2": {
       "type": "string",
       "maxLength": 30
+    },
+    "soldOut": {
+      "type": "boolean"
     }
   }
 }

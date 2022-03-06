@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_custom_others",
+  "info": {
+    "name": "others",
+    "icon": "arrows-alt-v"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    }
+  }
+}
