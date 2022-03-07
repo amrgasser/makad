@@ -823,12 +823,10 @@
                       "type": "string"
                     },
                     "body": {
-                      "type": "string",
-                      "maxLength": 180
+                      "type": "string"
                     },
                     "description": {
-                      "type": "string",
-                      "maxLength": 100
+                      "type": "string"
                     }
                   }
                 }
@@ -1805,12 +1803,10 @@
                       "type": "string"
                     },
                     "body": {
-                      "type": "string",
-                      "maxLength": 180
+                      "type": "string"
                     },
                     "description": {
-                      "type": "string",
-                      "maxLength": 100
+                      "type": "string"
                     }
                   }
                 }
