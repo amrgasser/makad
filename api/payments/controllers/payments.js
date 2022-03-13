@@ -277,6 +277,7 @@ const emailTemplate = {
     <head>
       <meta charset="utf-8">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
+      <meta name="color-scheme" content="light">
       <meta name="supported-color-schemes" content="light">
       <title>Success Email</title>
     </head>
