@@ -45,18 +45,19 @@ const LeftMenu = ({ shouldUpdateStrapi, version, plugins, setUpdateMenu }) => {
   const medialinks = filteredCollectionTypeLinks.filter(({ label, isDisplayed }) => label === "Centers" && isDisplayed)
   const eventslinks = filteredCollectionTypeLinks.filter(({ label, isDisplayed }) => label === "Events" && isDisplayed)
   const categorieslink = filteredCollectionTypeLinks.filter(({ label, isDisplayed }) => label === "Categories" && isDisplayed)
-  // const payments = filteredCollectionTypeLinks.filter(({ label, isDisplayed }) => label === "Payments" && isDisplayed)
+  const payments = filteredCollectionTypeLinks.filter(({ label, isDisplayed }) => label === "Payments" && isDisplayed)
   const buildingType = filteredCollectionTypeLinks.filter(({ label, isDisplayed }) => label === "Building Types" && isDisplayed)
+  const faq = filteredCollectionTypeLinks.filter(({ label, isDisplayed }) => label === "FAQS" && isDisplayed)
 
   makadilinks.unshift(makadilink[0])
   makadilinks.unshift(buildingType[0])
-  console.log(makadilinks);
   lifelinks.unshift(lifelink[0])
   medialinks.unshift(medialink[0])
   eventslinks.unshift(eventlink[0])
-  masterplan.unshift(aboutlink[0])
-  // masterplan.push(payments[0])
+  // masterplan.unshift(aboutlink[0])
   wallslink.push(categorieslink[0])
+  payments.push(faq[0])
+
   // categorieslink.unshift(wallslink[0])
   // This effect is really temporary until we create the menu api
   // We need this because we need to regenerate the links when the settings are being changed
@@ -105,7 +106,7 @@ const LeftMenu = ({ shouldUpdateStrapi, version, plugins, setUpdateMenu }) => {
           <LeftMenuLinksSection
             section="about"
             name="about"
-            links={masterplan || []}
+            links={aboutlink || []}
             location={location}
             searchable={false}
           />
@@ -155,6 +156,15 @@ const LeftMenu = ({ shouldUpdateStrapi, version, plugins, setUpdateMenu }) => {
             searchable={false}
           />
         )}
+        {homelinks.length > 0 && (
+          <LeftMenuLinksSection
+            section="payments"
+            name="payments"
+            links={payments}
+            location={location}
+            searchable={false}
+          />
+        )}
         {generalSectionLinks.length > 0 && (
           <LeftMenuLinksSection
             section="general"
@@ -174,6 +184,7 @@ const LeftMenu = ({ shouldUpdateStrapi, version, plugins, setUpdateMenu }) => {
             emptyLinksListMessage="app.components.LeftMenuLinkContainer.noPluginsInstalled"
           />
         )}
+
       </LinksContainer>
       {/* <LeftMenuFooter key="footer" version={version} /> */}
     </Wrapper>

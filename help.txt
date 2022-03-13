@@ -1,0 +1,3 @@
+To edit EMAIL
+
+node_modules -> strapi-plugin-content-manager -> controllers -> collectiontypes (publish())

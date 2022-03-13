@@ -89,6 +89,7 @@
       "collection": "zones"
     },
     "payments": {
+      "private": true,
       "via": "unit",
       "collection": "payments"
     },

@@ -12,14 +12,11 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "name": {
+    "firstName": {
       "type": "string"
     },
     "phonenumber": {
       "type": "string"
-    },
-    "address": {
-      "type": "text"
     },
     "personalID": {
       "type": "string",
@@ -40,6 +37,38 @@
     "email": {
       "type": "email",
       "unique": false
+    },
+    "totalUnitPrice": {
+      "type": "biginteger"
+    },
+    "downPayment": {
+      "type": "biginteger"
+    },
+    "validHours": {
+      "type": "integer"
+    },
+    "lastName": {
+      "type": "string"
+    },
+    "zone": {
+      "via": "payments",
+      "model": "zones"
+    },
+    "building_type": {
+      "via": "payments",
+      "model": "building-type"
+    },
+    "addressLine1": {
+      "type": "string"
+    },
+    "addressLine2": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "country": {
+      "type": "string"
     }
   }
 }

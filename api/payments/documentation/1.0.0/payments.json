@@ -593,13 +593,10 @@
           "id": {
             "type": "string"
           },
-          "name": {
+          "firstName": {
             "type": "string"
           },
           "phonenumber": {
-            "type": "string"
-          },
-          "address": {
             "type": "string"
           },
           "personalID": {
@@ -690,6 +687,167 @@
           "email": {
             "type": "string"
           },
+          "totalUnitPrice": {
+            "type": "integer"
+          },
+          "downPayment": {
+            "type": "integer"
+          },
+          "validHours": {
+            "type": "integer"
+          },
+          "lastName": {
+            "type": "string"
+          },
+          "zone": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "zoneName": {
+                "type": "string"
+              },
+              "zoneUnitMap": {
+                "type": "component"
+              },
+              "zoneConcept": {
+                "type": "component"
+              },
+              "slug": {
+                "type": "string"
+              },
+              "within_our_walls": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "bannerSection": {
+                "type": "component"
+              },
+              "zoneSection2": {
+                "type": "component"
+              },
+              "amenitiesSection": {
+                "type": "component"
+              },
+              "directories": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "building_types": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "units": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "payments": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "building_type": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "unitName": {
+                "type": "string"
+              },
+              "numberOfUnits": {
+                "type": "string"
+              },
+              "bathrooms": {
+                "type": "string"
+              },
+              "bua": {
+                "type": "string"
+              },
+              "availableUnits": {
+                "type": "string"
+              },
+              "price": {
+                "type": "string"
+              },
+              "exteriorImages": {
+                "type": "component"
+              },
+              "interiorImages": {
+                "type": "component"
+              },
+              "propertySize": {
+                "type": "string"
+              },
+              "types": {
+                "type": "string"
+              },
+              "floorPlan": {
+                "type": "component"
+              },
+              "zone": {
+                "type": "string"
+              },
+              "unitMapSlide": {
+                "type": "component"
+              },
+              "units": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "payments": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "addressLine1": {
+            "type": "string"
+          },
+          "addressLine2": {
+            "type": "string"
+          },
+          "city": {
+            "type": "string"
+          },
+          "country": {
+            "type": "string"
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -698,13 +856,10 @@
       },
       "NewPayments": {
         "properties": {
-          "name": {
+          "firstName": {
             "type": "string"
           },
           "phonenumber": {
-            "type": "string"
-          },
-          "address": {
             "type": "string"
           },
           "personalID": {
@@ -720,6 +875,36 @@
             "type": "string"
           },
           "email": {
+            "type": "string"
+          },
+          "totalUnitPrice": {
+            "type": "integer"
+          },
+          "downPayment": {
+            "type": "integer"
+          },
+          "validHours": {
+            "type": "integer"
+          },
+          "lastName": {
+            "type": "string"
+          },
+          "zone": {
+            "type": "string"
+          },
+          "building_type": {
+            "type": "string"
+          },
+          "addressLine1": {
+            "type": "string"
+          },
+          "addressLine2": {
+            "type": "string"
+          },
+          "city": {
+            "type": "string"
+          },
+          "country": {
             "type": "string"
           },
           "published_at": {

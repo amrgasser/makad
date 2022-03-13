@@ -1467,6 +1467,12 @@
                     "type": "string"
                   }
                 },
+                "payments": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
                 "created_by": {
                   "type": "string"
                 },
@@ -2377,6 +2383,12 @@
             }
           },
           "units": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "payments": {
             "type": "array",
             "items": {
               "type": "string"

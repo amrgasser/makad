@@ -429,11 +429,11 @@
                     "bannerImage": {
                       "type": "string"
                     },
-                    "others": {
-                      "type": "component"
-                    },
                     "bannerImageMobile": {
                       "type": "string"
+                    },
+                    "others": {
+                      "type": "component"
                     },
                     "published_at": {
                       "type": "string"
@@ -497,6 +497,12 @@
                       }
                     },
                     "units": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "payments": {
                       "type": "array",
                       "items": {
                         "type": "string"
@@ -986,11 +992,11 @@
                     "bannerImage": {
                       "type": "string"
                     },
-                    "others": {
-                      "type": "component"
-                    },
                     "bannerImageMobile": {
                       "type": "string"
+                    },
+                    "others": {
+                      "type": "component"
                     },
                     "published_at": {
                       "type": "string"
@@ -1054,6 +1060,12 @@
                       }
                     },
                     "units": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "payments": {
                       "type": "array",
                       "items": {
                         "type": "string"

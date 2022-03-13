@@ -1,19 +1,18 @@
 {
   "paths": {
-    "/within-our-walls": {
+    "/faqs": {
       "get": {
         "deprecated": false,
-        "description": "Find all the within-our-walls's records",
+        "description": "",
         "responses": {
           "200": {
-            "description": "Retrieve within-our-walls document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Faq"
                   }
                 }
               }
@@ -52,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Within-our-walls"
+          "Faq"
         ],
         "parameters": [
           {
@@ -195,18 +194,14 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new within-our-walls record",
+        "description": "Create a new record",
         "responses": {
           "200": {
-            "description": "Retrieve within-our-walls document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
+                  "$ref": "#/components/schemas/Faq"
                 }
               }
             }
@@ -244,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Within-our-walls"
+          "Faq"
         ],
         "requestBody": {
           "description": "",
@@ -252,26 +247,26 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewWithin-our-walls"
+                "$ref": "#/components/schemas/NewFaq"
               }
             }
           }
         }
       }
     },
-    "/within-our-walls/count": {
+    "/faqs/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the number of within-our-walls documents",
+        "description": "",
         "responses": {
           "200": {
-            "description": "Retrieve within-our-walls document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
                   "properties": {
-                    "foo": {
-                      "type": "string"
+                    "count": {
+                      "type": "integer"
                     }
                   }
                 }
@@ -311,26 +306,22 @@
         },
         "summary": "",
         "tags": [
-          "Within-our-walls"
+          "Faq"
         ],
         "parameters": []
       }
     },
-    "/within-our-walls/{id}": {
+    "/faqs/{id}": {
       "get": {
         "deprecated": false,
-        "description": "Find one within-our-walls record",
+        "description": "",
         "responses": {
           "200": {
-            "description": "Retrieve within-our-walls document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
+                  "$ref": "#/components/schemas/Faq"
                 }
               }
             }
@@ -368,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Within-our-walls"
+          "Faq"
         ],
         "parameters": [
           {
@@ -385,18 +376,14 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a single within-our-walls record",
+        "description": "Update a record",
         "responses": {
           "200": {
-            "description": "Retrieve within-our-walls document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
+                  "$ref": "#/components/schemas/Faq"
                 }
               }
             }
@@ -434,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Within-our-walls"
+          "Faq"
         ],
         "requestBody": {
           "description": "",
@@ -442,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewWithin-our-walls"
+                "$ref": "#/components/schemas/NewFaq"
               }
             }
           }
@@ -462,10 +449,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a single within-our-walls record",
+        "description": "Delete a record",
         "responses": {
           "200": {
-            "description": "deletes a single within-our-walls based on the ID supplied",
+            "description": "deletes a single record based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -508,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Within-our-walls"
+          "Faq"
         ],
         "parameters": [
           {
@@ -527,7 +514,7 @@
   },
   "components": {
     "schemas": {
-      "Within-our-walls": {
+      "Faq": {
         "required": [
           "id"
         ],
@@ -535,253 +522,11 @@
           "id": {
             "type": "string"
           },
-          "name": {
+          "question": {
             "type": "string"
           },
-          "smallDescriptionn": {
-            "type": "string",
-            "maxLength": 100
-          },
-          "bannerImage": {
-            "required": [
-              "id",
-              "name",
-              "hash",
-              "mime",
-              "size",
-              "url",
-              "provider"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "alternativeText": {
-                "type": "string"
-              },
-              "caption": {
-                "type": "string"
-              },
-              "width": {
-                "type": "integer"
-              },
-              "height": {
-                "type": "integer"
-              },
-              "formats": {
-                "type": "object"
-              },
-              "hash": {
-                "type": "string"
-              },
-              "ext": {
-                "type": "string"
-              },
-              "mime": {
-                "type": "string"
-              },
-              "size": {
-                "type": "number"
-              },
-              "url": {
-                "type": "string"
-              },
-              "previewUrl": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "provider_metadata": {
-                "type": "object"
-              },
-              "related": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "logo": {
-            "required": [
-              "id",
-              "name",
-              "hash",
-              "mime",
-              "size",
-              "url",
-              "provider"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "alternativeText": {
-                "type": "string"
-              },
-              "caption": {
-                "type": "string"
-              },
-              "width": {
-                "type": "integer"
-              },
-              "height": {
-                "type": "integer"
-              },
-              "formats": {
-                "type": "object"
-              },
-              "hash": {
-                "type": "string"
-              },
-              "ext": {
-                "type": "string"
-              },
-              "mime": {
-                "type": "string"
-              },
-              "size": {
-                "type": "number"
-              },
-              "url": {
-                "type": "string"
-              },
-              "previewUrl": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "provider_metadata": {
-                "type": "object"
-              },
-              "related": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "phoneNumber1": {
+          "answer": {
             "type": "string"
-          },
-          "phoneNumber2": {
-            "type": "string"
-          },
-          "categories": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "within_our_walls": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "published_at": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "zone": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "zoneName": {
-                "type": "string"
-              },
-              "zoneUnitMap": {
-                "type": "component"
-              },
-              "zoneConcept": {
-                "type": "component"
-              },
-              "slug": {
-                "type": "string"
-              },
-              "within_our_walls": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "bannerSection": {
-                "type": "component"
-              },
-              "zoneSection2": {
-                "type": "component"
-              },
-              "amenitiesSection": {
-                "type": "component"
-              },
-              "directories": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "building_types": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "units": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "payments": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "published_at": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
           },
           "published_at": {
             "type": "string",
@@ -789,28 +534,12 @@
           }
         }
       },
-      "NewWithin-our-walls": {
+      "NewFaq": {
         "properties": {
-          "name": {
+          "question": {
             "type": "string"
           },
-          "smallDescriptionn": {
-            "type": "string",
-            "maxLength": 100
-          },
-          "phoneNumber1": {
-            "type": "string"
-          },
-          "phoneNumber2": {
-            "type": "string"
-          },
-          "categories": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "zone": {
+          "answer": {
             "type": "string"
           },
           "published_at": {
@@ -827,5 +556,9 @@
       }
     }
   },
-  "tags": []
+  "tags": [
+    {
+      "name": "Faq"
+    }
+  ]
 }

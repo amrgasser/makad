@@ -62,5 +62,9 @@
   "walls": {
     "id": "app.components.LeftMenuLinkContainer.walls",
     "defaultMessage": "Within Our Walls"
+  },
+  "payments": {
+    "id": "app.components.LeftMenuLinkContainer.payments",
+    "defaultMessage": "leads and Payments"
   }
 }

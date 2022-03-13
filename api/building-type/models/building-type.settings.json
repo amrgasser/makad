@@ -52,8 +52,8 @@
       "component": "pages.exterior-images"
     },
     "zone": {
-      "model": "zones",
-      "via": "building_types"
+      "via": "building_types",
+      "model": "zones"
     },
     "unitMapSlide": {
       "type": "component",
@@ -63,6 +63,11 @@
     "units": {
       "via": "building_type",
       "collection": "unit"
+    },
+    "payments": {
+      "private": true,
+      "via": "building_type",
+      "collection": "payments"
     }
   }
 }
