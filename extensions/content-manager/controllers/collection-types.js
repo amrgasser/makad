@@ -39,8 +39,8 @@ module.exports = {
         id: entity.id,
         unitName: entity.unit.unitName,
         zoneName: entity.zone.zoneName,
-        link: `http://localhost:3000/payments/${entity.id}`
-        // link: `https://dev.makadi-heights.beyond-creation.net/payments/${entity.id}`
+        // link: `http://localhost:3000/payments/${entity.id}`
+        link: `https://dev.makadi-heights.beyond-creation.net/payments/${entity.id}`
       };
       var htmlToSend = template(replacements);
       var mailOptions = {
