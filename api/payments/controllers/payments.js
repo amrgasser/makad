@@ -194,6 +194,7 @@ module.exports = {
           downPayment: entity.downPayment,
           tax: entity.totalUnitPrice * 0.05,
           dueAmount: entity.totalUnitPrice - entity.downPayment,
+          bannerurl: entity.unit.exteriorImages[0].image[0].url
         };
         var htmlToSend = template(replacements);
         var mailOptions = {
@@ -203,10 +204,6 @@ module.exports = {
           html: htmlToSend,
           attachments: [
             {
-              filename: 'map_84fb534fcd.png',
-              path: `public/map_84fb534fcd.png`,
-              cid: 'logo1' //same cid value as in the html img src
-            }, {
               filename: 'twitter.png',
               path: `public/twitter.png`,
               cid: 'twitter' //same cid value as in the html img src
@@ -246,23 +243,14 @@ module.exports = {
   findOne: async (ctx) => {
     const { id } = ctx.params;
     const entity = await strapi.services.payments.findOne({ id });
-    // const building = await strapi.services['building-type'].findOne({id})
+
     const homeAtMakadi = await strapi.services['home-at-makadi-heights'].find()
     console.log(homeAtMakadi);
-    const zoneCard = homeAtMakadi.zones.filter((zone) => zone.Name.toLowerCase() == entity.zone.zoneName.toLowerCase())
-    // console.log(zoneCard[0]);
+    const zoneDescription = homeAtMakadi.zones.filter((zone) => zone.Name.toLowerCase() == entity.zone.zoneName.toLowerCase() ? zone.bottomDescription : "")
 
-    // let zoneText = ''
-    // for (let index = 0; index < homeAtMakadi.zones; index++) {
-    //   const element = homeAtMakadi.zones[index];
-    //   console.log(elements);
-    //   if (element.Name.toLowerCase() == payment.zone.zoneName) {
-    //     zoneText = element.bottomDescription
-    //     break
-    //   }
-    // }
     const faqs = await strapi.services.faq.find()
-    entity.zoneDescription = zoneCard.bottomDescription
+    entity.zoneDescription = zoneDescription[0].bottomDescription
+    entity.zoneImage = zoneDescription[0].bannerImg.url
     entity.faqs = faqs
 
     return sanitizeEntity(entity, { model: strapi.models.payments });
@@ -285,189 +273,8 @@ const emailTemplate = {
     <body>
     <style>
       body{
-        font-family: 'MS Sans Serif';
+        font-family: 'arial';
       }
-      @media (prefers-color-scheme: dark) {
-        [data-ogsc] footer{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        background-color: white;
-        padding: 1rem 1rem;
-        height: fit-content;
-        border-top: .4px solid rgba(23,31,42, 0.4);
-        margin-top: 1rem;
-      }
-      [data-ogsc] .full-email-container{
-      background-color: #E5E5E5;
-      padding: 0 1rem 0rem 1rem;
-      width: 400px;
-      margin: 0 auto;
-      }
-      @media (min-width:768px) {
-
-        .full-email-container {
-          width: 600px;
-        }
-        .order-summary-container{
-          width: 90%;
-        }
-      }
-      .banner-container{
-        width: 100%;
-        position: relative;
-      }
-      .banner-container img{
-        object-fit: contain;
-        width: 100%;
-      }
-      .banner-container content{
-      width: 100%;
-      height: 100%;
-      position: relative;
-      }
-      .banner-container .overlay{
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-      background: linear-gradient(180deg,rgba(88,104,113,0) 50%,#21436e 92%);
-
-      }
-      [data-ogsc] .banner-container .text-container{
-      position: absolute;
-      color: white;
-      bottom: 10%;
-      left: 25px;
-      font-size: 1.4rem;
-      text-align: center;
-      width: 350px;
-    }
-    @media (min-width: 768px){
-      [data-ogsc] .banner-container .text-container{
-        left: 125px;
-        font-size: 2rem;
-        }
-      }
-      [data-ogsc] .order-details-container{
-      text-align: center;
-      margin: 1rem auto;
-      }
-      [data-ogsc] .order-details-container .order-details-header{
-        color: #233142;
-        font-size: .75rem;
-      }
-      [data-ogsc] .order-details-container .order-number{
-        color: #233142;
-        font-size: 1.5rem;
-        margin: .5rem auto;
-        font-weight: 900;
-      }
-      [data-ogsc] .order-details-container .order-id{
-        color: #233142;
-        font-size: 1.2rem;
-        /* margin: .5rem auto; */
-      }
-      [data-ogsc] .email-body-container{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        background-color: #fff !important;
-      }
-      [data-ogsc] .order-summary-container .modal-summary-container{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-      }
-      [data-ogsc] .order-summary-container .modal-summary-container .summary{
-        text-align: center;
-        margin: .5rem auto;
-        color: #233142 !important;
-        font-size: 1.4rem;
-        border-top: .4px solid rgba(23,31,42, 0.4);
-        width: 100%;
-        padding-top: 1rem;
-      }
-      [data-ogsc] .order-summary-container .modal-summary-container .unit-header-container{
-        margin: auto auto .5rem;
-        border-bottom: .4px solid rgba(23,31,42, 0.4);
-        width: 100%;
-        padding-bottom: 1rem;
-      }
-
-      [data-ogsc] .unit-header-container .header{
-        text-align: center;
-        color: #233142;
-        font-size: 1.5rem;
-        padding-bottom: .5rem;
-      }
-      [data-ogsc] .modal-details-container{
-        width: 100%;
-      }
-      [data-ogsc] .modal-details-container .content{
-        padding: 1rem 0;
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        flex-direction: row;
-        font-size: .9rem;
-      }
-      [data-ogsc] .modal-details-container .content-total{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        font-size: 1.2rem;
-        border-top: .4px solid rgba(23,31,42, 0.4);
-        padding: 1.3rem 0;
-        border-bottom: .4px solid rgba(23,31,42, 0.4);
-      }
-      @media (min-width: 768px){
-        [data-ogsc] .modal-details-container .content{
-          font-size:1.2rem;
-        }
-        [data-ogsc] .modal-details-container .content-total{
-          font-size:1.5rem;
-        }
-      }
-      [data-ogsc] .download-btn-container{
-        padding: 1rem 1rem;
-        width: 50%;
-        background-color: #21436E !important;
-        color: white;
-        text-align: center;
-        display: -webkit-flex;
-        display: flex;
-        -webkit-justify-content: center;
-        justify-content: center;
-        -webkit-align-items: center;
-        align-items: center;
-        margin: 1.5rem auto 1.5rem;
-      }
-      [data-ogsc] .download-btn-container img{
-        margin-right: 9px;
-      }
-      [data-ogsc] .contact-us-container {
-        text-align: center;
-        margin: .75rem auto;
-      }
-      [data-ogsc] .contact-us-container .header{
-        font-weight: 900;
-        margin-bottom: .5rem;
-        font-size: 1.2rem;
-      }
-      [data-ogsc] .contact-us-container .sub{
-        font-size: .8rem;
-      }
-      [data-ogsc] .links .link img{
-        height: 1.3rem;
-        width: 1.3rem;
-        margin:  .4rem;
-      }
-    }
       footer{
         display: flex;
         flex-direction: row;
@@ -496,10 +303,10 @@ const emailTemplate = {
       .banner-container{
         width: 100%;
         position: relative;
-      }
-      .banner-container img{
-        object-fit: contain;
-        width: 100%;
+        height:25rem;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
       }
       .banner-container content{
         width: 100%;
@@ -582,6 +389,7 @@ const emailTemplate = {
         color: #233142;
         font-size: 1.5rem;
         padding-bottom: .5rem;
+        text-transform: capitalize;
       }
       .modal-details-container{
         width: 100%;
@@ -648,18 +456,15 @@ const emailTemplate = {
       }
     </style>
     <div class="full-email-container">
-    <div class="banner-container">
-      <div class="overlay"></div>
-      <div class="content">
-        <div class="logo-container">
-          <img src="cid:logo1"/>
-        </div>
+      <div class="banner-container" style="background-image: url('{{bannerurl}}')">
+        <div class="content">
+        <div class="overlay"></div>
         <div class="text-container">
           Thank you, {{name}}!<br />
           for booking your next home at makadi
         </div>
+        </div>
       </div>
-    </div>
 
     <div class="email-body-container">
       <div class="order-details-container">
@@ -726,3 +531,4 @@ const emailTemplate = {
 
     </html>`
 }
+

@@ -39,22 +39,18 @@ module.exports = {
         id: entity.id,
         unitName: entity.unit.unitName,
         zoneName: entity.zone.zoneName,
+        bannerurl: entity.unit.exteriorImages[0].image[0].url,
         // link: `http://localhost:3000/payments/${entity.id}`
         link: `https://dev.makadi-heights.beyond-creation.net/payments/${entity.id}`
       };
       var htmlToSend = template(replacements);
       var mailOptions = {
-        from: 'amr.r.gasser@gmail.com',
+        rom: 'amr.r.gasser@gmail.com',
         to: entity.email,
         subject: 'Sending Email using Node.js',
-        html: htmlToSend
-        ,
+        html: htmlToSend,
         attachments: [
           {
-            filename: 'map_84fb534fcd.png',
-            path: `public/map_84fb534fcd.png`,
-            cid: 'logo1' //same cid value as in the html img src
-          }, {
             filename: 'twitter.png',
             path: `public/twitter.png`,
             cid: 'twitter' //same cid value as in the html img src
@@ -69,7 +65,6 @@ module.exports = {
           }
         ]
       };
-
       transporter.sendMail(mailOptions, function (error, info) {
         if (error) {
           console.log(error);
@@ -108,7 +103,6 @@ const emailTemplate = {
       body{
         font-family: 'arial';
       }
-
       footer{
         display: flex;
         flex-direction: row;
@@ -120,10 +114,10 @@ const emailTemplate = {
         margin-top: 1rem;
       }
       .full-email-container{
-      background-color: #E5E5E5;
-      padding: 1rem;
-      width: 400px;
-      margin: 0rem auto;
+        background-color: #E5E5E5;
+        padding: 1rem;
+        width: 400px;
+        margin: 0rem auto;
       }
       @media (min-width:768px) {
 
@@ -137,6 +131,10 @@ const emailTemplate = {
       .banner-container{
         width: 100%;
         position: relative;
+        height:25rem;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
       }
       .banner-container img{
         object-fit: contain;
@@ -473,11 +471,9 @@ const emailTemplate = {
 </head>
 <body style='background-color:white !important;'>
  <div class="full-email-container">
- <div class="banner-container">
+ <div class="banner-container" style="background-image: url('{{bannerurl}}')">
   <div class="content">
-   <div class="logo-container">
-      <img src="cid:logo1"/>
-   </div>
+  <div class="overlay"></div>
    <div class="text-container" style="color:white !important;">
     Thank You, {{name}}!<br />
     for booking your next home at makadi
