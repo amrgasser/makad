@@ -45,7 +45,7 @@ module.exports = {
       };
       var htmlToSend = template(replacements);
       var mailOptions = {
-        from: 'noreply@makadi-heights.com',
+        from: 'no-reply from @makadiheights.com <noreply@makadiheights.com>',
         to: entity.email,
         subject: 'Action Required: Payment Notice',
         html: htmlToSend,
@@ -170,18 +170,22 @@ const emailTemplate = {
       }
       .order-details-container{
       text-align: center;
-      margin: 1rem auto;
+      margin: 1rem;
       }
       .order-details-container .order-details-header{
         color: #233142;
-        font-size: 1rem;
-        margin: .75rem auto
+        font-size: 1.5rem;
+        margin: .75rem auto;
+        text-align:left;
+        padding-left:1rem;
       }
       .order-details-container .order-number{
         color: #233142;
         font-size: 1.5rem;
         margin: .5rem auto;
         font-weight: 900;
+        text-align:justify;
+        padding: 0 1.25rem;
       }
       .order-details-container .order-id{
         color: #233142;
@@ -349,7 +353,7 @@ const emailTemplate = {
         }
       }
        .order-details-container{
-      text-align: center;
+      text-align: justify;
       margin: 1rem auto;
       }
        .order-details-container .order-details-header{
@@ -360,8 +364,10 @@ const emailTemplate = {
        .order-details-container .order-number{
         color: #233142;
         font-size: 1.5rem;
-        margin: .5rem auto;
+        margin: .75rem auto;
         font-weight: 900;
+        padding:0 2rem;
+        text-align:justify;
       }
        .order-details-container .order-id{
         color: #233142;
@@ -475,24 +481,24 @@ const emailTemplate = {
   <div class="content">
   <div class="overlay"></div>
    <div class="text-container" style="color:white !important;">
-    Thank You, {{name}}!<br />
-    for booking your next home at makadi
+    Hello, {{name}}!<br />
+    Your booking order is ready.
    </div>
   </div>
  </div>
 
  <div class="email-body-container">
   <div class="order-details-container">
-   <div class="order-details-header">Payment Link</div>
-   <div class="order-number">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</div>
+   <div class="order-details-header">Action Required:</div>
+   <div class="order-number">Please review your booking details. Once you’ve double checked your booking details, make sure you pay the booking amount to keep the unit locked for you. Otherwise, the payment link will expire in an hour and the unit will be made available to other customers.</div>
    <!-- <div class="order-id">{{link}}</div> -->
   </div>
   <a class="download-btn-container" href="{{link}}">
    <!-- <img src="./public/download.svg" alt=""> -->
-   Pay Now
+   View & Pay
   </a>
   <div class="contact-us-container">
-   <div class="header">Contact us</div>
+   <div class="header">Contact us if you have any questions</div>
    <div class="sub">Singel 459, 1012 WP Amsterdam, The Netherlands</div>
   </div>
   <div class="contact-us-container">

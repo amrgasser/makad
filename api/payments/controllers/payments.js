@@ -198,7 +198,7 @@ module.exports = {
         };
         var htmlToSend = template(replacements);
         var mailOptions = {
-          from: 'amr.r.gasser@gmail.com',
+          from: 'no-reply from @makadiheights.com <noreply@makadiheights.com>',
           to: entity.email,
           subject: 'Sending Email using Node.js',
           html: htmlToSend,
