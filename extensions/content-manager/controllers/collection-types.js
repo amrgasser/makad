@@ -45,9 +45,9 @@ module.exports = {
       };
       var htmlToSend = template(replacements);
       var mailOptions = {
-        rom: 'amr.r.gasser@gmail.com',
+        from: 'noreply@makadi-heights.com',
         to: entity.email,
-        subject: 'Sending Email using Node.js',
+        subject: 'Action Required: Payment Notice',
         html: htmlToSend,
         attachments: [
           {
