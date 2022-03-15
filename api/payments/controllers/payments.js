@@ -200,7 +200,7 @@ module.exports = {
         var mailOptions = {
           from: 'no-reply from @makadiheights.com <noreply@makadiheights.com>',
           to: entity.email,
-          subject: 'Sending Email using Node.js',
+          subject: 'Order Receipt',
           html: htmlToSend,
           attachments: [
             {
