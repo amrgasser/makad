@@ -194,7 +194,14 @@ module.exports = {
           downPayment: entity.downPayment,
           tax: entity.totalUnitPrice * 0.05,
           dueAmount: entity.totalUnitPrice - entity.downPayment,
-          bannerurl: entity.unit.exteriorImages[0].image[0].url
+          bannerurl: entity.unit.exteriorImages[0].image[0].url,
+          price: entity.unit.price,
+          propertySize: entity.unit.propertySize,
+          bathrooms: entity.unit.bathrooms,
+          beds: entity.unit.beds,
+          terraces: entity.unit.terraces,
+          bua: entity.unit.bua,
+          logourl: entity.zone.bannerSection.logoImg.url,
         };
         var htmlToSend = template(replacements);
         var mailOptions = {
@@ -260,275 +267,479 @@ module.exports = {
 
 const emailTemplate = {
   subject: 'Makadi Height Receipt',
-  html: `
-    <html>
-    <head>
-      <meta charset="utf-8">
-      <meta http-equiv="x-ua-compatible" content="ie=edge">
-      <meta name="color-scheme" content="light">
-      <meta name="supported-color-schemes" content="light">
-      <title>Success Email</title>
-    </head>
-
-    <body>
+  html: `<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="color-scheme" content="light" />
+    <meta name="supported-color-schemes" content="light" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Success Email</title>
     <style>
-      body{
-        font-family: 'arial';
-      }
-      footer{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        background-color: white;
-        padding: 1rem 1rem;
-        height: fit-content;
-        border-top: .4px solid rgba(23,31,42, 0.4);
-        margin-top: 1rem;
-      }
-      .full-email-container{
-      background-color: #E5E5E5;
-      padding: 0 1rem 0rem 1rem;
-      width: 400px;
-      margin: 0 auto;
-      }
-      @media (min-width:768px) {
-
-        .full-email-container {
-          width: 600px;
-        }
-        .order-summary-container{
-          width: 90%;
-        }
-      }
-      .banner-container{
-        width: 100%;
-        position: relative;
-        height:25rem;
-        background-size: cover;
-        background-position: center center;
-        background-repeat: no-repeat;
-      }
-      .banner-container content{
-        width: 100%;
-        height: 100%;
-        position: relative;
-      }
-      .banner-container .overlay{
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        background: linear-gradient(180deg, rgba(196, 196, 196, 0) 0%, rgba(33, 67, 111, 0.9) 100%);
-      }
-      .banner-container .text-container{
-      position: absolute;
-      color: white;
-      bottom: 10%;
-      left: 25px;
-      font-size: 1.4rem;
-      text-align: center;
-      width: 350px;
-    }
-    @media (min-width: 768px){
-      .banner-container .text-container{
-        left: 125px;
-        font-size: 2rem;
-        }
-      }
-      .order-details-container{
-      text-align: center;
-      margin: 1rem auto;
-      }
-      .order-details-container .order-details-header{
-        color: #233142;
-        font-size: .75rem;
-      }
-      .order-details-container .order-number{
-        color: #233142;
-        font-size: 1.5rem;
-        margin: .5rem auto;
-        font-weight: 900;
-      }
-      .order-details-container .order-id{
-        color: #233142;
-        font-size: 1.2rem;
-        /* margin: .5rem auto; */
-      }
-      .email-body-container{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        background-color: #fff !important;
-      }
-      .order-summary-container .modal-summary-container{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-      }
-      .order-summary-container .modal-summary-container .summary{
-        text-align: center;
-        margin: .5rem auto;
+      body {
         color: #233142 !important;
-        font-size: 1.4rem;
-        border-top: .4px solid rgba(23,31,42, 0.4);
-        width: 100%;
-        padding-top: 1rem;
+        font-family: "arial";
       }
-      .order-summary-container .modal-summary-container .unit-header-container{
-        margin: auto auto .5rem;
-        border-bottom: .4px solid rgba(23,31,42, 0.4);
-        width: 100%;
-        padding-bottom: 1rem;
+      .modal-summary-container .title,
+      .modal-summary-container .data {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+        color: #999999;
       }
-
-      .unit-header-container .header{
-        text-align: center;
-        color: #233142;
-        font-size: 1.5rem;
-        padding-bottom: .5rem;
-        text-transform: capitalize;
-      }
-      .modal-details-container{
-        width: 100%;
-      }
-      .modal-details-container .content{
-        padding: 1rem 0;
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        flex-direction: row;
-        font-size: .9rem;
-      }
-      .modal-details-container .content-total{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        font-size: 1.2rem;
-        border-top: .4px solid rgba(23,31,42, 0.4);
-        padding: 1.3rem 0;
-        border-bottom: .4px solid rgba(23,31,42, 0.4);
-      }
-      @media (min-width: 768px){
-        .modal-details-container .content{
-          font-size:1.2rem;
+      @media (max-width: 767px) {
+        .banner-container {
+          height: 20rem !important;
         }
-        .modal-details-container .content-total{
-          font-size:1.5rem;
+        .text-container {
+          font-size: 1.2rem !important;
         }
-      }
-      .download-btn-container{
-        padding: 1rem 1rem;
-        width: 50%;
-        background-color: #21436E !important;
-        color: white;
-        text-align: center;
-        display: -webkit-flex;
-        display: flex;
-        -webkit-justify-content: center;
-        justify-content: center;
-        -webkit-align-items: center;
-        align-items: center;
-        margin: 1.5rem auto 1.5rem;
-      }
-      .download-btn-container img{
-        margin-right: 9px;
-      }
-      .contact-us-container {
-        text-align: center;
-        margin: .75rem auto;
-      }
-      .contact-us-container .header{
-        font-weight: 900;
-        margin-bottom: .5rem;
-        font-size: 1.2rem;
-      }
-      .contact-us-container .sub{
-        font-size: .8rem;
-      }
-      .links .link img{
-        height: 1.3rem;
-        width: 1.3rem;
-        margin:  .4rem;
+        .logo-container img {
+          margin-top: 10rem !important;
+        }
+        .header img {
+          width: 40%;
+        }
+        .download-btn-container {
+          font-size: 1.2rem !important;
+          width: calc(100% - 1rem) !important;
+        }
+        .modal-summary-container .title,
+        .modal-summary-container .data {
+          font-size: 0.7rem;
+          margin-bottom: 0.5rem;
+        }
       }
     </style>
-    <div class="full-email-container">
-      <div class="banner-container" style="background-image: url('{{bannerurl}}')">
-        <div class="content">
-        <div class="overlay"></div>
-        <div class="text-container">
-          Thank you, {{name}}!<br />
-          for booking your next home at makadi
+  </head>
+  <body>
+    <div
+      class="full-email-container"
+      style="
+        background-color: #bbbbbb;
+        padding: 1rem;
+        width: 600px;
+        max-width: 90%;
+        margin: 0rem auto;
+      "
+    >
+      <div class="header" style="padding: 0 0 1rem">
+        <img
+          src="https://dev.makadi-heights.beyond-creation.net/logoBig.png"
+          width="30%"
+          alt=""
+          srcset=""
+          style="float: left"
+        />
+        <div
+          class="address"
+          style="
+            float: right;
+            font-size: 0.7rem;
+            text-align: right;
+            color: #fff;
+          "
+        >
+          <div class="need-help" style="margin-bottom: 0.2rem">
+            Need help?
+            <a
+              target="_blank"
+              href="https://dev.makadi-heights.beyond-creation.net/contact-us"
+              style="color: #21436e; text-decoration: none"
+              >Contact us</a
+            >
+          </div>
+          Real Estate Inquiries: 16595
         </div>
+        <div style="clear: both"></div>
+      </div>
+      <div
+        class="banner-container"
+        style="
+          background-image: url('{{bannerurl}}');
+          width: 100%;
+          position: relative;
+          height: 25rem;
+          background-size: cover;
+          background-position: center center;
+          background-repeat: no-repeat;
+        "
+      >
+        <div class="content">
+          <div
+            class="overlay"
+            style="
+              width: 100%;
+              height: 100%;
+              position: absolute;
+              top: 0;
+              left: 0;
+              background: linear-gradient(
+                180deg,
+                rgba(196, 196, 196, 0) 0%,
+                rgba(33, 67, 111, 0.9) 100%
+              );
+            "
+          ></div>
+        </div>
+        <div style="width: 100%">
+          <div class="logo-container">
+            <img
+              src="{{logourl}}"
+              style="
+                padding: 3rem 2rem;
+                background-color: #fff;
+                width: 100px;
+                margin-top: 10rem;
+                margin-right: 1rem;
+                display: inline-block;
+                float: right;
+                z-index: 12;
+                position: relative;
+              "
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="email-body-container"
+        style="
+          display: block;
+          padding: 0 2rem;
+          background-color: #fff !important;
+        "
+      >
+        <div
+          class="text-container"
+          style="
+            font-size: 1.2rem;
+            padding: 2rem 0;
+            font-weight: 800;
+            border-bottom: 1px solid rgba(0, 56, 255, 0.2);
+          "
+        >
+          ORDER NUMBER: {{id}}
+        </div>
+        <div
+          class="summary"
+          style="
+            font-size: 1rem;
+            border-bottom: 1px solid rgba(0, 56, 255, 0.2);
+            padding: 1rem 0;
+            text-align: center;
+            font-weight: 800;
+          "
+        >
+          <div
+            class="order-summary"
+            style="
+              color: #999999;
+              text-align: center;
+              margin-bottom: 1rem;
+              font-weight: 300;
+            "
+          >
+            Order Summary
+          </div>
+          Your order {{unitName}} at {{zoneName}} : Makadi Heights
+        </div>
+        <div class="order-summary-container" style="padding: 1rem 0">
+          <div class="modal-summary-container">
+            <div class="title" style="float: left">Total value</div>
+            <div class="data" style="float: right">EGP {{totalUnitPrice}}</div>
+            <div style="clear: both"></div>
+            <div class="title" style="float: left">Advance amount</div>
+            <div class="data" style="float: right">EGP {{downPayment}}</div>
+            <div style="clear: both"></div>
+            <div class="title" style="float: left">
+              Due amount after payment
+            </div>
+            <div class="data" style="float: right">EGP {{dueAmount}}</div>
+            <div style="clear: both"></div>
+            <div class="title" style="float: left">Service tax 5%</div>
+            <div class="data" style="float: right">EGP {{tax}}</div>
+            <div style="clear: both"></div>
+            <div class="title" style="float: left">
+              Amount Due <br />
+              (Advance Amount)
+            </div>
+            <div class="data" style="float: right">EGP {{downPayment}}</div>
+            <div style="clear: both"></div>
+          </div>
+          <div
+            class="download-btn-container"
+            style="
+              padding: 1rem 0.5rem;
+              width: 50%;
+              background-color: #21436e;
+              border: 1px solid #fff;
+              color: #fff;
+              font-size: 1.2rem;
+              text-align: center;
+              text-decoration: none;
+              display: block;
+              margin: 2rem 0;
+              text-align: center;
+            "
+          >
+            <img src="cid:download" alt="" />
+            Download Receipt
+          </div>
+          <div
+            class="contact-us-container"
+            style="text-align: lef; margin: 0.75rem 0"
+          >
+            <div class="sub" style="font-size: 0.8rem; margin-bottom: 0.3rem">
+              Nile City Towers, North Tower 12th Floor, 2005 A Corniche El Nil,
+              Ramlet Boulaq
+            </div>
+            <div class="sub" style="font-size: 0.8rem">
+              info@makadiheights.com
+            </div>
+          </div>
+          <div class="contact-us-container" style="margin: 0.75rem 0">
+            <div
+              class="header"
+              style="font-weight: 900; margin-bottom: 0.5rem; font-size: 1.2rem"
+            >
+              Follow us
+            </div>
+            <div class="links">
+              <a href="" class="link"
+                ><img
+                  src="cid:facebook"
+                  alt=""
+                  style="height: 1.3rem; width: 1.3rem; margin: 0.4rem"
+              /></a>
+              <a href="" class="link"
+                ><img
+                  src="cid:twitter"
+                  alt=""
+                  style="height: 1.3rem; width: 1.3rem; margin: 0.4rem"
+              /></a>
+              <a href="" class="link"
+                ><img
+                  src="cid:instagram"
+                  alt=""
+                  style="
+                    height: 1.3rem;
+                    width: 1.3rem;
+                    margin: 0.4rem;
+                    margin-bottom: 0;
+                  "
+              /></a>
+            </div>
+          </div>
         </div>
       </div>
 
-    <div class="email-body-container">
-      <div class="order-details-container">
-      <div class="order-details-header">ORDER DETAILS</div>
-      <div class="order-number">ORDER NUMBER</div>
-      <div class="order-id">{{id}}</div>
-      </div>
-      <div class="order-summary-container">
-      <div class="modal-summary-container">
-        <div class="summary diodrum">Your order summary</div>
-        <div class="unit-header-container">
-        <div class="header diodrum">
-          {{unitName}} At {{zoneName}} :<br /> Makadi Heights
+      <div
+        class="explore"
+        style="
+          background-color: white;
+          padding: 1rem;
+          font-size: .9rem;
+          margin-top: 1rem;
+        "
+      >
+        <h3
+          style="
+            color: #233142;
+            font-size: 1rem;
+            margin: 0;
+            margin-bottom: 1rem;
+          "
+        >
+          Explore your new home
+        </h3>
+        <div class="unit-img" style="width: 49%; margin: 0; float: left">
+          <img
+            width="100%"
+            src="https://dev.makadi-heights.beyond-creation.net/HomeAtMakadiPage/home-at-makadi-banner.png"
+            alt=""
+            srcset=""
+          />
         </div>
+        <div
+          class="unit-desc"
+          style="width: 49%; padding-left: 1%; float: right"
+        >
+          <p
+            style="
+              width: 40%;
+              padding-right: 1rem;
+              float: left;
+              border-right: 1px dotted #ddd;
+              margin: 0;
+            "
+          >
+            <span style="text-transform: uppercase; color: #999999"
+              >Property Price</span
+            >
+            <br>
+            L.E {{price}}
+          </p>
+          <p
+            style="
+              width: 45%;
+              padding-left: 1rem;
+              float: left;
+              margin: 0;
+            "
+          >
+            <span style="text-transform: uppercase; color: #999999"
+              > Property Size</span
+            >
+            <br>
+            {{propertySize}} m2
+          </p>
+          <p
+            style="
+              width: 40%;
+              padding-right: 1rem;
+              float: left;
+              border-right: 1px dotted #ddd;
+              margin: 0;
+              margin-top: 1rem;
+            "
+          >
+            <span style="text-transform: uppercase; color: #999999"
+              >Bathrooms</span
+            >
+            <br>
+            {{bathrooms}}
+          </p>
+          <p
+            style="
+              width: 45%;
+              padding-left: 1rem;
+              float: left;
+              margin: 0;
+              margin-top: 1rem;
+            "
+          >
+            <span style="text-transform: uppercase; color: #999999"
+              > BEDROOM</span
+            >
+            <br>
+            {{beds}}
+          </p>
+          <p
+            style="
+              width: 40%;
+              padding-right: 1rem;
+              float: left;
+              border-right: 1px dotted #ddd;
+              margin: 0;
+              margin-top: 1rem;
+            "
+          >
+            <span style="text-transform: uppercase; color: #999999"
+              >UNCOVERED TERACES</span
+            >
+            <br>
+            {{terraces}}
+          </p>
+          <p
+            style="
+              width: 45%;
+              padding-left: 1rem;
+              float: left;
+              margin: 0;
+              margin-top: 1rem;
+            "
+          >
+            <span style="text-transform: uppercase; color: #999999"
+              > BUILT UP AREA</span
+            >
+            <br>
+            {{bua}} m2
+          </p>
+          <div style="clear: both"></div>
         </div>
-        <div class="modal-details-container">
-        <div class="content">
-          <div class="title diodrum">Total Value</div>
-          <div class="data diodrum">{{totalUnitPrice}} EGP</div>
-        </div>
-        <div class="content">
-          <div class="title diodrum">Advance amount</div>
-          <div class="data diodrum">{{downPayment}} EGP</div>
-        </div>
-        <div class="content">
-          <div class="title diodrum">Due Amount After payment</div>
-          <div class="data diodrum">{{dueAmount}} EGP</div>
-        </div>
-        <div class="content">
-          <div class="title diodrum">Service tax 5%</div>
-          <div class="data diodrum">{{tax}} EGP</div>
-        </div>
-        <div class="content-total">
-          <div class="title diodrum">AMOUNT DUE</div>
-          <div class="data diodrum">{{downPayment}} EGP</div>
-        </div>
-        </div>
+        <div style="clear: both"></div>
       </div>
 
+      <div
+        class="explore"
+        style="
+          background-color: white;
+          padding: 1rem;
+          font-size: 0.9rem;
+          margin-top: 1rem;
+        "
+      >
+        <h3
+          style="
+            color: #233142;
+            font-size: 1rem;
+            margin: 0;
+            margin-bottom: 1rem;
+          "
+        >
+        Explore your neighbourhood: {{zoneName}}
+        </h3>
+        <div class="unit-img" style="width: 49%; margin: 0; float: left">
+          <img
+            width="100%"
+            src="https://dev.makadi-heights.beyond-creation.net/HomeAtMakadiPage/home-at-makadi-banner.png"
+            alt=""
+            srcset=""
+          />
+        </div>
+        <div
+          class="unit-desc"
+          style="width: 49%; padding-left: 1%; float: right"
+        >
+          <h2 style="margin-top: 0;">
+            {{zoneName}}
+          </h2>
+          <p>
+            Apartments, duplexes and floating chalets are designed with Boho-inspired architecture that features serenity on every floor
+          </p>
+          <a
+          class="download-btn-container"
+          href="https://dev.makadi-heights.beyond-creation.net/home-at-makadi"
+          style="
+            padding: 0.5rem;
+            width: 50%;
+            background-color: #21436e;
+            border: 1px solid #fff;
+            color: #fff;
+            font-size: 1rem;
+            text-align: center;
+            text-decoration: none;
+            display: block;
+            margin: 1rem 0;
+            text-align: center;
+          "
+        >
+          Explore
+        </a>
+          <div style="clear: both"></div>
+        </div>
+        <div style="clear: both"></div>
       </div>
-      <div class="download-btn-container">
-      <img src="cid:download" alt="">
-      Download Receipt
-      </div>
-      <div class="contact-us-container">
-      <div class="header">Contact us</div>
-      <div class="sub">Singel 459, 1012 WP Amsterdam, The Netherlands</div>
-      </div>
-      <div class="contact-us-container">
-      <div class="header">Follow us</div>
-      <div class="links">
-        <a href="" class="link"><img src="cid:facebook" alt=""></a>
-        <a href="" class="link"><img src="cid:twitter" alt=""></a>
-        <a href="" class="link"><img src="cid:instagram" alt=""></a>
-      </div>
+
+      <div
+        class="footer"
+        style="
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          background-color: white;
+          padding: 1rem 1rem;
+          height: fit-content;
+          border-top: 0.4px solid rgba(23, 31, 42, 0.4);
+          margin-top: 1rem;
+          font-size: 0.8rem;
+        "
+      >
+        <div style="float: left">&copy; 2022 Makadi Heights</div>
+        <div style="margin-left: auto">Terms and conditions</div>
       </div>
     </div>
-    <footer>
-      <div>&copy; 2022 Makadi Heights</div>
-      <div>Terms and conditions</div>
-    </footer>
-    </div>
-    </body>
-
-    </html>`
+  </body>
+</html>
+`
 }
 
