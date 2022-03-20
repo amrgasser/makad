@@ -392,7 +392,7 @@ const emailTemplate = {
                 padding: 3rem 2rem;
                 background-color: #fff;
                 width: 100px;
-                margin-top: 13rem;
+                margin-top: 14rem;
                 margin-right: 1rem;
                 display: inline-block;
                 float: right;
@@ -690,6 +690,7 @@ const emailTemplate = {
             src="https://res.cloudinary.com/doh4vcgwz/image/upload/v1644246698/Topio_1_2fd2098ae1.jpg"
             alt=""
             srcset=""
+            height="200px"
           />
         </div>
         <div

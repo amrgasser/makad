@@ -202,7 +202,7 @@ const emailTemplate = {
                   padding: 3rem 2rem;
                   background-color: #fff;
                   width: 100px;
-                  margin-top: 13rem;
+                  margin-top: 14rem;
                   margin-right: 1rem;
                   display: inline-block;
                   float: right;
@@ -228,7 +228,7 @@ const emailTemplate = {
           class="text-container"
           style="font-size: 2rem; padding: 2.5rem 2.5rem 0; font-weight: 800"
         >
-          Thanks for your order, {{name}}
+          Thanks for your order, {{name}}!
         </div>
         <div
           class="order-details-container"
@@ -269,8 +269,8 @@ const emailTemplate = {
             justify-content: center;
           "
         >
-        <img src="https://dev.makadi-heights.beyond-creation.net/orascom-circle.svg" style="display: inline;margin-right: 5px;color:#fff" width="17px" alt="" srcset="">
-          View & Pay
+        View & Pay
+        <img src="https://dev.makadi-heights.beyond-creation.net/orascom-circle.svg" style="display: inline;margin-left: 5px;color:#fff" width="17px" alt="" srcset="">
         </a>
         <div
           class="contact-us-container"
