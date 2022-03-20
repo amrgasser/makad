@@ -202,7 +202,7 @@ const emailTemplate = {
                   padding: 3rem 2rem;
                   background-color: #fff;
                   width: 100px;
-                  margin-top: 10rem;
+                  margin-top: 13rem;
                   margin-right: 1rem;
                   display: inline-block;
                   float: right;
@@ -255,17 +255,21 @@ const emailTemplate = {
           style="
             padding: 1rem 0.5rem;
             width: 40%;
-            background-color: #fff;
-            border: 1px solid #21436e;
-            color: #21436e;
-            font-size: 1.5rem;
+            background-color: #21436e;
+            border: 1px solid #fff;
+            color: #fff;
+            font-size: 1.1rem;
             text-align: center;
             text-decoration: none;
             display: block;
             margin: 2.5rem;
             text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
           "
         >
+        <img src="https://dev.makadi-heights.beyond-creation.net/orascom-circle.svg" style="display: inline;margin-right: 5px;color:#fff" width="17px" alt="" srcset="">
           View & Pay
         </a>
         <div

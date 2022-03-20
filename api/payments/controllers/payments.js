@@ -286,6 +286,9 @@ const emailTemplate = {
         margin-bottom: 1rem;
         color: #999999;
       }
+      .unit-desc {
+        font-size: .8rem;
+      }
       @media (max-width: 767px) {
         .banner-container {
           height: 20rem !important;
@@ -389,7 +392,7 @@ const emailTemplate = {
                 padding: 3rem 2rem;
                 background-color: #fff;
                 width: 100px;
-                margin-top: 10rem;
+                margin-top: 13rem;
                 margin-right: 1rem;
                 display: inline-block;
                 float: right;
@@ -554,9 +557,10 @@ const emailTemplate = {
         <div class="unit-img" style="width: 49%; margin: 0; float: left">
           <img
             width="100%"
-            src="https://dev.makadi-heights.beyond-creation.net/HomeAtMakadiPage/home-at-makadi-banner.png"
+            src="{{bannerurl}}"
             alt=""
             srcset=""
+            style="max-height: 200px;"
           />
         </div>
         <div
@@ -592,6 +596,7 @@ const emailTemplate = {
             <br>
             {{propertySize}} m2
           </p>
+          <div style="clear:both"></div>
           <p
             style="
               width: 40%;
@@ -623,6 +628,7 @@ const emailTemplate = {
             <br>
             {{beds}}
           </p>
+          <div style="clear:both"></div>
           <p
             style="
               width: 40%;
@@ -681,7 +687,7 @@ const emailTemplate = {
         <div class="unit-img" style="width: 49%; margin: 0; float: left">
           <img
             width="100%"
-            src="https://dev.makadi-heights.beyond-creation.net/HomeAtMakadiPage/home-at-makadi-banner.png"
+            src="https://res.cloudinary.com/doh4vcgwz/image/upload/v1644246698/Topio_1_2fd2098ae1.jpg"
             alt=""
             srcset=""
           />
@@ -700,12 +706,12 @@ const emailTemplate = {
           class="download-btn-container"
           href="https://dev.makadi-heights.beyond-creation.net/home-at-makadi"
           style="
-            padding: 0.5rem;
+            padding: .8rem;
             width: 50%;
             background-color: #21436e;
             border: 1px solid #fff;
             color: #fff;
-            font-size: 1rem;
+            font-size: 1.1rem;
             text-align: center;
             text-decoration: none;
             display: block;
@@ -713,7 +719,8 @@ const emailTemplate = {
             text-align: center;
           "
         >
-          Explore
+        Explore
+        <img src="https://dev.makadi-heights.beyond-creation.net/orascom-circle.svg" style="display: inline;margin-left: 5px;color: #21436e;" width="17px" height="15px" alt="" srcset="">
         </a>
           <div style="clear: both"></div>
         </div>
