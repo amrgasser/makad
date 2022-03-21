@@ -55,6 +55,10 @@
     "id": "app.components.LeftMenuLinkContainer.about",
     "defaultMessage": "About"
   },
+  "masterplan": {
+    "id": "app.components.LeftMenuLinkContainer.masterplan",
+    "defaultMessage": "Master Plan"
+  },
   "media": {
     "id": "app.components.LeftMenuLinkContainer.media",
     "defaultMessage": "Media Center"

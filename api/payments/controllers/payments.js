@@ -290,6 +290,9 @@ const emailTemplate = {
         font-size: .8rem;
       }
       @media (max-width: 767px) {
+        * {
+          box-sizing: border-box;
+        }
         .banner-container {
           height: 20rem !important;
         }
@@ -304,7 +307,31 @@ const emailTemplate = {
         }
         .download-btn-container {
           font-size: 1.2rem !important;
-          width: calc(100% - 1rem) !important;
+          width: calc(100%) !important;
+        }
+        .unit-img {
+          margin-bottom: 1rem!important;
+        }
+        .unit-desc {
+          padding: 0 .7rem!important;
+          text-align: center!important;
+        }
+        .unit-desc p {
+          width: 50%!important;
+          font-size: .6rem;
+          line-height: .9;
+        }
+        .unit-desc p.zone-desc {
+          width: 100%!important;
+          font-size: .8rem;
+        }
+        .unit-desc p span {
+          display: block!important;
+          font-size: .6rem;
+        }
+        .unit-img,.unit-desc {
+          width: 100%!important;
+          float: none!important;
         }
         .modal-summary-container .title,
         .modal-summary-container .data {
@@ -690,7 +717,7 @@ const emailTemplate = {
             src="https://res.cloudinary.com/doh4vcgwz/image/upload/v1644246698/Topio_1_2fd2098ae1.jpg"
             alt=""
             srcset=""
-            height="200px"
+            height="160px"
           />
         </div>
         <div
@@ -700,7 +727,7 @@ const emailTemplate = {
           <h2 style="margin-top: 0;">
             {{zoneName}}
           </h2>
-          <p>
+          <p class="zone-desc">
             Apartments, duplexes and floating chalets are designed with Boho-inspired architecture that features serenity on every floor
           </p>
           <a

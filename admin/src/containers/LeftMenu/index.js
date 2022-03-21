@@ -38,7 +38,7 @@ const LeftMenu = ({ shouldUpdateStrapi, version, plugins, setUpdateMenu }) => {
   const eventlink = singleTypesSectionLinks.filter(({ label, isDisplayed }) => label === "Event Page" && isDisplayed)
 
   const wallslink = filteredCollectionTypeLinks.filter(({ label, isDisplayed }) => label === "WithinOurWalls" && isDisplayed)
-  const masterplan = filteredCollectionTypeLinks.filter(({ label, isDisplayed }) => label === "Master Plans" && isDisplayed)
+  const masterplan = filteredCollectionTypeLinks.filter(({ label, isDisplayed }) => label === "Master Plan" && isDisplayed)
 
   const makadilinks = filteredCollectionTypeLinks.filter(({ label, isDisplayed }) => (label === "Zones" || label === "Units" || label === "Unit Types") && isDisplayed)
   const lifelinks = filteredCollectionTypeLinks.filter(({ label, isDisplayed }) => label === "Amenities" && isDisplayed)
@@ -107,6 +107,15 @@ const LeftMenu = ({ shouldUpdateStrapi, version, plugins, setUpdateMenu }) => {
             section="about"
             name="about"
             links={aboutlink || []}
+            location={location}
+            searchable={false}
+          />
+        )}
+        {homelinks.length > 0 && (
+          <LeftMenuLinksSection
+            section="masterplan"
+            name="masterplan"
+            links={masterplan || []}
             location={location}
             searchable={false}
           />
