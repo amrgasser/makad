@@ -92,6 +92,9 @@
       "plugin": "upload",
       "required": false,
       "pluginOptions": {}
+    },
+    "btnLink": {
+      "type": "string"
     }
   }
 }

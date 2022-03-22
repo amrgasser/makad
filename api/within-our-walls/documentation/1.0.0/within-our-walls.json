@@ -783,6 +783,67 @@
               }
             }
           },
+          "amenity": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "slug": {
+                "type": "string"
+              },
+              "experience": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "activities": {
+                "type": "component"
+              },
+              "bannerTitle": {
+                "type": "string"
+              },
+              "bannerTitleLine2": {
+                "type": "string"
+              },
+              "bodyHeader": {
+                "type": "string"
+              },
+              "body": {
+                "type": "string"
+              },
+              "bannerImage": {
+                "type": "string"
+              },
+              "bannerImageMobile": {
+                "type": "string"
+              },
+              "others": {
+                "type": "component"
+              },
+              "directories": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -811,6 +872,9 @@
             }
           },
           "zone": {
+            "type": "string"
+          },
+          "amenity": {
             "type": "string"
           },
           "published_at": {

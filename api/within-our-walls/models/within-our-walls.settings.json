@@ -57,6 +57,10 @@
     "zone": {
       "via": "directories",
       "model": "zones"
+    },
+    "amenity": {
+      "via": "directories",
+      "model": "amenity"
     }
   }
 }

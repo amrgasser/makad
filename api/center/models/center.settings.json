@@ -73,6 +73,9 @@
       "type": "component",
       "repeatable": false,
       "component": "pages.media-outer-section"
+    },
+    "external_link": {
+      "type": "string"
     }
   }
 }

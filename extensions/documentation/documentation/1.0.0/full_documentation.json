@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "03/13/2022 12:05:39 PM"
+    "x-generation-date": "03/23/2022 1:42:26 AM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -14043,6 +14043,58 @@
               }
             }
           },
+          "directories": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "smallDescriptionn": {
+                  "type": "string"
+                },
+                "bannerImage": {
+                  "type": "string"
+                },
+                "logo": {
+                  "type": "string"
+                },
+                "phoneNumber1": {
+                  "type": "string"
+                },
+                "phoneNumber2": {
+                  "type": "string"
+                },
+                "categories": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "zone": {
+                  "type": "string"
+                },
+                "amenity": {
+                  "type": "string"
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -14167,6 +14219,12 @@
                   }
                 }
               }
+            }
+          },
+          "directories": {
+            "type": "array",
+            "items": {
+              "type": "string"
             }
           },
           "published_at": {
@@ -15462,6 +15520,9 @@
                 "zone": {
                   "type": "string"
                 },
+                "amenity": {
+                  "type": "string"
+                },
                 "published_at": {
                   "type": "string"
                 },
@@ -15967,6 +16028,9 @@
               }
             }
           },
+          "external_link": {
+            "type": "string"
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -16223,6 +16287,9 @@
                 "format": "date"
               }
             }
+          },
+          "external_link": {
+            "type": "string"
           },
           "published_at": {
             "type": "string",
@@ -17297,6 +17364,12 @@
                     "others": {
                       "type": "component"
                     },
+                    "directories": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
                     "published_at": {
                       "type": "string"
                     },
@@ -17859,6 +17932,12 @@
                     },
                     "others": {
                       "type": "component"
+                    },
+                    "directories": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
                     },
                     "published_at": {
                       "type": "string"
@@ -19368,6 +19447,9 @@
                 },
                 "eventOuterSection": {
                   "type": "component"
+                },
+                "external_link": {
+                  "type": "string"
                 },
                 "published_at": {
                   "type": "string"
@@ -23541,6 +23623,9 @@
               }
             }
           },
+          "btnLink": {
+            "type": "string"
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -23572,6 +23657,9 @@
             "type": "string"
           },
           "yPositionMobile": {
+            "type": "string"
+          },
+          "btnLink": {
             "type": "string"
           },
           "published_at": {
@@ -23715,6 +23803,9 @@
                 "eventOuterSection": {
                   "type": "component"
                 },
+                "external_link": {
+                  "type": "string"
+                },
                 "published_at": {
                   "type": "string"
                 },
@@ -23775,6 +23866,9 @@
                 "eventOuterSection": {
                   "type": "component"
                 },
+                "external_link": {
+                  "type": "string"
+                },
                 "published_at": {
                   "type": "string"
                 },
@@ -23834,6 +23928,9 @@
                 },
                 "eventOuterSection": {
                   "type": "component"
+                },
+                "external_link": {
+                  "type": "string"
                 },
                 "published_at": {
                   "type": "string"
@@ -23952,6 +24049,9 @@
                 },
                 "eventOuterSection": {
                   "type": "component"
+                },
+                "external_link": {
+                  "type": "string"
                 },
                 "published_at": {
                   "type": "string"
@@ -27037,6 +27137,67 @@
               }
             }
           },
+          "amenity": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "slug": {
+                "type": "string"
+              },
+              "experience": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "activities": {
+                "type": "component"
+              },
+              "bannerTitle": {
+                "type": "string"
+              },
+              "bannerTitleLine2": {
+                "type": "string"
+              },
+              "bodyHeader": {
+                "type": "string"
+              },
+              "body": {
+                "type": "string"
+              },
+              "bannerImage": {
+                "type": "string"
+              },
+              "bannerImageMobile": {
+                "type": "string"
+              },
+              "others": {
+                "type": "component"
+              },
+              "directories": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -27065,6 +27226,9 @@
             }
           },
           "zone": {
+            "type": "string"
+          },
+          "amenity": {
             "type": "string"
           },
           "published_at": {
@@ -27549,6 +27713,9 @@
                 "zone": {
                   "type": "string"
                 },
+                "amenity": {
+                  "type": "string"
+                },
                 "published_at": {
                   "type": "string"
                 },
@@ -27963,6 +28130,9 @@
                   }
                 },
                 "zone": {
+                  "type": "string"
+                },
+                "amenity": {
                   "type": "string"
                 },
                 "published_at": {

@@ -77,6 +77,10 @@
       "type": "component",
       "repeatable": false,
       "component": "custom.others"
+    },
+    "directories": {
+      "collection": "within-our-walls",
+      "via": "amenity"
     }
   }
 }

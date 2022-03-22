@@ -984,6 +984,9 @@
                 "zone": {
                   "type": "string"
                 },
+                "amenity": {
+                  "type": "string"
+                },
                 "published_at": {
                   "type": "string"
                 },
@@ -1398,6 +1401,9 @@
                   }
                 },
                 "zone": {
+                  "type": "string"
+                },
+                "amenity": {
                   "type": "string"
                 },
                 "published_at": {

@@ -1181,6 +1181,9 @@
               }
             }
           },
+          "external_link": {
+            "type": "string"
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -1437,6 +1440,9 @@
                 "format": "date"
               }
             }
+          },
+          "external_link": {
+            "type": "string"
           },
           "published_at": {
             "type": "string",

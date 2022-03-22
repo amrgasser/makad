@@ -435,6 +435,12 @@
                     "others": {
                       "type": "component"
                     },
+                    "directories": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
                     "published_at": {
                       "type": "string"
                     },
@@ -997,6 +1003,12 @@
                     },
                     "others": {
                       "type": "component"
+                    },
+                    "directories": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
                     },
                     "published_at": {
                       "type": "string"

@@ -895,6 +895,9 @@
               }
             }
           },
+          "btnLink": {
+            "type": "string"
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -926,6 +929,9 @@
             "type": "string"
           },
           "yPositionMobile": {
+            "type": "string"
+          },
+          "btnLink": {
             "type": "string"
           },
           "published_at": {

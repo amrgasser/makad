@@ -1307,6 +1307,9 @@
                 "eventOuterSection": {
                   "type": "component"
                 },
+                "external_link": {
+                  "type": "string"
+                },
                 "published_at": {
                   "type": "string"
                 },
