@@ -76,6 +76,11 @@
     },
     "external_link": {
       "type": "string"
+    },
+    "MetaComponent": {
+      "type": "component",
+      "repeatable": false,
+      "component": "pages.meta-component"
     }
   }
 }

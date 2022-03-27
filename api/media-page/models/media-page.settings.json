@@ -37,6 +37,11 @@
     },
     "latestPressReleases": {
       "collection": "center"
+    },
+    "MetaComponent": {
+      "type": "component",
+      "repeatable": false,
+      "component": "pages.meta-component"
     }
   }
 }

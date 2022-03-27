@@ -64,6 +64,11 @@
       "private": true,
       "via": "zone",
       "collection": "payments"
+    },
+    "MetaComponent": {
+      "type": "component",
+      "repeatable": false,
+      "component": "pages.meta-component"
     }
   }
 }

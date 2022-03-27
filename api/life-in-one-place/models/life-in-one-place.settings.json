@@ -45,6 +45,11 @@
       "type": "component",
       "repeatable": true,
       "component": "custom.amenity-life-in-one-place"
+    },
+    "MetaComponent": {
+      "type": "component",
+      "repeatable": false,
+      "component": "pages.meta-component"
     }
   }
 }

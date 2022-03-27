@@ -46,6 +46,11 @@
       "type": "component",
       "repeatable": true,
       "component": "custom.section2"
+    },
+    "MetaComponent": {
+      "type": "component",
+      "repeatable": false,
+      "component": "pages.meta-component"
     }
   }
 }

@@ -879,6 +879,9 @@
                   "type": "string"
                 }
               },
+              "MetaComponent": {
+                "type": "component"
+              },
               "published_at": {
                 "type": "string"
               },

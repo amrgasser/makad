@@ -772,6 +772,9 @@
                   "type": "string"
                 }
               },
+              "MetaComponent": {
+                "type": "component"
+              },
               "published_at": {
                 "type": "string"
               },
@@ -832,6 +835,9 @@
                 "items": {
                   "type": "string"
                 }
+              },
+              "MetaComponent": {
+                "type": "component"
               },
               "published_at": {
                 "type": "string"

@@ -26,6 +26,11 @@
       "type": "component",
       "repeatable": false,
       "component": "pages.about-banner-section"
+    },
+    "MetaComponent": {
+      "type": "component",
+      "repeatable": false,
+      "component": "pages.meta-component"
     }
   }
 }

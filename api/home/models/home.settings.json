@@ -45,6 +45,11 @@
       "type": "component",
       "repeatable": false,
       "component": "pages.life-place-new"
+    },
+    "MetaComponent": {
+      "type": "component",
+      "repeatable": false,
+      "component": "pages.meta-component"
     }
   }
 }

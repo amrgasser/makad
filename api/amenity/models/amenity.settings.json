@@ -81,6 +81,11 @@
     "directories": {
       "collection": "within-our-walls",
       "via": "amenity"
+    },
+    "MetaComponent": {
+      "type": "component",
+      "repeatable": false,
+      "component": "pages.meta-component"
     }
   }
 }
