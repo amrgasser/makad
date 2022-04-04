@@ -67,6 +67,9 @@
       "type": "component",
       "repeatable": false,
       "component": "pages.meta-component"
+    },
+    "youtubeVideo": {
+      "type": "string"
     }
   }
 }

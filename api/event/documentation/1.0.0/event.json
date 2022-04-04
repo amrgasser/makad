@@ -955,6 +955,9 @@
                 "MetaComponent": {
                   "type": "component"
                 },
+                "youtubeVideo": {
+                  "type": "string"
+                },
                 "published_at": {
                   "type": "string"
                 },
@@ -1050,6 +1053,9 @@
                 }
               }
             }
+          },
+          "youtubeVideo": {
+            "type": "string"
           },
           "published_at": {
             "type": "string",
@@ -1395,6 +1401,9 @@
                 }
               }
             }
+          },
+          "youtubeVideo": {
+            "type": "string"
           },
           "published_at": {
             "type": "string",
