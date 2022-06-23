@@ -1697,7 +1697,7 @@
                     }
                   }
                 },
-                "maxItems": 8
+                "maxItems": 20
               },
               "title1": {
                 "type": "string",
@@ -3993,7 +3993,7 @@
                     }
                   }
                 },
-                "maxItems": 8
+                "maxItems": 20
               },
               "title1": {
                 "type": "string",
