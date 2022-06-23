@@ -11,7 +11,7 @@
       "type": "component",
       "repeatable": true,
       "component": "custom.home-zone",
-      "max": 8
+      "max": 20
     },
     "title1": {
       "type": "string",
