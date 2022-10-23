@@ -96,6 +96,9 @@
     "building_type": {
       "via": "units",
       "model": "building-type"
+    },
+    "floatingTerrace": {
+      "type": "string"
     }
   }
 }

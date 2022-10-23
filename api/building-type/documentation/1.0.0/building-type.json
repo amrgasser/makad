@@ -1201,6 +1201,9 @@
                 "building_type": {
                   "type": "string"
                 },
+                "floatingTerrace": {
+                  "type": "string"
+                },
                 "published_at": {
                   "type": "string"
                 },
