@@ -1484,7 +1484,7 @@
                 }
               }
             },
-            "maxItems": 8
+            "maxItems": 6
           },
           "zonesSection": {
             "type": "object",
@@ -3780,7 +3780,7 @@
                 }
               }
             },
-            "maxItems": 8
+            "maxItems": 6
           },
           "zonesSection": {
             "type": "object",
