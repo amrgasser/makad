@@ -20675,7 +20675,7 @@
                 }
               }
             },
-            "maxItems": 6
+            "maxItems": 8
           },
           "zonesSection": {
             "type": "object",
@@ -22971,7 +22971,7 @@
                 }
               }
             },
-            "maxItems": 6
+            "maxItems": 8
           },
           "zonesSection": {
             "type": "object",
@@ -29687,7 +29687,7 @@
                     }
                   }
                 },
-                "maxItems": 6
+                "maxItems": 8
               }
             }
           },
@@ -30784,7 +30784,7 @@
                     }
                   }
                 },
-                "maxItems": 6
+                "maxItems": 8
               }
             }
           },
